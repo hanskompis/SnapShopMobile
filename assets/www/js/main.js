@@ -1,11 +1,11 @@
 var AppRouter = Backbone.Router.extend({
 
   routes: {
-    ""      : "login"
+    "": "login"
   },
   
   login: function(){
-    var loginView = new loginView ({el: $("#container")})
+    var loginView = new LoginView ({el: $("#container")});
   }
 
 });

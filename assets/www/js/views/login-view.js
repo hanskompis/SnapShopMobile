@@ -1,4 +1,4 @@
-var loginView = Backbone.View.extend({
+var LoginView = Backbone.View.extend({
   initialize: function() {
     this.render();
   },
@@ -6,5 +6,4 @@ var loginView = Backbone.View.extend({
      var loginElement = Mustache.to_html($("#login-template").html(), {});
      $(this.el).html(loginElement);
    }
-
-})
+});
