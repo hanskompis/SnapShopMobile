@@ -1,8 +1,12 @@
 var User = Backbone.Model.extend({
 	defaults: {
 		"authenticated": "",
-		 "user": "", 
-		 "organization":"",
-		 "session":""
+		 "userid": "", 
+		 "username":"",
+		 "uname":"", 
+		 "msisdn":"",
+		 "organizationid":"",
+		 "organizationname":"",
+		 "sessionid":""
 	}
 });

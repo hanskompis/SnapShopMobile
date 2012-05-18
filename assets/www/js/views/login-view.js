@@ -17,23 +17,32 @@ var LoginView = Backbone.View.extend({
 		   username: $("#username").val(),
 		   password: $("#password").val()
 	   });
-	   console.log(loginModel);
 	   loginModel.save({}, {
 		   success: function(model, response) {
 			   //alert(JSON.stringify(response));
-			   //alert(response.user.username);
+			   if (response.authenticated === false){
+				   alert("Login failed!");
+				   return;
+			   }
 			   var userModel = new User({
 			   "authenticated": response.authenticated,
-			   "user": response.user, 
-			   "organization": response.organization, 
-			   "session": response.session
+			   "userid": response.user.id,
+			   "username": response.user.username,
+			   "uname": response.user.name,
+			   "msisdn": response.user.msisdn,
+			   "organizationid": response.organization.id,
+			   "organizationname": response.organization.name, 
+			   "sessionid": response.session.id
 			   });
+
 			   //alert(userModel.get("user.id").toString());
 			   
 //			   app.navigate("/gallery", {trigger: true});
 //			   app.navigate("/gallery", true);
+			   alert("Logged in as "+userModel.get("uname").toString());	
 			   var galleryView = new GalleryView ({el: $("#container")});			   
 		   }
+			   		   			   
 	   })
    }
 	   
