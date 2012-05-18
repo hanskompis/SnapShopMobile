@@ -28,10 +28,11 @@ var LoginView = Backbone.View.extend({
 			   "organization": response.organization, 
 			   "session": response.session
 			   });
-			   alert(userModel.get("user.id").toString());
+			   //alert(userModel.get("user.id").toString());
 			   
-			   //alert(userModel.get("authenticated").toString());
-			   
+//			   app.navigate("/gallery", {trigger: true});
+//			   app.navigate("/gallery", true);
+			   var galleryView = new GalleryView ({el: $("#container")});			   
 		   }
 	   })
    }
