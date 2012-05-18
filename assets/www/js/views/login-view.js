@@ -14,13 +14,24 @@ var LoginView = Backbone.View.extend({
    
    loginAction: function() {
 	   var loginModel = new Login( {
-		   username: "test", //$("#username").val(),
-		   password: "test" //$("#password").val()
+		   username: $("#username").val(),
+		   password: $("#password").val()
 	   });
 	   console.log(loginModel);
 	   loginModel.save({}, {
 		   success: function(model, response) {
-			   alert("Woow: " + response.status);
+			   //alert(JSON.stringify(response));
+			   //alert(response.user.username);
+			   var userModel = new User({
+			   "authenticated": response.authenticated,
+			   "user": response.user, 
+			   "organization": response.organization, 
+			   "session": response.session
+			   });
+			   alert(userModel.get("user.id").toString());
+			   
+			   //alert(userModel.get("authenticated").toString());
+			   
 		   }
 	   })
    }

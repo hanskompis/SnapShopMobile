@@ -1,6 +1,8 @@
 var User = Backbone.Model.extend({
 	defaults: {
 		"authenticated": "",
-		"password": "test"
+		 "user": "", 
+		 "organization":"",
+		 "session":""
 	}
 });
