@@ -14,26 +14,37 @@
 
 
 <script type="text/template" id="gallery-template">
-  <form>
     You are logged in.<br>
     Browsing pictures...
-  </form>
+	<ul id="Gallery" class="gallery">		
+		<li><a href="images/full/001.jpg"><img src="images/thumb/001.jpg" alt="Image 001" /></a></li>
+		<li><a href="images/full/002.jpg"><img src="images/thumb/002.jpg" alt="Image 002" /></a></li>
+		<li><a href="images/full/003.jpg"><img src="images/thumb/003.jpg" alt="Image 003" /></a></li>
+		<li><a href="images/full/004.jpg"><img src="images/thumb/004.jpg" alt="Image 004" /></a></li>
+		<li><a href="images/full/005.jpg"><img src="images/thumb/005.jpg" alt="Image 005" /></a></li>
+		
+	</ul>
+
 </script>
 
  
 </head>
   <body>
     <div id = "container"></div>
-    <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/klass.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/code.photoswipe.jquery-3.0.4.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/underscore-min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/backbone-min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/mustache.js"></script>
+	<script type="text/javascript" charset="utf-8" src="lib/code.photoswipe-3.0.4.min.js"></script>	
     <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/models/loginmodel.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/models/usermodel.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/views/login-view.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/views/gallery-view.js"></script>
+
 
 <script type="text/javascript">
   $(document).ready(startApp);

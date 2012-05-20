@@ -34,13 +34,9 @@ var LoginView = Backbone.View.extend({
 			   "organizationname": response.organization.name, 
 			   "sessionid": response.session.id
 			   });
-
-			   //alert(userModel.get("user.id").toString());
-			   
-//			   app.navigate("/gallery", {trigger: true});
-//			   app.navigate("/gallery", true);
-			   alert("Logged in as "+userModel.get("uname").toString());	
-			   var galleryView = new GalleryView ({el: $("#container")});			   
+			   //alert("Logged in as "+userModel.get("uname").toString());
+			   app.navigate("gallery", true);
+			   				   			   
 		   }
 			   		   			   
 	   })

@@ -2,7 +2,7 @@ var AppRouter = Backbone.Router.extend({
 
   routes: {
     "": "login",
-    "/gallery": "gallery" 
+    "gallery": "gallery" 
   },
   
   login: function(){
@@ -16,8 +16,8 @@ var AppRouter = Backbone.Router.extend({
   
 
 });
-
+var app;
 function startApp() {
-  var app = new AppRouter();
+  app = new AppRouter();
   Backbone.history.start();
 }
