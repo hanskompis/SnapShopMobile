@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>SnapShopMob</title>
-
+<link href="photoswipe.css" type="text/css" rel="stylesheet" />
 
 <script type="text/template" id="login-template">
   <form>
@@ -50,5 +50,10 @@
   $(document).ready(startApp);
 </script>
 
-  </body>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function(){
+    var myPhotoSwipe = Code.PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), { enableMouseWheel: false , enableKeyboard: false } );
+}, false);
+</script>
+</body>
 </html>

@@ -3,9 +3,9 @@ var GalleryView = Backbone.View.extend({
     this.render();
   },
    render: function() {
-     var galleryElement = Mustache.to_html($("#gallery-template").html(), {});
+     var galleryElement = Mustache.to_html($("#gallery-template").html(), {});   
      $(this.el).html(galleryElement);
+     return this;
    },
-
 	   
 });
