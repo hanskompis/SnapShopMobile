@@ -6,12 +6,9 @@ var LoginView = Backbone.View.extend({
      var loginElement = Mustache.to_html($("#login-template").html(), {});
      $(this.el).html(loginElement);
    },
-   
-   
    events: {
 	   "click input[type=button]": "loginAction"
    },
-   
    loginAction: function() {
 	   var loginModel = new Login( {
 		   username: $("#username").val(),
@@ -34,13 +31,9 @@ var LoginView = Backbone.View.extend({
 			   "organizationname": response.organization.name, 
 			   "sessionid": response.session.id
 			   });
-
 			   //alert(userModel.get("user.id").toString());
-			   
-//			   app.navigate("/gallery", {trigger: true});
-//			   app.navigate("/gallery", true);
 			   alert("Logged in as "+userModel.get("uname").toString());	
-			   var galleryView = new GalleryView ({el: $("#container")});			   
+			   Backbone.history.navigate("gallery", true);
 		   }
 			   		   			   
 	   })
