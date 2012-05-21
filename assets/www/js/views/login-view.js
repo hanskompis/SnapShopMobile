@@ -21,18 +21,7 @@ var LoginView = Backbone.View.extend({
 				   alert("Login failed!");
 				   return;
 			   }
-			   var userModel = new User({
-			   "authenticated": response.authenticated,
-			   "userid": response.user.id,
-			   "username": response.user.username,
-			   "uname": response.user.name,
-			   "msisdn": response.user.msisdn,
-			   "organizationid": response.organization.id,
-			   "organizationname": response.organization.name, 
-			   "sessionid": response.session.id
-			   });
-			   //alert(userModel.get("user.id").toString());
-			   alert("Logged in as "+userModel.get("uname").toString());	
+			   var userModel = new User(response);	
 			   Backbone.history.navigate("gallery", true);
 		   }
 			   		   			   
