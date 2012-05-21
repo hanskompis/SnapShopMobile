@@ -4,7 +4,7 @@ var LoginView = Backbone.View.extend({
      $(this.el).html(loginElement);
    },
    events: {
-	   "click input[type=button]": "loginAction"
+	   "click #loginButton": "loginAction"
    },
    loginAction: function() {
 	   var loginModel = new Login( {
