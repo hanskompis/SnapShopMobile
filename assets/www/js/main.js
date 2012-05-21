@@ -11,8 +11,8 @@ var AppRouter = Backbone.Router.extend({
   },
   
   gallery: function(){
-	var galleryView = new GalleryView ({el: $("#container")});
-	galleryView.render();
+	var browseView = new BrowseView ({el: $("#container")});
+	browseView.render();
   }
   
 });

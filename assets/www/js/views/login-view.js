@@ -13,12 +13,16 @@ var LoginView = Backbone.View.extend({
 	   });
 	   loginModel.save({}, {
 		   success: function(model, response) {
-			   //alert(JSON.stringify(response));
+//			   alert(JSON.stringify(response));
 			   if (response.authenticated === false){
 				   alert("Login failed!");
 				   return;
 			   }
-			   var userModel = new User(response);	
+			   var userModel = new User(response);
+			   var session = response.session;
+			   //alert(session.id);
+			   document.cookie = session.id;
+
 			   Backbone.history.navigate("gallery", true);
 		   }
 			   		   			   
