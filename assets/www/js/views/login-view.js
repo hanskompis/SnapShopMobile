@@ -23,7 +23,7 @@ var LoginView = Backbone.View.extend({
 			   //alert(session.id);
 			   document.cookie = session.id;
 
-			   Backbone.history.navigate("gallery", true);
+			   Backbone.history.navigate("browse", true);
 		   }
 			   		   			   
 	   })
