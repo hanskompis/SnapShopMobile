@@ -8,6 +8,7 @@ var BrowseView = Backbone.View.extend({
    render: function() {
      var browseElement = Mustache.to_html($("#browse-template").html(), {});
      $(this.el).html(browseElement);
+<<<<<<< HEAD
 //     alert(document.cookie);
      
 
@@ -37,6 +38,31 @@ var BrowseView = Backbone.View.extend({
 	 alert("all images!");
 //	 this.render();
  }
+=======
+     //alert(document.cookie);
+   },
+   
+   // For getItemService testing
+   //
+   //
+   events : {
+	   "click #browseButton" : "browseAction"
+   },
+   browseAction : function() {
+	   var cookieName = "snapcookie";
+		var begin = document.cookie.indexOf(cookieName)
+				+ cookieName.length + 1;
+		var end = document.cookie.indexOf(";", begin);
+>>>>>>> 65fc79f7b41f0b96409749e1b1a1930a5ad9e8e7
 
+		var getItemsService = new GetItemsService();
+		getItemsService.onItemsFetched = function(items) {
+			alert(items.length);
+		};
+		getItemsService.getItemsCollection("user", 0, 11, "test");
+   }
+   //
+   //
+   // For getItemService testing
 	   
 });
