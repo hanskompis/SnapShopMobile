@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>SnapShopMob</title>
-
+<link rel="stylesheet" href="style.css" type="text/css">
 
 <script type="text/template" id="login-template">
   <form>
@@ -18,12 +18,12 @@
 </script>
 
 <script type="text/template" id="browse-table-row-template">
-  <tr id="pictureRow"></tr>
+  <tr></tr>
 </script>
 
 <script type="text/template" id="browse-table-data-template">
   <!-- <td><a href="{{backendUrl}}content/{{id}}/type/original"><img src=backendUrl+"content/{{id}}/type/thumbnail"/></a></td> -->
-  <td><a href="{{backendUrl}}content/{{id}}/type/original">imglink</a></td>
+  <td id="tableData"><a href="{{backendUrl}}content/{{id}}/type/original">imglink</a></td>
 </script>
 
 
