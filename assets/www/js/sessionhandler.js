@@ -1,0 +1,3 @@
+var SessionService = Class.extend ({
+	// Implementation here...
+});
