@@ -2,7 +2,7 @@ var AppRouter = Backbone.Router.extend({
 
   routes: {
     "": "login",
-    "gallery": "gallery" 
+    "browse": "browse" 
   },
   
   login: function(){
@@ -10,9 +10,9 @@ var AppRouter = Backbone.Router.extend({
     loginView.render();
   },
   
-  gallery: function(){
-	var galleryView = new GalleryView ({el: $("#container")});
-	galleryView.render();
+  browse: function(){
+	var browseView = new BrowseView ({el: $("#container")});
+	browseView.render();
   }
   
 });
