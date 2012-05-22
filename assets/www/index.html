@@ -6,24 +6,26 @@
 
 <script type="text/template" id="login-template">
   <form>
-    Username: <input type="text" id="username"/><br />
-    Password: <input type="password" id="password"/><br />
+    Username: <input type="text" id="username" value="test"/><br />
+    Password: <input type="password" id="password" value="test"/><br />
     <input type="button" id="loginButton" value="login" />
   </form>
 </script>
 
+<script type="text/template" id="browse-template">
+  <h2>Gallery</h2>
+  <table border="1" id="pictureTable"></table>
+</script>
+
 <script type="text/template" id="browse-table-row-template">
-  <tr></tr>
+  <tr id="pictureRow"></tr>
 </script>
 
 <script type="text/template" id="browse-table-data-template">
-  <td><a href="{{backendUrl}}content/{{id}}/type/original"><img src=backendUrl+"content/{{id}}/type/thumbnail"/></a></td>
+  <!-- <td><a href="{{backendUrl}}content/{{id}}/type/original"><img src=backendUrl+"content/{{id}}/type/thumbnail"/></a></td> -->
+  <td><a href="{{backendUrl}}content/{{id}}/type/original">imglink</a></td>
 </script>
 
-<script type="text/template" id="browse-template">
-  <h2>Gallery</h2>
-  <table></table>
-</script>
 
  
 </head>
