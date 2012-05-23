@@ -20,25 +20,25 @@ var GetItemsService = Class.extend({
 		
 		switch(listType) {
 		case "user":
-			alert("case user");
+//			alert("case user");
 			items.url+="items/user/"+userID;
-			alert(items.url);
+//			alert(items.url);
 			break;
 		case "organization": // Not functioning yet
-			alert("case organization");
+//			alert("case organization");
 			items.url+="items/offset/"+offset+"/count/"+count;
-			alert(items.url);
+//			alert(items.url);
 			break;
 		default:
-			alert("case default");
+//			alert("case default");
 			items.url +="items";
-			alert(items.url);
+//			alert(items.url);
 			break;
 		}
 		
 		items.fetch({
 			success : function(model, response) {
-				alert("items.fetch.success");
+//				alert("items.fetch.success");
 				self.onItemsFetched(items);
 			},
 			error : function(model, response) {
