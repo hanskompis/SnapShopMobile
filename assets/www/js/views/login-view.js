@@ -7,26 +7,9 @@ var LoginView = Backbone.View.extend({
 	   "click #loginButton": "loginAction"
    },
    loginAction: function() {
-	   var loginModel = new Login( {
-		   username: $("#username").val(),
-		   password: $("#password").val()
-	   });
-	   loginModel.save({}, {
-		   success: function(model, response) {
-//			   alert(JSON.stringify(response));
-			   if (response.authenticated === false){
-				   alert("Login failed!");
-				   return;
-			   }
-			   var userModel = new User(response);
-			   var session = response.session;
-			   //alert(session.id);
-			   document.cookie = session.id;
-
-			   Backbone.history.navigate("browse", true);
-		   }
-			   		   			   
-	   })
+	   var sessionService = new SessionService();
+	   var userID = sessionService.makeLogin($("#username").val(), $("#password").val());
+	   Backbone.history.navigate("browse", true);
    }
 	   
 });
