@@ -1,8 +1,7 @@
 var SessionService = Class.extend ({
-	
-	makeLogin : function(username, password) {
+	loginOk : null,
+	makeLogin : function(username, password) {	
 		var self = this;
-		var userid = 0;
 		var loginModel = new Login( {
 			   username: username,
 			   password: password
@@ -13,12 +12,10 @@ var SessionService = Class.extend ({
 					   alert("Login failed!");
 					   return;
 				   }
-				   var userModel = new User(response);
-				   var session = response.session;
-				   //alert(session.id);
-				   document.cookie = session.id;				   
+				   self.loginOk(response);
 			   }				   		   			   
-		   })
-		return self.userid;
+		   });
+		   
 	}
+	
 });
