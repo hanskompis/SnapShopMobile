@@ -12,7 +12,7 @@ var BrowseView = Backbone.View.extend({
 	   "click #browseButton" : "browseAction"
    },
    browseAction : function() {
-	   var cookieName = "snapcookie";
+	   	var cookieName = "snapcookie";
 		var begin = document.cookie.indexOf(cookieName)
 				+ cookieName.length + 1;
 		var end = document.cookie.indexOf(";", begin);
@@ -23,7 +23,7 @@ var BrowseView = Backbone.View.extend({
 		};
 		getItemsService.getItemsCollection("organization", 0, 11, "1");
    }
-   //
+   //oo
    //
    // For getItemService testing
 	   

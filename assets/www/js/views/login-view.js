@@ -8,8 +8,14 @@ var LoginView = Backbone.View.extend({
    },
    loginAction: function() {
 	   var sessionService = new SessionService();
-	   var userID = sessionService.makeLogin($("#username").val(), $("#password").val());
-	   Backbone.history.navigate("browse", true);
+	   sessionService.loginOk = function(response) {
+		   document.cookie = response.session.id;
+		   userSession.authentication = response;
+		   alert(userSession.authentication.user.id);
+		   Backbone.history.navigate("browse", true);
+	   };
+
+	   sessionService.makeLogin($("#username").val(), $("#password").val());
    }
 	   
 });
