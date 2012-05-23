@@ -21,7 +21,7 @@ var BrowseView = Backbone.View.extend({
 		getItemsService.onItemsFetched = function(items) {
 			alert(items.length);
 		};
-		getItemsService.getItemsCollection("user", 0, 11, "test");
+		getItemsService.getItemsCollection("organization", 0, 11, "1");
    }
    //
    //
