@@ -11,7 +11,6 @@ var LoginView = Backbone.View.extend({
 	   sessionService.loginOk = function(response) {
 		   document.cookie = response.session.id;
 		   userSession.authentication = response;
-		   alert(userSession.authentication.user.id);
 		   Backbone.history.navigate("browse", true);
 	   };
 
