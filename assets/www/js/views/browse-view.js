@@ -38,8 +38,7 @@ var BrowseView = Backbone.View.extend({
 	  	        }
 	        }
 
-		};
-		
+		};		
      }, //render
      
      
@@ -74,6 +73,5 @@ var BrowseView = Backbone.View.extend({
     	 this.offset -= 12;
          this.render();
      }
-
 	   
 });

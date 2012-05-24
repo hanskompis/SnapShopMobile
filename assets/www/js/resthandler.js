@@ -4,20 +4,11 @@ var Items = Backbone.Collection.extend({
 
 var GetItemsService = Class.extend({
 	onItemsFetched : null,
-	currentOffset : 0,
-	currentListType : "",
 	
 	getItemsCollection : function (listType, offset, count, userID) {
 		var self = this;
 		var items = new Items();
-		
-		if(listType != self.currentListType)
-			self.currentOffset = 0;
-		else
-			self.currentOffset = offset;
-		self.currentListType = listType;
-		
-		
+
 		switch(listType) {
 		case "user":
 //			alert("case user");
