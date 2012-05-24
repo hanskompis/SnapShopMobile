@@ -14,10 +14,15 @@
 
 <script type="text/template" id="browse-template">
   <h2>Gallery</h2>
+  <form>
+    <input type="button" id="previousImagesButton" value="previous" />
+    <input type="button" id="nextImagesButton" value="next" />
+  </form> 
   <table id="pictureTable"></table><br />
   <form>
     <input type="radio" id="myImagesButton" name="pictureGroup" {{checked1}}/> My images
     <input type="radio" id="allImagesButton" name="pictureGroup" {{checked2}}/> All images
+
   </form> 
 </script>
 
