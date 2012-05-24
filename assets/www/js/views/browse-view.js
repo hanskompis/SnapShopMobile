@@ -18,8 +18,11 @@ var BrowseView = Backbone.View.extend({
 //			getItemsService.getItemsCollection("organization", 0, 12, "1"); 
 //		}
 		
-		getItemsService.getItemsCollection("organization", this.offset, 12, "1"); //TODO: check hard coded organization
+//		getItemsService.getItemsCollection("organization", this.offset, 12, "1"); //TODO: check hard coded organization
+		getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id);
 		getItemsService.onItemsFetched = function(items) {
+			if(items.length === 0)
+				alert("No more pictures");
 //			alert(JSON.stringify(items));
 
 //			items.forEach(function(item) {
@@ -41,8 +44,7 @@ var BrowseView = Backbone.View.extend({
 		};		
      }, //render
      
-     
-     
+
      events: {
 	   "click #myImagesButton": "myImagesAction",
        "click #allImagesButton": "allImagesAction",
@@ -73,5 +75,4 @@ var BrowseView = Backbone.View.extend({
     	 this.offset -= 12;
          this.render();
      }
-	   
 });

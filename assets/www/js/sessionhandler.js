@@ -12,10 +12,10 @@ var SessionService = Class.extend ({
 					   alert("Login failed!");
 					   return;
 				   }
+				   globalUserProfile = response;
 				   self.loginOk(response);
 			   }				   		   			   
 		   });
 		   
 	}
-	
 });
