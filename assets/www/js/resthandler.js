@@ -12,10 +12,10 @@ var GetItemsService = Class.extend({
 		switch(listType) {
 		case "user":
 //			alert("case user");
-			items.url+="items/user/"+userID;
+			items.url+="items/user/"+userID+"/offset/"+offset+"/count/"+count;
 //			alert(items.url);
 			break;
-		case "organization": // Not functioning yet
+		case "organization": 
 //			alert("case organization");
 			items.url+="items/offset/"+offset+"/count/"+count;
 //			alert(items.url);

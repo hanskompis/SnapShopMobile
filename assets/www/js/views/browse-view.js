@@ -11,15 +11,15 @@ var BrowseView = Backbone.View.extend({
 	    }
         $(this.el).html(browseElement);
 		var getItemsService = new GetItemsService();
-//		if(this.myPictures) {
-//			getItemsService.getItemsCollection("user", 0, 12, "1");
-//		}
-//		else {
-//			getItemsService.getItemsCollection("organization", 0, 12, "1"); 
-//		}
+		if(this.myPictures) {
+			getItemsService.getItemsCollection("user", this.offset, 12, globalUserProfile.user.id);
+		}
+		else {
+			getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id); 
+		}
 		
 //		getItemsService.getItemsCollection("organization", this.offset, 12, "1"); //TODO: check hard coded organization
-		getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id);
+//		getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id);
 		getItemsService.onItemsFetched = function(items) {
 			if(items.length === 0)
 				alert("No more pictures");
