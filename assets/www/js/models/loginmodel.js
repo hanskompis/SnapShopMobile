@@ -1,3 +1,3 @@
-var Login = Backbone.Model.extend({
+App.Models.Login = Backbone.Model.extend({
 	url: backendUrl + "login"
 });

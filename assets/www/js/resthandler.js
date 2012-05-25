@@ -1,4 +1,4 @@
-var Items = Backbone.Collection.extend({
+App.Collections.Items = Backbone.Collection.extend({
 	url : backendUrl
 });
 
@@ -7,7 +7,7 @@ var GetItemsService = Class.extend({
 	
 	getItemsCollection : function (listType, offset, count, userID) {
 		var self = this;
-		var items = new Items();
+		var items = new App.Collections.Items();
 
 		switch(listType) {
 		case "user":

@@ -1,4 +1,4 @@
-var BrowseView = Backbone.View.extend({
+App.Views.BrowseView = Backbone.View.extend({
     myPictures: true,
     offset: 0,
 	
@@ -12,10 +12,10 @@ var BrowseView = Backbone.View.extend({
         $(this.el).html(browseElement);
 		var getItemsService = new GetItemsService();
 		if(this.myPictures) {
-			getItemsService.getItemsCollection("user", this.offset, 12, globalUserProfile.user.id);
+			getItemsService.getItemsCollection("user", this.offset, 12, App.globalUserProfile.user.id);
 		}
 		else {
-			getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id); 
+			getItemsService.getItemsCollection("organization", this.offset, 12, App.globalUserProfile.user.id); 
 		}
 		
 //		getItemsService.getItemsCollection("organization", this.offset, 12, "1"); //TODO: check hard coded organization

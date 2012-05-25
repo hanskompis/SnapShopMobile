@@ -2,7 +2,7 @@ var SessionService = Class.extend ({
 	loginOk : null,
 	makeLogin : function(username, password) {	
 		var self = this;
-		var loginModel = new Login( {
+		var loginModel = new App.Models.Login( {
 			   username: username,
 			   password: password
 		   });
@@ -12,7 +12,7 @@ var SessionService = Class.extend ({
 					   alert("Login failed!");
 					   return;
 				   }
-				   globalUserProfile = response;
+				   App.globalUserProfile = response;
 				   self.loginOk(response);
 			   }				   		   			   
 		   });

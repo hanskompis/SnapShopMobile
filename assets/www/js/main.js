@@ -1,4 +1,4 @@
-var AppRouter = Backbone.Router.extend({
+App.Routers.Main = Backbone.Router.extend({
 
   routes: {
     "": "login",
@@ -6,19 +6,15 @@ var AppRouter = Backbone.Router.extend({
   },
   
   login: function(){
-    var loginView = new LoginView ({el: $("#container")});
+    var loginView = new App.Views.LoginView ({el: $("#container")});
     loginView.render();
   },
   
   browse: function(){
-	var browseView = new BrowseView ({el: $("#container")});
+	var browseView = new App.Views.BrowseView ({el: $("#container")});
 	browseView.render();
   }
   
 });
 
-function startApp() {
-  var app = new AppRouter();
-  Backbone.history.start();
-}
 

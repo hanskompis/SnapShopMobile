@@ -1,4 +1,4 @@
-var LoginView = Backbone.View.extend({
+App.Views.LoginView = Backbone.View.extend({
    render: function() {
      var loginElement = Mustache.to_html($("#login-template").html(), {});
      $(this.el).html(loginElement);
