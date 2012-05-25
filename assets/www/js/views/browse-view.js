@@ -17,10 +17,7 @@ App.Views.BrowseView = Backbone.View.extend({
 		else {
 			getItemsService.getItemsCollection("organization", this.offset, 12, App.globalUserProfile.get("user").id); 
 		}
-		
-//		getItemsService.getItemsCollection("organization", this.offset, 12, "1"); //TODO: check hard coded organization
-//		getItemsService.getItemsCollection("organization", this.offset, 12, globalUserProfile.user.id);
-		getItemsService.onItemsFetched = function(items) {
+				getItemsService.onItemsFetched = function(items) {
 			if(items.length === 0)
 				alert("No more pictures");
 //			alert(JSON.stringify(items));
@@ -32,7 +29,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	        var appended = 0;
 	        for(var i = 0; i < browseTableRow && appended < count; i++){
 	  	        var rowElement = Mustache.to_html($("#browse-table-row-template").html(), {});
-	  	        $("#pictureTable").append(rowElement);
+	  	        $("#Gallery").append(rowElement);
 	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
 	  	        	var index = items.at(appended).id;
 	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {id: index, backendUrl: backendUrl});
@@ -40,7 +37,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	  		        appended++;
 	  	        }
 	        }
-
+	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
 		};		
      }, //render
      
