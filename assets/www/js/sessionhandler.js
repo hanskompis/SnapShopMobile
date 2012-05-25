@@ -12,7 +12,7 @@ var SessionService = Class.extend ({
 					   alert("Login failed!");
 					   return;
 				   }
-				   App.globalUserProfile = response;
+				   App.globalUserProfile = new App.Models.User(response);
 				   self.loginOk(response);
 			   }				   		   			   
 		   });
