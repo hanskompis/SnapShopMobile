@@ -2,15 +2,17 @@ var AppRouter = Backbone.Router.extend({
 
   routes: {
     "": "login",
-    "gallery": "gallery" 
+    "browse": "browse" 
   },
   
   login: function(){
     var loginView = new LoginView ({el: $("#container")});
+    loginView.render();
   },
   
-  gallery: function(){
-	    var galleryView = new GalleryView ({el: $("#container")});
+  browse: function(){
+	var browseView = new BrowseView ({el: $("#container")});
+	browseView.render();
   }
   
 });
@@ -19,3 +21,4 @@ function startApp() {
   var app = new AppRouter();
   Backbone.history.start();
 }
+
