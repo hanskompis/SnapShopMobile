@@ -38,7 +38,10 @@ App.Views.BrowseView = Backbone.View.extend({
 	  		        appended++;
 	  	        }
 	        }
-	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
+	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,  getToolbar: function(){
+				return '<div class="ps-toolbar-close" style="padding-top: 12px;">Close</div>';
+				
+			}  });
 		};		
      }, //render
      
