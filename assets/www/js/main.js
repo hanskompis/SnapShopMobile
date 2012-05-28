@@ -13,6 +13,8 @@ App.Routers.Main = Backbone.Router.extend({
   browse: function(){
 	var browseView = new App.Views.BrowseView ({el: $("#container")});
 	browseView.render();
+	var mainNavigationView = new App.Views.MainNavigationView ({el: $("#topContainer")});
+	mainNavigationView.render();
   }
   
 });

@@ -32,7 +32,8 @@ App.Views.BrowseView = Backbone.View.extend({
 	  	        $("#Gallery").append(rowElement);
 	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
 	  	        	var index = items.at(appended).id;
-	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {id: index, backendUrl: backendUrl});
+	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
+	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
 	  		        $("tr:last").append(dataElement); 
 	  		        appended++;
 	  	        }
