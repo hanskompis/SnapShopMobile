@@ -32,14 +32,20 @@ img
 }
 
 #loginButton
-{
-  
+{ 
   border: 0;
   width: 452px;
   height: 78px;
   background: url(../images/btn_general_normal.png) no-repeat;
   
 
+}
+
+#loginButton:active
+{
+	width: 452px;
+   height: 78px;
+	background: url(../images/btn_general_active.png) no-repeat;
 }
 
 p.login_label
