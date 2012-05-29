@@ -24,16 +24,28 @@ App.Views.BrowseView = Backbone.View.extend({
 	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
 	  	        	var index = items.at(appended).id;
 	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
-	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
+	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title"), description: items.at(appended).get("description")});
 	  		        $("tr:last").append(dataElement); 
 	  		        appended++;
 	  	        }
 	        }
-	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,  getToolbar: function(){
-				return '<div class="ps-toolbar-close" style="padding-top: 12px;">Close</div>';
-				
-			}  
-	     });
+	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,  
+	        	getToolbar: function(){ 
+	        		return '<div class="ps-toolbar-close" style="padding-top: 12px;">Close</div>'},
+			
+	        	getImageMetaData: function(el){
+				  return {
+					  description: el.getAttribute('description')
+				  }
+			    }
+			    
+	        });
+	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
+//			  alert(myPhotoSwipe.getCurrentImage().caption);
+	        	var currentImage = myPhotoSwipe.getCurrentImage();
+	        	alert(currentImage.metaData.description);
+
+		    });   
 		};		
 
 		if(App.myPictures) {
