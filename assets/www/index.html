@@ -3,6 +3,7 @@
 <head>
 <title>SnapShopMob</title>
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/photoswipe.css" type="text/css">
 
 <script type="text/template" id="login-template">
   <form>
@@ -12,18 +13,26 @@
   </form>
 </script>
 
+<script type="text/template" id="main-navigation-template">
+  <form id="mainNavigation">
+    <input type="button" id="galleryButton" value="gallery" />
+    <input type="button" id="cameraButton" value="camera" />
+    <input type="button" id="profileButton" value="profile" />
+  </form>
+</script>
+
 <script type="text/template" id="browse-template">
-  <h2>Gallery</h2>
+  <ul id="Gallery">
+ 
+  </ul>
   <form>
     <input type="button" id="previousImagesButton" value="previous" />
     <input type="button" id="nextImagesButton" value="next" />
-  </form> 
-  <table id="pictureTable"></table><br />
+  </form>
   <form>
     <input type="radio" id="myImagesButton" name="pictureGroup" {{checked1}}/> My images
     <input type="radio" id="allImagesButton" name="pictureGroup" {{checked2}}/> All images
-
-  </form> 
+  </form>
 </script>
 
 <script type="text/template" id="browse-table-row-template">
@@ -31,17 +40,21 @@
 </script>
 
 <script type="text/template" id="browse-table-data-template">
-  <td id="tableData"><a href="{{backendUrl}}content/{{id}}/type/original"><img src="{{backendUrl}}content/{{id}}/type/thumbnail"/></a></td> 
+  <td id="tableData"><a href="{{backendUrl}}content/{{id}}/type/original"><img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/></a></td> 
 </script>
  
 </head>
   <body>
+    <div id = "topContainer"></div>
     <div id = "container"></div>
     <div id = "buttonContainer"></div>
     <!-- Javascript libraries -->
+    <div id = "bottomContainer"></div>
     <script type="text/javascript" charset="utf-8" src="lib/javascript-inheritance.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/cordova-1.7.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/klass.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/code.photoswipe.jquery-3.0.4.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/underscore-min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/backbone-min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/mustache.js"></script>
@@ -54,6 +67,7 @@
     <script type="text/javascript" charset="utf-8" src="js/views/login-view.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/resthandler.js"></script>   
     <script type="text/javascript" charset="utf-8" src="js/views/browse-view.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/views/mainNavigation-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
 	
 	    
