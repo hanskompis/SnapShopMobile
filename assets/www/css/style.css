@@ -21,3 +21,12 @@ img
     background-color:#33CCFF; 
 }
 
+#loginButton
+{
+  border: 0;
+  background: url(../images/btn_general_normal.png) no-repeat;
+}
+
+
+
+
