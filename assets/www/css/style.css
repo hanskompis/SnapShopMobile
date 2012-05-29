@@ -30,6 +30,7 @@ img.logoImage
 	width: 90%;
 	height: 20%;
 }
+
 #loginButton
 {
   border: 0;
@@ -47,7 +48,25 @@ p.login_user
 	font-size: 18px;
 	color: #FFFFFF;
 }
+
 p.login_pass
+{
+	position: absolute;
+	left: 5%;
+	top: 45%;
+	font-family: 'RobotoMedium';
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+#loginButton:active
+{
+	width: 452px;
+   height: 78px;
+	background: url(../images/btn_general_active.png) no-repeat;
+}
+
+p.login_label
 {
 	position: absolute;
 	left: 5%;
