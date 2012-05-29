@@ -7,7 +7,8 @@
 
 body
 {
-    background-color:#505050; 
+    background-color:#FF5050; 
+    background-image: url(../images/bg_app.png);
 }
 
 img
@@ -19,6 +20,15 @@ img
 #mainNavigation 
 { 
     background-color:#33CCFF; 
+}
+
+#logoImage
+{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	width: 90%;
+	height: 20%;
 }
 
 #loginButton
@@ -55,10 +65,10 @@ input.pass
 }
 input.log
 {
-	font-family: 'RobotoRegular';
+  font-family: 'RobotoRegular';
   font-size: 24px;
   color: #FFFFFF;
-	box-shadow: -90px 111px #00000 40%;
+  box-shadow: -90px 111px #00000 40%;
 }
 
 
