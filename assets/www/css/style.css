@@ -23,10 +23,42 @@ img
 
 #loginButton
 {
+  
   border: 0;
-  width: 452;
-  height: 78;
+  width: 452px;
+  height: 78px;
   background: url(../images/btn_general_normal.png) no-repeat;
+  
+
+}
+
+p.login_label
+{
+	font-family: 'RobotoMedium';
+	font-size: 18px;
+	color: #FFFFFF;
+}
+input.user
+{
+	font-family: 'RobotoRegular';
+	font-size: 28px;
+	color: #1A1A1A;
+
+}
+input.pass
+{
+	font-family: 'RobotoRegular';
+	font-size: 28px;
+	color: #999999;
+	placeholder: 'Snap';
+
+}
+input.log
+{
+	font-family: 'RobotoRegular';
+  font-size: 24px;
+  color: #FFFFFF;
+	box-shadow: -90px 111px #00000 40%;
 }
 
 
