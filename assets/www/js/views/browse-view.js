@@ -31,21 +31,53 @@ App.Views.BrowseView = Backbone.View.extend({
 	        }
 	        var myPhotoSwipe = $("#Gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,  
 	        	getToolbar: function(){ 
-	        		return '<div class="ps-toolbar-close" style="padding-top: 12px;">Close</div>'},
+	        		return '<div style="padding-top: 12px;" id="toolbarDescription"></div>'
+	        	},
 			
 	        	getImageMetaData: function(el){
 				  return {
 					  description: el.getAttribute('description')
 				  }
-			    }
+			    },
 			    
-	        });
+			    getImageCaption: function(el){
+
+			    	var captionText, captionEl;
+			    	
+			    	if (el.nodeName === "IMG"){
+			    	  captionText = el.getAttribute('alt');
+			    	}
+			    	var i, j, childEl;
+			    	for (i=0, j=el.childNodes.length; i<j; i++){
+			    	  childEl = el.childNodes[i];
+			    	  if (el.childNodes[i].nodeName === 'IMG'){
+			    	    captionText = childEl.getAttribute('alt');
+			    	  }
+			    	}
+
+			    	captionEl = document.createElement('tr');
+//			    	captionEl.style.cssText = 'background: red; font-weight: bold; padding: 5px;';
+			    	
+			    	var closeElement = document.createElement('td'); 	
+			    	closeElement.appendChild(document.createTextNode("Close"));
+			    	captionEl.appendChild(closeElement);
+			    	
+			    	var titleElement = document.createElement('td');
+			    	titleElement.appendChild(document.createTextNode(captionText));		    	
+			    	captionEl.appendChild(titleElement);			    	
+			    	
+			    	return captionEl;
+
+			    	}
+    
+	        });//myPhotoSwipe
+	        
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
 //			  alert(myPhotoSwipe.getCurrentImage().caption);
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
-	        	alert(currentImage.metaData.description);
-
-		    });   
+	        	var description = currentImage.metaData.description;
+	        	$("#toolbarDescription").text(description);
+		    }); //onDisplay  
 		};		
 
 		if(App.myPictures) {
