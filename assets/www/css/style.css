@@ -24,6 +24,8 @@ img
 #loginButton
 {
   border: 0;
+  width: 452;
+  height: 78;
   background: url(../images/btn_general_normal.png) no-repeat;
 }
 
