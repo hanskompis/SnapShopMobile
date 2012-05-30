@@ -21,7 +21,13 @@ img.logoImage
 	position: relative;
 	left: 5%;
 	width: 90%;
-	
+	top: 10%;
+}
+
+.logonPart
+{
+	position: relative;
+	top: 20%
 }
 
 p.login_user
@@ -31,6 +37,7 @@ p.login_user
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
+	padding
 }
 
 p.login_pass
