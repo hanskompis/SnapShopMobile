@@ -11,7 +11,6 @@ App.Views.BrowseView = Backbone.View.extend({
 	    else {
 		    browseElement = Mustache.to_html($("#browse-template").html(), {checked2: "checked"});
 	    }
-        $(this.el).html(browseElement);
 		var getItemsService = new GetItemsService();
 
 		var self = this;
@@ -19,16 +18,19 @@ App.Views.BrowseView = Backbone.View.extend({
 		getItemsService.onItemsFetched = function(items) {
 			if(items.length === 0)
 				alert("No more pictures");
+
+			$(self.el).html(browseElement);
+
 			var count = items.length;
 	        var appended = 0;
 	        for(var i = 0; i < browseTableRow && appended < count; i++){
-	  	        var rowElement = Mustache.to_html($("#browse-table-row-template").html(), {});
-	  	        $(self.el).find(".gallery").append(rowElement);
+	  	        /*var rowElement = Mustache.to_html($("#browse-table-row-template").html(), {});
+	  	        $(self.el).find(".gallery").append(rowElement);*/
 	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
 	  	        	var index = items.at(appended).id;
 	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
 	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title"), description: items.at(appended).get("description")});
-	  		        $(self.el).find("tr:last").append(dataElement); 
+	  		        $(self.el).find(".gallery").append(dataElement); 
 	  		        appended++;
 	  	        }
 	        }
