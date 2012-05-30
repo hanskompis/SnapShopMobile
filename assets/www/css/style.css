@@ -1,102 +1,103 @@
-#tableData 
-{ 
-    width:90px;
-    height:90px;
-    background-color:#505050; 
+body {
+	
+	background-color: #505050;
+	background-image: url(../images/bg_app.png);
 }
 
-body
-{
-    background-color:#505050; 
-    background-image: url(../images/bg_app.png);
+#tableData {
+	
+	width: 90px;
+	height: 90px;
+	background-color: #505050;
 }
 
-#mainNavigation 
-{ 
-    background-color:#33CCFF; 
+#mainNavigation {
+	
+	background-color: #33CCFF;
 }
 
-img.logoImage
-{
+img.logoImage {
+	
 	position: relative;
 	left: 5%;
 	width: 90%;
 	top: 10%;
 }
 
-.logonPart
+div.logonPart
 {
 	position: relative;
 	top: 20%
 }
 
-p.login_user
-{
-	position: relative;
-	left: 5%;
+p.login_user {
+	
 	font-family: 'RobotoMedium';
 	font-size: 18px;
+	position: relative;
+	left: 5%;
 	color: #FFFFFF;
 	padding
 }
 
-p.login_pass
-{
-	position: relative;
-	left: 5%;
+p.login_pass {
+	
 	font-family: 'RobotoMedium';
 	font-size: 18px;
+	position: relative;
+	left: 5%;
 	color: #FFFFFF;
 }
 
-p.login_label
-{
-	position: relative;
-	left: 5%;
+p.login_label {
+	
 	font-family: 'RobotoMedium';
 	font-size: 18px;
+	position: relative;
+	left: 5%;
 	color: #FFFFFF;
 }
 
-input.user
-{
+input.user {
+	
+	font-family: 'RobotoRegular';
+	font-size: 28px;
 	position: relative;
 	left: 5%;
 	width: 90%;
-	font-family: 'RobotoRegular';
-	font-size: 28px;
 	color: #1A1A1A;
-
 }
-input.pass
-{
+
+input.pass {
+	
+	font-family: 'RobotoRegular';
+	font-size: 28px;
 	position: relative;
 	left: 5%;
 	width: 90%;
-	font-family: 'RobotoRegular';
-	font-size: 28px;
 	color: #999999;
 	placeholder: 'Snap';
-
-}
-input.log
-{
-  position: relative;
-  left: 5%;
-  width: 90%;
-  font-family: 'RobotoRegular';
-  font-size: 24px;
-  color: #FFFFFF;
-  box-shadow: -90px 111px #00000 40%;
-  background: url(../images/btn_general_normal.png) no-repeat;
 }
 
-#loginButton
-{
-  border: 0;
-  
+input.log {
+	
+	font-family: 'RobotoRegular';
+	font-size: 24px;
+	position: relative;
+	left: 5%;
+	width: 90%;
+	color: #FFFFFF;
+	box-shadow: -90px 111px #00000;
+	opacity: 0.4;
+	background: url(../images/btn_general_normal.png) no-repeat;
 }
-#loginButton:active
-{
+
+#loginButton {
+	
+	border: 0;
+}
+
+#loginButton:active {
+	
 	background: url(../images/btn_general_active.png) no-repeat;
 }
