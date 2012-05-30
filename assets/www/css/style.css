@@ -60,35 +60,26 @@ p.login_label {
 	left: 5%;
 	color: #FFFFFF;
 }
-
-input.user {
+input {
 	
 	font-family: 'RobotoRegular';
-	font-size: 28px;
+	font-size: 28px;	
+	color: #1A1A1A;
 	position: relative;
 	left: 5%;
 	width: 90%;
-	color: #1A1A1A;
+}
+input.user {
+	
 }
 
 input.pass {
 	
-	font-family: 'RobotoRegular';
-	font-size: 28px;
-	position: relative;
-	left: 5%;
-	width: 90%;
 	color: #999999;
-	placeholder: 'Snap';
 }
 
 input.log {
 	
-	font-family: 'RobotoRegular';
-	font-size: 24px;
-	position: relative;
-	left: 5%;
-	width: 90%;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.4;
