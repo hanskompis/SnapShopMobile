@@ -11,11 +11,13 @@ body {
 	background-color: #505050;
 }
 
-#mainNavigation {
+div.mainNavigation {
 	
 	background-color: #33CCFF;
 }
-
+a.galleryButton {
+	background: url(../images/tab_images_normal.png) no-repeat;
+}
 img.logoImage {
 	
 	position: relative;
