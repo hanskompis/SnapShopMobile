@@ -29,34 +29,17 @@ div.logonPart
 	position: relative;
 	top: 20%
 }
-
-p.login_user {
-	
-	font-family: 'RobotoMedium';
-	font-size: 18px;
-	position: relative;
-	left: 5%;
-	color: #FFFFFF;
-	padding
-}
-
-p.login_pass {
-	
+p {
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
 }
+p.login_user {}
+p.login_pass {}
+p.login_label {}
 
-p.login_label {
-	
-	font-family: 'RobotoMedium';
-	font-size: 18px;
-	position: relative;
-	left: 5%;
-	color: #FFFFFF;
-}
 input {
 	
 	font-family: 'RobotoRegular';
@@ -66,13 +49,13 @@ input {
 	left: 5%;
 	width: 90%;
 }
-input.user {
-	
-}
+
+input.user {}
 
 input.pass {
 	
 	color: #999999;
+
 }
 
 input.log {
