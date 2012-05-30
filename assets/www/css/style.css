@@ -67,7 +67,8 @@ input.log {
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.4;
-	background: url(../images/btn_general_normal.png) no-repeat;
+	background: transparent url(../images/btn_general_normal.png) no-repeat;
+	background-size: 100%;
 }
 
 #loginButton {
