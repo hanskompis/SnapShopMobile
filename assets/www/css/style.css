@@ -43,7 +43,7 @@ p.login_user
 {
 	position: absolute;
 	left: 5%;
-	top: 45%;
+	top: 35%;
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
@@ -53,7 +53,7 @@ p.login_pass
 {
 	position: absolute;
 	left: 5%;
-	top: 45%;
+	top: 50%;
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
@@ -80,7 +80,7 @@ input.user
 {
 	position: absolute;
 	left: 5%;
-	top: 60%;
+	top: 45%;
 	font-family: 'RobotoRegular';
 	font-size: 28px;
 	color: #1A1A1A;
@@ -90,7 +90,7 @@ input.pass
 {
 	position: absolute;
 	left: 5%;
-	top: 70%;
+	top: 60%;
 	font-family: 'RobotoRegular';
 	font-size: 28px;
 	color: #999999;
