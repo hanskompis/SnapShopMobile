@@ -7,15 +7,9 @@
 
 body
 {
-    background-color:#FF5050; 
+    background-color:#505050; 
     background-image: url(../images/bg_app.png);
 }
-
-img
-{ 
-    width:90px;
-    height:90px;
-}	
 
 #mainNavigation 
 { 
@@ -24,26 +18,16 @@ img
 
 img.logoImage
 {
-	position: absolute;
-	top: 20%;
+	position: relative;
 	left: 5%;
 	width: 90%;
-	height: 20%;
-}
-
-#loginButton
-{
-  border: 0;
-  width: 452px;
-  height: 78px;
-  background: url(../images/btn_general_normal.png) no-repeat;
+	
 }
 
 p.login_user
 {
-	position: absolute;
+	position: relative;
 	left: 5%;
-	top: 35%;
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
@@ -51,26 +35,17 @@ p.login_user
 
 p.login_pass
 {
-	position: absolute;
+	position: relative;
 	left: 5%;
-	top: 50%;
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
 }
 
-#loginButton:active
-{
-	width: 452px;
-   height: 78px;
-	background: url(../images/btn_general_active.png) no-repeat;
-}
-
 p.login_label
 {
-	position: absolute;
+	position: relative;
 	left: 5%;
-	top: 50%;
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	color: #FFFFFF;
@@ -78,9 +53,9 @@ p.login_label
 
 input.user
 {
-	position: absolute;
+	position: relative;
 	left: 5%;
-	top: 45%;
+	width: 90%;
 	font-family: 'RobotoRegular';
 	font-size: 28px;
 	color: #1A1A1A;
@@ -88,9 +63,9 @@ input.user
 }
 input.pass
 {
-	position: absolute;
+	position: relative;
 	left: 5%;
-	top: 60%;
+	width: 90%;
 	font-family: 'RobotoRegular';
 	font-size: 28px;
 	color: #999999;
@@ -99,15 +74,22 @@ input.pass
 }
 input.log
 {
-  position: absolute;
+  position: relative;
   left: 5%;
-  bottom: 5%; 
+  width: 90%;
   font-family: 'RobotoRegular';
   font-size: 24px;
   color: #FFFFFF;
   box-shadow: -90px 111px #00000 40%;
+  background: url(../images/btn_general_normal.png) no-repeat;
 }
 
-
-
-
+#loginButton
+{
+  border: 0;
+  
+}
+#loginButton:active
+{
+	background: url(../images/btn_general_active.png) no-repeat;
+}
