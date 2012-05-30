@@ -65,16 +65,10 @@ input.pass {
 input.log {
 	
 	color: #FFFFFF;
-<<<<<<< HEAD
 	box-shadow: -90px 111px #00000;
 	opacity: 0.4;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size: 100%;
-=======
-	text-shadow: 1px 0px 0 #000000;
-	opacity: 0.6;
-	background: url(../images/btn_general_normal.png) no-repeat;
->>>>>>> 058b09cb13cebd11cd5eebd464318e5ecb3799e0
 }
 
 #loginButton {
