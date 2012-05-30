@@ -3,7 +3,6 @@ var App = {
     myPictures: true,
     offset: 0,
 	globalUserProfile: null,
-	born: false, 
 	Collections: {},
 	Views: {},
 	Routers: {},

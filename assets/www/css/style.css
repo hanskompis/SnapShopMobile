@@ -62,7 +62,7 @@ p.login_pass
 #loginButton:active
 {
 	width: 452px;
-   height: 78px;
+    height: 78px;
 	background: url(../images/btn_general_active.png) no-repeat;
 }
 
