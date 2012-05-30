@@ -61,13 +61,15 @@ input.pass {
 input.log {
 	
 	color: #FFFFFF;
-	box-shadow: -90px 111px #00000;
-	opacity: 0.4;
+	text-shadow: 1px 0px 0 #000000;
+	opacity: 0.6;
 	background: url(../images/btn_general_normal.png) no-repeat;
 }
 
 #loginButton {
 	
+	width: 452px;
+	height: 78px;
 	border: 0;
 }
 
