@@ -16,8 +16,11 @@ App.Views.BrowseView = Backbone.View.extend({
 		var self = this;
 
 		getItemsService.onItemsFetched = function(items) {
-			if(items.length === 0)
-				alert("No more pictures");
+			if(items.length === 0){
+				//alert("No more pictures");
+				return;
+			}
+				
 
 			$(self.el).html(browseElement);
 
@@ -92,9 +95,16 @@ App.Views.BrowseView = Backbone.View.extend({
 	        	$("#toolbarDescription").text(description);
 	        	$("#closeButton").click(function() {
 	        		e.target.hide();
-	        		alert("Close");
+//	        		alert("Close");
 	        	});	
 		    }); //onDisplay  
+	        
+	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+	        	$("#closeButton").click(function() {
+        		e.target.hide();
+//        		alert("Close");
+        	  })
+			});
 		}; //onItemsFetched		
 
 		if(App.myPictures) {
@@ -114,7 +124,7 @@ App.Views.BrowseView = Backbone.View.extend({
      },
     
      myImagesAction: function() {
-    	 alert("myImagesAction");
+//    	 alert("myImagesAction");
 //    	 alert(App.globalUserProfile.get("user").id);
     	 App.offset = 0;
     	 App.myPictures = true;
@@ -122,7 +132,7 @@ App.Views.BrowseView = Backbone.View.extend({
      },
     
      allImagesAction: function() {
-    	 alert("allImagesAction");
+//    	 alert("allImagesAction");
 //    	 alert(App.globalUserProfile.get("user").id);
     	 App.offset = 0;
     	 App.myPictures = false;
@@ -130,14 +140,14 @@ App.Views.BrowseView = Backbone.View.extend({
      },
      
      nextImagesAction: function() {
-    	 alert("nextImagesAction");
+//    	 alert("nextImagesAction");
 //    	 alert(App.globalUserProfile.get("user").id);
     	 App.offset += 12;
          this.render();
      },
      
      previousImagesAction: function() {
-    	 alert("prevImagesAction");
+//    	 alert("prevImagesAction");
 //    	 alert(App.globalUserProfile.get("user").id);
     	 if(App.offset === 0)
     		 return;
