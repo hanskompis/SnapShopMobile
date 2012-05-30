@@ -57,21 +57,21 @@ p.login_label {
 	left: 5%;
 	color: #FFFFFF;
 }
-
-input.user {
+input {
 	
 	font-family: 'RobotoRegular';
-	font-size: 28px;
+	font-size: 28px;	
+	color: #1A1A1A;
+}
+input.user {
+	
 	position: relative;
 	left: 5%;
 	width: 90%;
-	color: #1A1A1A;
 }
 
 input.pass {
 	
-	font-family: 'RobotoRegular';
-	font-size: 28px;
 	position: relative;
 	left: 5%;
 	width: 90%;
@@ -81,8 +81,6 @@ input.pass {
 
 input.log {
 	
-	font-family: 'RobotoRegular';
-	font-size: 24px;
 	position: relative;
 	left: 5%;
 	width: 90%;
