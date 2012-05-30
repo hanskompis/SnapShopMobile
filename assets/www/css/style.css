@@ -12,12 +12,23 @@ body {
 }
 
 div.mainNavigation {
-	
+
 	background-color: #33CCFF;
+	background: url(../images/tab-bar.png) no-repeat;
+	background-size: 100%;
 }
-a.galleryButton {
-	background: url(../images/tab_images_normal.png) no-repeat;
+
+a.galleryButton:active {
+	
+	background: url(../images/tab_images_active.png) no-repeat;
 }
+
+a.profileButton:active {
+	background: url(../images/tab_profile_active.png) no-repeat;
+}
+
+a.cameraButton {}
+
 img.logoImage {
 	
 	position: relative;
@@ -26,8 +37,8 @@ img.logoImage {
 	top: 10%;
 }
 
-div.logonPart
-{
+div.logonPart {
+	
 	position: relative;
 	top: -5%;
 	left: 5%;
@@ -35,6 +46,7 @@ div.logonPart
 	padding-bottom: 0px;
 	padding-top: 5px;
 }
+
 p {
 	font-family: 'RobotoMedium';
 	font-size: 18px;
@@ -42,6 +54,7 @@ p {
 	left: 5%;
 	color: #FFFFFF;
 }
+
 p.login_user {}
 p.login_pass {}
 p.login_label {}
@@ -66,6 +79,8 @@ input.pass {
 
 input.log {
 	
+	border: 0;
+	font-size: 24px;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.7;
@@ -73,12 +88,8 @@ input.log {
 	background-size: 100%;
 }
 
-#loginButton {
-
-	border: 0;
-}
-
-#loginButton:active {
+input.log:active {
 	
-	background: url(../images/btn_general_active.png) no-repeat;
+	background: url(../images/btn_general_active.png) no-repeat;	
 }
+
