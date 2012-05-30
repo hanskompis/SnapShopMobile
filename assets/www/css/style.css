@@ -27,7 +27,11 @@ img.logoImage {
 div.logonPart
 {
 	position: relative;
-	top: 20%
+	top: -5%;
+	left: 5%;
+	width: 90%;
+	padding-bottom: 0px;
+	padding-top: 5px;
 }
 
 p.login_user {
@@ -37,7 +41,6 @@ p.login_user {
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
-	padding
 }
 
 p.login_pass {
