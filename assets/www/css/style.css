@@ -43,8 +43,6 @@ div.logonPart {
 	top: -5%;
 	left: 5%;
 	width: 90%;
-	padding-bottom: 0px;
-	padding-top: 5px;
 }
 
 p {
@@ -53,20 +51,31 @@ p {
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
+	padding: 0px;
 }
 
-p.login_user {}
-p.login_pass {}
-p.login_label {}
+p.loginUsername {
+	
+	padding: 0px;
+}
+
+p.loginPassword {
+	
+	padding: 0px;
+}
+
+p.loginLabel {}
 
 input {
 	
 	font-family: 'RobotoRegular';
-	font-size: 28px;	
+	font-size: 24px;	
 	color: #1A1A1A;
 	position: relative;
 	left: 5%;
 	width: 90%;
+	padding-top: 1px;
+	padding-bottom: 5px;
 }
 
 input.user {}
@@ -86,6 +95,7 @@ input.log {
 	opacity: 0.7;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size: 100%;
+	padding-top: 5px;
 }
 
 input.log:active {
