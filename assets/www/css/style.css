@@ -65,7 +65,6 @@ input.pass {
 }
 
 input.log {
-	
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.4;
@@ -73,14 +72,8 @@ input.log {
 	background-size: 100%;
 }
 
-#loginButton {
-	
-	width: 452px;
-	height: 78px;
-	border: 0;
-}
-
 #loginButton:active {
 	
 	background: url(../images/btn_general_active.png) no-repeat;
+	background-size: 100%;
 }
