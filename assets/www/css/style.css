@@ -62,28 +62,21 @@ input {
 	font-family: 'RobotoRegular';
 	font-size: 28px;	
 	color: #1A1A1A;
-}
-input.user {
-	
 	position: relative;
 	left: 5%;
 	width: 90%;
+}
+input.user {
+	
 }
 
 input.pass {
 	
-	position: relative;
-	left: 5%;
-	width: 90%;
 	color: #999999;
-	placeholder: 'Snap';
 }
 
 input.log {
 	
-	position: relative;
-	left: 5%;
-	width: 90%;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.4;
