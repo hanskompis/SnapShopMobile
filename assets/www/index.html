@@ -28,9 +28,10 @@
 </script>
 
 <script type="text/template" id="browse-template">
-  <ul id="Gallery">
+  <ul class="gallery">
  
   </ul>
+<br>
   <form>
     <input type="button" id="previousImagesButton" value="previous" />
     <input type="button" id="nextImagesButton" value="next" />
@@ -42,11 +43,10 @@
 </script>
 
 <script type="text/template" id="browse-table-row-template">
-  <tr></tr>
 </script>
 
 <script type="text/template" id="browse-table-data-template">
-  <td id="tableData"><a href="{{backendUrl}}content/{{id}}/type/original" description="{{description}}"><img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/></a></td> 
+  <li class="tableData"><a href="{{backendUrl}}content/{{id}}/type/original" description="{{description}}"><img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/></a></li> 
 </script>
 
 </head>

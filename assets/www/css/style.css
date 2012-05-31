@@ -1,14 +1,15 @@
+
 body {
 	
 	background-color: #505050;
 	background-image: url(../images/bg_app.png);
-}
+}	
 
-#tableData {
+.tableData { 
 	
-	width: 90px;
-	height: 90px;
-	background-color: #505050;
+    width:90px;
+    height:90px;
+    background-color:#505050; 
 }
 
 div.mainNavigation {
@@ -24,6 +25,7 @@ a.galleryButton:active {
 }
 
 a.profileButton:active {
+	
 	background: url(../images/tab_profile_active.png) no-repeat;
 }
 
@@ -46,6 +48,7 @@ div.logonPart {
 }
 
 p {
+	
 	font-family: 'RobotoMedium';
 	font-size: 18px;
 	position: relative;
@@ -57,6 +60,13 @@ p {
 p.loginUsername {
 	
 	padding: 0px;
+}
+
+#loginButton:active {
+	
+	width: 452px;
+    height: 78px;
+	background: url(../images/btn_general_active.png) no-repeat;
 }
 
 p.loginPassword {
@@ -83,7 +93,6 @@ input.user {}
 input.pass {
 	
 	color: #999999;
-
 }
 
 input.log {
@@ -102,4 +111,52 @@ input.log:active {
 	
 	background: url(../images/btn_general_active.png) no-repeat;	
 }
+
+input.log {
+	
+  position: absolute;
+  left: 5%;
+  bottom: 5%; 
+  font-family: 'RobotoRegular';
+  font-size: 24px;
+  color: #FFFFFF;
+  box-shadow: -90px 111px #00000 40%;
+}
+
+.gallery { 
+	
+	list-style: none; 
+	padding: 0; 
+	margin: 0; 
+}
+
+.gallery:after { 
+	
+	clear: both; 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	visibility: hidden; 
+}
+
+.gallery li { 
+	
+	float: left; 
+	width: 33.33333333%; 
+}
+
+.gallery li a { 
+	
+	display: block; 
+	margin: 5px; 
+	border: 1px solid #3c3c3c; 
+}
+
+.gallery li img { 
+	
+	display: block; 
+	width: 100%; 
+	height: auto; 
+}
+
 
