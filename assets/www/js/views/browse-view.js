@@ -40,7 +40,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	        
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,	
 	        	getToolbar: function(){ 
-	        		return '<div style="padding-top: 12px;" id="toolbarDescription"></div>'
+	        		return '<div class="imageDescription"></div>'
 	        	},
 			
 	        	getImageMetaData: function(el){
@@ -92,7 +92,7 @@ App.Views.BrowseView = Backbone.View.extend({
 //			  alert(myPhotoSwipe.getCurrentImage().caption);
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
 	        	var description = currentImage.metaData.description;
-	        	$("#toolbarDescription").text(description);
+	        	$(".imageDescription").text(description);
 	        	$("#closeButton").click(function() {
 	        		e.target.hide();
 //	        		alert("Close");

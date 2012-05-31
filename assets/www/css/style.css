@@ -19,6 +19,14 @@ div.mainNavigation {
 	background-size: 100%;
 }
 
+div.imageDescription {
+		
+	font-family: 'RobotoRegular';
+	font-size: 18px;
+	color: #FFFFFF;
+	padding-top: 12px;
+}
+
 a.galleryButton:active {
 	
 	background: url(../images/tab_images_active.png) no-repeat;
