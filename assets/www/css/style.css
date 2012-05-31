@@ -37,20 +37,22 @@ a.profileButton:active {
 	background: url(../images/tab_profile_active.png) no-repeat;
 }
 
-a.cameraButton {}
+a.cameraButton { position: relative; align: center; }
 
 img.logoImage {
 	
 	position: relative;
-	left: 5%;
-	width: 90%;
-	top: 10%;
+	left: 10%;
+	width: 80%;
+	top: 15%;
+	margin: 5px;
 }
 
 div.logonPart {
 	
 	position: relative;
-	top: -5%;
+	top: 7%;
+	margin: 0px;
 	left: 5%;
 	width: 90%;
 }
@@ -62,12 +64,12 @@ p {
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
-	padding: 0px;
+	margin: 0px;
 }
 
 p.loginUsername {
 	
-	padding: 0px;
+	margin: 0px;
 }
 
 #loginButton:active {
@@ -79,7 +81,7 @@ p.loginUsername {
 
 p.loginPassword {
 	
-	padding: 0px;
+	margin: 0px;
 }
 
 p.loginLabel {}
@@ -92,15 +94,16 @@ input {
 	position: relative;
 	left: 5%;
 	width: 90%;
-	padding-top: 1px;
-	padding-bottom: 5px;
+	margin: 0px;
 }
 
-input.user {}
+input.user { margin: 0px; margin-bottom: 20px; }
 
 input.pass {
 	
 	color: #999999;
+	margin: 0px;
+	margin-bottom: 20px;
 }
 
 input.log {
@@ -115,7 +118,8 @@ input.log {
 	opacity: 0.7;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size: 100%;
-	padding-top: 5px;
+	margin: 0px;
+	padding: 5px;
 }
 
 input.log:active {
