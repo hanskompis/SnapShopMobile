@@ -114,7 +114,7 @@ input.log:active {
 
 input.log {
 	
-  position: absolute;
+  position: relative;
   left: 5%;
   bottom: 5%; 
   font-family: 'RobotoRegular';
