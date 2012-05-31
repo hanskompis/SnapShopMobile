@@ -157,6 +157,7 @@ input.log:active {
 	padding: 0; 
 	margin: 0;
 	border: 0;
+	
 }
 
 .gallery:after { 
@@ -165,13 +166,14 @@ input.log:active {
 	content: "."; 
 	display: block; 
 	height: 0; 
-	visibility: hidden; 
+	visibility: hidden;
 }
 
 .gallery li { 
 	
 	float: left; 
-	width: 33.33333333%; 
+	width: 33.33333333%;
+	background-color: transparent;
 }
 
 .gallery li a { 
@@ -185,7 +187,7 @@ input.log:active {
 	
 	display: block; 
 	width: 100%;
-	height: 100%; 
+	height: 90%; 
 }
 
 
