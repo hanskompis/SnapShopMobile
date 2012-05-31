@@ -72,8 +72,6 @@ App.Views.BrowseView = Backbone.View.extend({
 			    	$(closeButton).attr('id', 'closeButton');
 			    	$(closeButton).css({backgroundColor: '#707070'});
 			    	$(closeButton).css({border: 'none'});
-			    	$(closeButton).css({font-family: 'RobotoRegular'});
-			    	$(closeButton).css({font-size: '18px'});
 			    	//alert(closeButton.getAttribute('id'));
 			    	
 			    	closeButton.appendChild(document.createTextNode("Close"));
