@@ -13,13 +13,14 @@ body {
     background-color:#505050; 
 }
 
-div.mainNavigation {
+/*div.mainNavigation {
 
 	background-color: #33CCFF;
 	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
 	width: 100%;
-}
+}*/
+
 
 div.imageDescription {
 		
@@ -27,6 +28,14 @@ div.imageDescription {
 	font-size: 18px;
 	color: #FFFFFF;
 	padding-top: 12px;
+}
+
+table.mainNavigationList {
+	
+	background: url(../images/tab-bar.png) no-repeat;
+	background-size: 100%;
+	width: 100%;
+	text-align: center;
 }
 
 a.galleryButton:active {
@@ -44,6 +53,8 @@ a.cameraButton {
 	position: relative;
 
 }
+
+
 
 img.logoImage {
 	
