@@ -63,7 +63,7 @@ div.logonPart {
 p {
 	
 	font-family: 'RobotoMedium';
-	font-size: 18px;
+	font-size: 16px;
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
@@ -94,7 +94,7 @@ p.loginLabel {}
 input {
 	
 	font-family: 'RobotoRegular';
-	font-size: 24px;	
+	font-size: 20px;	
 	color: #1A1A1A;
 	position: relative;
 	left: 5%;
@@ -118,7 +118,7 @@ input.pass {
 input.log {
 	
 	font-family: 'RobotoRegular';
-	font-size: 20px;
+	font-size: 18px;
 	position: relative;
     left: 5%;
   	border: 0;
@@ -133,7 +133,9 @@ input.log {
 
 input.log:active {
 	
-	background: url(../images/btn_general_active.png) no-repeat;	
+	background: url(../images/btn_general_active.png) no-repeat;
+	margin: 0px;
+	padding: 10px;	
 }
 
 .gallery { 
