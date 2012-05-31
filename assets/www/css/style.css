@@ -29,15 +29,14 @@ div.imageDescription {
 	color: #FFFFFF;
 	padding-top: 12px;
 }
-
 table.mainNavigationList {
 	
 	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
 	width: 100%;
 	text-align: center;
-}
 
+}
 a.galleryButton:active {
 	
 	background: url(../images/tab_images_active.png) no-repeat;
@@ -156,7 +155,8 @@ input.log:active {
 
 	list-style: none; 
 	padding: 0; 
-	margin: 0; 
+	margin: 0;
+	border: 0;
 }
 
 .gallery:after { 
@@ -184,8 +184,8 @@ input.log:active {
 .gallery li img { 
 	
 	display: block; 
-	width: 90px;
-	height: 90px; 
+	width: 100%;
+	height: 100%; 
 }
 
 
