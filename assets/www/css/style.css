@@ -18,8 +18,7 @@ div.mainNavigation {
 	background-color: #33CCFF;
 	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
-	display: table-row;
-	margin: 0px;
+	width: 100%;
 }
 
 div.imageDescription {
@@ -40,7 +39,11 @@ a.profileButton:active {
 	background: url(../images/tab_profile_active.png) no-repeat;
 }
 
-a.cameraButton { position: relative; align: center; }
+a.cameraButton { 
+	
+	position: relative;
+
+}
 
 img.logoImage {
 	
