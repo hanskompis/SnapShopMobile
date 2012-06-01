@@ -2,7 +2,8 @@ App.Routers.Main = Backbone.Router.extend({
 
   routes: {
     "": "login",
-    "browse": "browse" 
+    "browse": "browse",
+    "takepic": "takepic"
   },
   
   login: function(){
@@ -17,6 +18,11 @@ App.Routers.Main = Backbone.Router.extend({
 	var mainNavigationView = new App.Views.MainNavigationView ({el: $("#topContainer")});
 	mainNavigationView.render();
 	
+  }
+  
+  takepic: function() {
+	  var uploadView = new App.Views.UploadView ({el: $("container")});
+	  uploadView.render();
   }
   
 });
