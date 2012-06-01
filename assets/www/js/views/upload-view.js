@@ -4,7 +4,8 @@ App.Views.UploadView = Backbone.View.extend({
      $(this.el).html(uploadElement);
    },
    events: {
-	   "click #uploadButton": "uploadAction"
+	   "click #uploadButton": "uploadAction",
+	   "click #closeButton" : "browse"
    },
    uploadAction: function() {
 	   alert("uploading...");

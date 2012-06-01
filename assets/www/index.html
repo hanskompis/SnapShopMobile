@@ -7,13 +7,14 @@
 <link rel="stylesheet" href="css/photoswipe.css" type="text/css">
 
 <script type="text/template" id="login-template">
+
   <img src="images/login_logo.png" class="logoImage">
   <div class="logonPart">
       <p class="loginUsername">Username</p>
 	  <input type="text" class="user" id="username" />
       <p class="loginPassword">Password</p>
 	  <input type="password" id="password" class="pass" placeholder="Snap Shop password"/>
-      <input type="button" id="loginButton" class="log" value="Log in"/>
+      <input type="button" id="loginButton" class="log" value="Log in"/> // Should be replaced as <a href....
   </div>
 </script>
 
@@ -34,8 +35,9 @@
 <script type="text/template" id="upload-picture-template">
 
   <div class="uploadView">
-
-      <p>Title</p>
+	<a href="javascript:;" class="closeButton"><img src="images/btn_titlebar_normal.png"</a>
+      
+	  <p>Title</p>
 	  <input type="text" class="imageTitle" />
 
       <p>Description</p>
@@ -47,15 +49,12 @@
       <p>Title category 2</p>
 	  <input type="text" class="imageCategory2" />
 
-
       <input type="button" id="uploadButton" class="upload" value="Upload"/>
 
   </div>
 
-
-
-
 </script>
+
 <script type="text/template" id="browse-template">
   <ul class="gallery">
  
@@ -106,8 +105,8 @@
 	<script type="text/javascript" charset="utf-8" src="js/resthandler.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/browse-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/mainNavigation-view.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/views/upload-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-
 
 	<script type="text/javascript">
 		$(document).ready(App.init());
