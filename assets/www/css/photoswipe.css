@@ -63,6 +63,15 @@ div.ps-carousel-item-error
 
 
 /* Caption */
+
+.ps-caption
+
+{
+  opacity:0.8 !important;
+  display:block !important;
+}
+
+
 div.ps-caption
 { 
 	background: #000000;
