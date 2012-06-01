@@ -8,7 +8,7 @@ App.Views.MainNavigationView = Backbone.View.extend({
      },
      
    openCameraAction: function() {
-  	 alert("camera pressed!");
+
   	 Backbone.history.navigate("opencamera", true);
    }
 	   

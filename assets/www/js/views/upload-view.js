@@ -5,10 +5,14 @@ App.Views.UploadView = Backbone.View.extend({
    },
    events: {
 	   "click #uploadButton": "uploadAction",
-	   "click #closeButton" : "browse"
+	   "click #cancelUpload": "cancelUploadAction"
    },
    uploadAction: function() {
 	   alert("uploading...");
-	   };
+	   },
+	   
+   cancelUploadAction: function() {
+		   Backbone.history.navigate("browse", true);
+	   }
    	   
 });
