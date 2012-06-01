@@ -22,7 +22,6 @@ App.Routers.Main = Backbone.Router.extend({
   
   opencamera: function() {
 	  var uploadView = new App.Views.UploadView ({el: $("#container")});
-	  alert("kaak");
 	  uploadView.render();
   }
   

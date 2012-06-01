@@ -52,6 +52,14 @@ a.cameraButton {
 	position: relative;
 
 }
+a.cancelUploadButton {
+	
+	font-family: 'RobotoMedium';
+	font-size: 16px;
+	color: #FFFFFF;
+	margin: 0px;
+	background: url(../images/btn_titlebar_normal.png);
+}
 
 
 
