@@ -10,6 +10,5 @@ App.Views.UploadView = Backbone.View.extend({
    uploadAction: function() {
 	   alert("uploading...");
 	   };
-   }
-	   
+   	   
 });

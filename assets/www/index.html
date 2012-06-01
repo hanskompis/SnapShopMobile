@@ -14,7 +14,7 @@
 	  <input type="text" class="user" id="username" />
       <p class="loginPassword">Password</p>
 	  <input type="password" id="password" class="pass" placeholder="Snap Shop password"/>
-      <input type="button" id="loginButton" class="log" value="Log in"/> // Should be replaced as <a href....
+      <input type="button" id="loginButton" class="log" value="Log in"/>
   </div>
 </script>
 
@@ -23,9 +23,21 @@
   <div class="mainNavigation">
 	<table class="mainNavigationList">
 		<tr>
-			<td><a href="javascript:;" class="galleryButton"><img src="images/tab_images_normal.png"</a></td>
-			<td><a href="javascript:;" class="cameraButton"><img src="images/tab_shutter.png"</a></td>
-			<td><a href="javascript:;" class="profileButton"><img src="images/tab_profile_normal.png"</a></td>
+			<td>
+				<a href="javascript:;" id="galleryButton" class="galleryButton">
+					<img src="images/tab_images_normal.png">
+				</a>
+			</td>
+			<td>
+				<a href="javascript:;" id="cameraButton" >
+					<img src="images/tab_shutter.png">
+				</a>
+			</td>
+			<td>
+				<a href="javascript:;" id="profileButton" class="profileButton">
+					<img src="images/tab_profile_normal.png">
+				</a>
+			</td>
 		</tr>
 	</table>
   </div>
@@ -35,7 +47,7 @@
 <script type="text/template" id="upload-picture-template">
 
   <div class="uploadView">
-	<a href="javascript:;" class="closeButton"><img src="images/btn_titlebar_normal.png"</a>
+	<a href="javascript:;" id="cancelUpload" class="cancelButton"><img src="images/btn_titlebar_normal.png"</a>
       
 	  <p>Title</p>
 	  <input type="text" class="imageTitle" />
@@ -49,7 +61,7 @@
       <p>Title category 2</p>
 	  <input type="text" class="imageCategory2" />
 
-      <input type="button" id="uploadButton" class="upload" value="Upload"/>
+      <input type="button" id="uploadButton" class="uploadButton" value="Upload"/>
 
   </div>
 

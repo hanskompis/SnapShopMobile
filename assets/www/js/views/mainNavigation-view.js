@@ -3,5 +3,13 @@ App.Views.MainNavigationView = Backbone.View.extend({
      var mainNavigationElement = Mustache.to_html($("#main-navigation-template").html(), {});
      $(this.el).html(mainNavigationElement);
    },
+   events: {
+       "click #cameraButton": "openCameraAction"   
+     },
+     
+   openCameraAction: function() {
+  	 alert("camera pressed!");
+  	 Backbone.history.navigate("opencamera", true);
+   }
 	   
 });
