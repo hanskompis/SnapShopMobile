@@ -88,11 +88,17 @@ App.Views.BrowseView = Backbone.View.extend({
     
 	        });//myPhotoSwipe
 	        
+	        
+	        var show = false;
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
 //			  alert(myPhotoSwipe.getCurrentImage().caption);
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
 	        	var description = currentImage.metaData.description;
 	        	$(".imageDescription").text(description);
+	        	
+	        	$(".imageDescription").hide();
+	        	showDescription = false;
+	        	
 	        	$("#closeButton").click(function() {
 	        		e.target.hide();
 //	        		alert("Close");
@@ -105,6 +111,20 @@ App.Views.BrowseView = Backbone.View.extend({
 //        		alert("Close");
         	  })
 			});
+	        
+	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onTouch, function(e){
+	        	if (e.action === 'tap'){
+	        		if(showDescription) {
+	        			show = false;
+	        			$(".imageDescription").hide();
+	        		}
+	        		else {
+	        			showDescription = true; 
+	        			$(".imageDescription").show();
+	        		}
+	        	}
+	        });	        
+	        
 		}; //onItemsFetched		
 
 		if(App.myPictures) {
