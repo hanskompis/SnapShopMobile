@@ -2,6 +2,13 @@ App.Views.UploadView = Backbone.View.extend({
    render: function() {
      var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
      $(this.el).html(uploadElement);
+     
+     var getItemsService = new GetItemsService();
+	 getItemsService.onItemsFetched = function(categories) {
+		 alert(categories);
+	 }
+	 getItemsService.getCategoryList();
+     
    },
    events: {
 	   "click #uploadButton": "uploadAction",
