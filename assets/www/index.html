@@ -20,7 +20,6 @@
 
 <script type="text/template" id="main-navigation-template">
 
-  <div class="mainNavigation">
 	<table class="mainNavigationList">
 		<tr>
 			<td>
@@ -40,35 +39,35 @@
 			</td>
 		</tr>
 	</table>
-  </div>
 
 </script>
 
 <script type="text/template" id="upload-picture-template">
 
   <div class="submitPart">
+
 	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
-      
-	  <p>Title</p>
-	  <input type="text" class="imageTitle" />
-
-      <p>Description</p>
-	  <input type="text" class="imageDescription" />
-      
-      <p>Title category 1</p>
-	  <select id="imageCategory1" class="categoryOptions1">
-			<option>Category 1</option>
-			<option>Category 2</option>
-			<option>Category 3</option>
-	  </select>
-	  <p>Title category 2</p>
-	  <select id="imageCategory1" class="categoryOptions2">
-			<option>Category 1</option>
-			<option>Category 2</option>
-			<option>Category 3</option>
-	  </select>
-
-      <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+	<p>Title</p>
+	<input type="text" class="imageTitle" />
+    
+	<p>Description</p>
+	<input type="text" class="imageDescription" />
+    
+	<p>Title category 1</p>
+	<select id="imageCategory1" class="categoryOptions1">
+		<option>{{optionTest}}</option>
+		<option>Category 2</option>
+		<option>Category 3</option>
+	</select>
+	
+	<p>Title category 2</p>
+	<select id="imageCategory1" class="categoryOptions2">
+		<option>Category 1</option>
+		<option>Category 2</option>
+		<option>Category 3</option>
+	</select>
+    
+	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
 
   </div>
 

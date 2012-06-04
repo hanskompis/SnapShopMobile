@@ -13,15 +13,6 @@ body {
     background-color:#505050; 
 }
 
-/*div.mainNavigation {
-
-	background-color: #33CCFF;
-	background: url(../images/tab-bar.png) no-repeat;
-	background-size: 100%;
-	width: 100%;
-}*/
-
-
 div.imageDescription {
 		
 	font-family: 'RobotoRegular';
@@ -151,6 +142,7 @@ input.log:active {
 	background: url(../images/btn_general_active.png) no-repeat;
 	background-size: 100%;	
 }
+
 select {
 	
 	font-family: 'RobotoRegular';
@@ -159,7 +151,7 @@ select {
     left: 5%;
     background-size: 100%;
   	border: 0;
-  	margin: 0px;
+  	margin: 5px;
   	padding: 10px
 }
 
