@@ -97,12 +97,6 @@ p.loginUsername {
 	margin-bottom: 10px;
 }
 
-#loginButton:active {
-	
-	width: 452px;
-    height: 78px;
-	background: url(../images/btn_general_active.png) no-repeat;
-}
 
 p.loginPassword {
 	
@@ -155,8 +149,7 @@ input.log {
 input.log:active {
 	
 	background: url(../images/btn_general_active.png) no-repeat;
-	margin: 0px;
-	padding: 10px;	
+	background-size: 100%;	
 }
 
 .gallery { 
