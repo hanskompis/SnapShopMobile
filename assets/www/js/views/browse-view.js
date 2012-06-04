@@ -38,7 +38,8 @@ App.Views.BrowseView = Backbone.View.extend({
 	  	        }
 	        }
 	        
-	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , enableKeyboard: false,	
+	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
+	        	enableKeyboard: false, 	
 	        	getToolbar: function(){ 
 	        		return '<div class="imageDescription"></div>'
 	        	},
