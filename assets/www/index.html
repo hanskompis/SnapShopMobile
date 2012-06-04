@@ -9,12 +9,12 @@
 <script type="text/template" id="login-template">
 
   <img src="images/login_logo.png" class="logoImage">
-  <div class="logonPart">
+  <div class="submitPart">
       <p class="loginUsername">Username</p>
 	  <input type="text" class="user" id="username" />
       <p class="loginPassword">Password</p>
 	  <input type="password" id="password" class="pass" placeholder="Snap Shop password"/>
-      <input type="button" id="loginButton" class="log" value="Log in"/>
+      <input type="button" id="loginButton" class="submitButton" value="Log in"/>
   </div>
 </script>
 
@@ -46,7 +46,7 @@
 
 <script type="text/template" id="upload-picture-template">
 
-  <div class="uploadView">
+  <div class="submitPart">
 	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
       
 	  <p>Title</p>
@@ -56,12 +56,19 @@
 	  <input type="text" class="imageDescription" />
       
       <p>Title category 1</p>
-	  <input type="text" class="imageCategory1" />
+	  <select id="imageCategory1" class="categoryOptions1">
+			<option>Category 1</option>
+			<option>Category 2</option>
+			<option>Category 3</option>
+	  </select>
+	  <p>Title category 2</p>
+	  <select id="imageCategory1" class="categoryOptions2">
+			<option>Category 1</option>
+			<option>Category 2</option>
+			<option>Category 3</option>
+	  </select>
 
-      <p>Title category 2</p>
-	  <input type="text" class="imageCategory2" />
-
-      <input type="button" id="uploadButton" class="uploadButton" value="Upload"/>
+      <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
 
   </div>
 

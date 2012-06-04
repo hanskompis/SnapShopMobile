@@ -72,7 +72,7 @@ img.logoImage {
 	margin: 5px;
 }
 
-div.logonPart {
+div.submitPart {
 	
 	position: relative;
 	top: 7%;
@@ -130,7 +130,7 @@ input.pass {
 	margin-bottom: 20px;
 }
 
-input.log {
+input.submitButton {
 	
 	font-family: 'RobotoRegular';
 	font-size: 18px;
@@ -150,6 +150,17 @@ input.log:active {
 	
 	background: url(../images/btn_general_active.png) no-repeat;
 	background-size: 100%;	
+}
+select {
+	
+	font-family: 'RobotoRegular';
+	font-size: 18px;
+	position: relative;
+    left: 5%;
+    background-size: 100%;
+  	border: 0;
+  	margin: 0px;
+  	padding: 10px
 }
 
 .gallery { 
