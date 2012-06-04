@@ -38,6 +38,23 @@ var GetItemsService = Class.extend({
 			
 		});
 		return items;
+	},
+	
+	getCategoryList : function() {
+		var self = this;
+		var categories = new App.Models.Categories();
+		
+		categories.fetch({
+			success : function(model, response) {
+//				alert("items.fetch.success");
+				self.onItemsFetched(categories);
+			},
+			error : function(model, response) {
+				alert("categories.fetch.error");
+			}
+			
+		});
+		return categories;
 	}
 });
 

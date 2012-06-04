@@ -7,13 +7,14 @@
 <link rel="stylesheet" href="css/photoswipe.css" type="text/css">
 
 <script type="text/template" id="login-template">
+
   <img src="images/login_logo.png" class="logoImage">
-  <div class="logonPart">
+  <div class="submitPart">
       <p class="loginUsername">Username</p>
 	  <input type="text" class="user" id="username" />
       <p class="loginPassword">Password</p>
 	  <input type="password" id="password" class="pass" placeholder="Snap Shop password"/>
-      <input type="button" id="loginButton" class="log" value="Log in"/>
+      <input type="button" id="loginButton" class="submitButton" value="Log in"/>
   </div>
 </script>
 
@@ -22,11 +23,53 @@
   <div class="mainNavigation">
 	<table class="mainNavigationList">
 		<tr>
-			<td><a href="javascript:;" class="galleryButton"><img src="images/tab_images_normal.png"</a></td>
-			<td><a href="javascript:;" class="cameraButton"><img src="images/tab_shutter.png"</a></td>
-			<td><a href="javascript:;" class="profileButton"><img src="images/tab_profile_normal.png"</a></td>
+			<td>
+				<a href="javascript:;" id="galleryButton" class="galleryButton">
+					<img src="images/tab_images_normal.png">
+				</a>
+			</td>
+			<td>
+				<a href="javascript:;" id="cameraButton" >
+					<img src="images/tab_shutter.png">
+				</a>
+			</td>
+			<td>
+				<a href="javascript:;" id="profileButton" class="profileButton">
+					<img src="images/tab_profile_normal.png">
+				</a>
+			</td>
 		</tr>
 	</table>
+  </div>
+
+</script>
+
+<script type="text/template" id="upload-picture-template">
+
+  <div class="submitPart">
+	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
+      
+	  <p>Title</p>
+	  <input type="text" class="imageTitle" />
+
+      <p>Description</p>
+	  <input type="text" class="imageDescription" />
+      
+      <p>Title category 1</p>
+	  <select id="imageCategory1" class="categoryOptions1">
+			<option>Category 1</option>
+			<option>Category 2</option>
+			<option>Category 3</option>
+	  </select>
+	  <p>Title category 2</p>
+	  <select id="imageCategory1" class="categoryOptions2">
+			<option>Category 1</option>
+			<option>Category 2</option>
+			<option>Category 3</option>
+	  </select>
+
+      <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+
   </div>
 
 </script>
@@ -76,13 +119,15 @@
 	<script type="text/javascript" charset="utf-8" src="js/config.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/models/loginmodel.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/models/usermodel.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/models/categorymodel.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/sessionhandler.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/login-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/resthandler.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/browse-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/mainNavigation-view.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/camerafunctions.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/views/upload-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-
 
 	<script type="text/javascript">
 		$(document).ready(App.init());

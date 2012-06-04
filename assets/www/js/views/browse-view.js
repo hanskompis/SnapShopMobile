@@ -121,9 +121,10 @@ App.Views.BrowseView = Backbone.View.extend({
 	   "click #myImagesButton": "myImagesAction",
        "click #allImagesButton": "allImagesAction",
        "click #nextImagesButton": "nextImagesAction",
-       "click #previousImagesButton": "previousImagesAction"
+       "click #previousImagesButton": "previousImagesAction"    
      },
     
+     
      myImagesAction: function() {
 //    	 alert("myImagesAction");
 //    	 alert(App.globalUserProfile.get("user").id);

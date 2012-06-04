@@ -52,6 +52,14 @@ a.cameraButton {
 	position: relative;
 
 }
+a.cancelUploadButton {
+	
+	font-family: 'RobotoMedium';
+	font-size: 16px;
+	color: #FFFFFF;
+	margin: 0px;
+	background: url(../images/btn_titlebar_normal.png);
+}
 
 
 
@@ -64,7 +72,7 @@ img.logoImage {
 	margin: 5px;
 }
 
-div.logonPart {
+div.submitPart {
 	
 	position: relative;
 	top: 7%;
@@ -89,12 +97,6 @@ p.loginUsername {
 	margin-bottom: 10px;
 }
 
-#loginButton:active {
-	
-	width: 452px;
-    height: 78px;
-	background: url(../images/btn_general_active.png) no-repeat;
-}
 
 p.loginPassword {
 	
@@ -128,7 +130,7 @@ input.pass {
 	margin-bottom: 20px;
 }
 
-input.log {
+input.submitButton {
 	
 	font-family: 'RobotoRegular';
 	font-size: 18px;
@@ -147,8 +149,18 @@ input.log {
 input.log:active {
 	
 	background: url(../images/btn_general_active.png) no-repeat;
-	margin: 0px;
-	padding: 10px;	
+	background-size: 100%;	
+}
+select {
+	
+	font-family: 'RobotoRegular';
+	font-size: 20px;
+	position: relative;
+    left: 5%;
+    background-size: 100%;
+  	border: 0;
+  	margin: 0px;
+  	padding: 10px
 }
 
 .gallery { 
