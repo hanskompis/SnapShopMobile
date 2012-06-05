@@ -7,24 +7,23 @@ App.Routers.Main = Backbone.Router.extend({
   },
   
   login: function(){
-    var loginView = new App.Views.LoginView ({el: $("#container")});
+    var loginView = new App.Views.LoginView ({el: $("#mainContainer")});
     loginView.render();
   },
   
   browse: function(){
 //	$("#container").empty();  
-	var browseView = new App.Views.BrowseView ({el: $("#container")});
-	browseView.render();
-	var mainNavigationView = new App.Views.MainNavigationView ({el: $("#topContainer")});
+	var mainNavigationView = new App.Views.MainNavigationView ({el: $("#naviContainer")});
+	var browseView = new App.Views.BrowseView ({el: $("#mainContainer")});
 	mainNavigationView.render();
-	
+	browseView.render();
   },
   
   opencamera: function() {
-	  $("#topContainer").empty();
-	  var uploadView = new App.Views.UploadView ({el: $("#container")});
+	  $("#naviContainer").empty();
+	  var uploadView = new App.Views.UploadView ({el: $("#mainContainer")});
 	  uploadView.render();
-	   //takePic();
+	  takePic();
   }
   
 });

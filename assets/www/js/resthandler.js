@@ -46,7 +46,7 @@ var GetItemsService = Class.extend({
 		
 		categories.fetch({
 			success : function(model, response) {
-//				alert("items.fetch.success");
+//				alert("categories.fetch.success");
 				self.onItemsFetched(categories);
 			},
 			error : function(model, response) {

@@ -1,5 +1,5 @@
-App.Models.Login = Backbone.Model.extend({
-	url: backendUrl + "login",
+App.Models.Conntent = Backbone.Model.extend({
+	url: backendUrl + "content",
 	title: "",
 	description: "",
 	maincategory: "",
