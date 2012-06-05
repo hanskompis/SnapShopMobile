@@ -32,7 +32,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
 	  	        	var index = items.at(appended).id;
 	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
-	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title"), description: items.at(appended).get("description")});
+	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
 	  		        $(self.el).find(".gallery").append(dataElement); 
 	  		        appended++;
 	  	        }
@@ -46,7 +46,7 @@ App.Views.BrowseView = Backbone.View.extend({
 			
 	        	getImageMetaData: function(el){
 				  return {
-					  description: el.getAttribute('description')
+					  pictureId: el.getAttribute('pictureId')
 				  }
 			    },
 			    
@@ -92,14 +92,15 @@ App.Views.BrowseView = Backbone.View.extend({
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
 //			  alert(myPhotoSwipe.getCurrentImage().caption);
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
-	        	var description = currentImage.metaData.description;
+	        	var pictureId = currentImage.metaData.pictureId;
+	        	var description = self.getImageAttributeValue(items, pictureId, "description");
 	        	$(".imageDescription").text(description);
 	        	$("#closeButton").click(function() {
 	        		e.target.hide();
 //	        		alert("Close");
 	        	});	
-		    }); //onDisplay  
-	        
+		    });//onDisplay
+       
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
 	        	$("#closeButton").click(function() {
         		e.target.hide();
@@ -107,6 +108,8 @@ App.Views.BrowseView = Backbone.View.extend({
         	  })
 			});
 		}; //onItemsFetched		
+		
+
 
 		if(App.myPictures) {
 			getItemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
@@ -115,6 +118,15 @@ App.Views.BrowseView = Backbone.View.extend({
 			getItemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
 		}
      }, //render
+     
+     getImageAttributeValue: function(items, pictureId, attributeName) {
+     	$.each(items, function(index, value){
+//     		if(value.get("id")===pictureId){
+//     			return value.get(attributeName);
+//     		}
+     		alert(value.id);
+     	})
+     },
      
 
      events: {
