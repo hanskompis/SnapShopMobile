@@ -5,8 +5,8 @@ function uploadPhoto(imageURI) {
     options.mimeType="image/jpeg";
 
     var params = new Object();
-    params.title = "test picture";
-    params.description = "test description";
+    params.title = $("#imageTitle").val();
+    params.description = $("#imageDescription").val();
 
     options.params = params;
 
