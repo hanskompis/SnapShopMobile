@@ -1,3 +1,3 @@
-App.Models.Categories = Backbone.Model.extend({
+App.Collections.Categories = Backbone.Collection.extend({
 	url: backendUrl + "categories"
 });

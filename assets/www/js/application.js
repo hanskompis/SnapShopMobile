@@ -4,6 +4,7 @@ var App = {
     offset: 0,
 	globalUserProfile: null,
 	picturePath: null,
+	categories: null,
 	Collections: {},
 	Views: {},
 	Routers: {},

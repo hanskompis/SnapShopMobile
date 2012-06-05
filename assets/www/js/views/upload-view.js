@@ -3,20 +3,14 @@ App.Views.UploadView = Backbone.View.extend({
 	 var kaak = "Huu";
      var uploadElement = Mustache.to_html($("#upload-picture-template").html(), { optionTest : kaak});
      $(this.el).html(uploadElement);
-     
-     var getItemsService = new GetItemsService();
-	 getItemsService.onItemsFetched = function(categories) {
-		 alert(categories);
-	 }
-	 getItemsService.getCategoryList();
-     
+     alert(App.categories);
    },
    events: {
 	   "click #uploadButton": "uploadAction",
 	   "click #cancelUpload": "cancelUploadAction"
    },
    uploadAction: function() {
-
+		 
 	   alert("uploading...");
 	   uploadPhoto(App.picturePath);
 	   },

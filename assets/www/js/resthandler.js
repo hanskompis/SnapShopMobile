@@ -42,17 +42,18 @@ var GetItemsService = Class.extend({
 	
 	getCategoryList : function() {
 		var self = this;
-		var categories = new App.Models.Categories();
+		var categories = new App.Collections.Categories();
 		
 		categories.fetch({
 			success : function(model, response) {
 //				alert("categories.fetch.success");
 				self.onItemsFetched(categories);
+				//App.categories = categories;
 			},
 			error : function(model, response) {
 				alert("categories.fetch.error");
 			}
-			
+		
 		});
 		return categories;
 	}
