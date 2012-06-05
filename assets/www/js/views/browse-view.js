@@ -21,7 +21,7 @@ App.Views.BrowseView = Backbone.View.extend({
 			
 			self.appendImagesToList(items);
 	        
-	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
+	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false, 
 	        	enableKeyboard: false, 	
 	        	getToolbar: function(){ 
 	        		return '<div class="imageDescription"></div><div class="categoryList"></div><div class="infoList"></div>'
@@ -33,6 +33,8 @@ App.Views.BrowseView = Backbone.View.extend({
 				  }
 			    },
 			    
+			    
+			    //TODO: tämä koko metodi uusitaan siinä vaiheessa, kun tehdään muotoilut
 			    getImageCaption: function(el){
 
 			    	var captionText, captionEl;
@@ -40,6 +42,7 @@ App.Views.BrowseView = Backbone.View.extend({
 			    	if (el.nodeName === "IMG"){
 			    	  captionText = el.getAttribute('alt');
 			    	}
+			    	
 			    	var i, j, childEl;
 			    	for (i=0, j=el.childNodes.length; i<j; i++){
 			    	  childEl = el.childNodes[i];
@@ -159,9 +162,9 @@ App.Views.BrowseView = Backbone.View.extend({
        var appended = 0;
        for(var i = 0; i < browseTableRow && appended < count; i++){
 	     for(var j = 0; j < browseTableCol && appended < count; j++){
-	       var index = items.at(appended).id;
+	       var id = items.at(appended).id;
 	       var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
-	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
+	    	    	id: id, backendUrl: backendUrl, title: items.at(appended).get("title")});
 		   $(this.el).find(".gallery").append(dataElement); 
 		   appended++;
 	     }
