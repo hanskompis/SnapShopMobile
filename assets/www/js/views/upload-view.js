@@ -25,3 +25,10 @@ App.Views.UploadView = Backbone.View.extend({
 		   Backbone.history.navigate("browse", true);
 	   }
 });
+
+App.Views.SubcategoryView = Backbone.View.extend({
+    render: function() {	   
+        var subcategoryElement = Mustache.to_html($("#upload-picture-subcategory").html(), {});
+        $(this.el).html(subcategoryElement);
+    }
+});
