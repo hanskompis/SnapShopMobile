@@ -25,7 +25,7 @@ App.Routers.Main = Backbone.Router.extend({
 	  var subcategoryView = new App.Views.SubcategoryView ({el: $("#subcategoryContainer")});
 	  uploadView.render();
 	  subcategoryView.render();
-	  /*takePic();*/
+	  takePic();
   }
   
 });
