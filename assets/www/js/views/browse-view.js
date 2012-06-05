@@ -41,7 +41,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
 	        	enableKeyboard: false, 	
 	        	getToolbar: function(){ 
-	        		return '<div class="imageDescription"></div>'
+	        		return '<div class="imageDescription"></div><div class="categoryList"></div>'
 	        	},
 			
 	        	getImageMetaData: function(el){
@@ -94,17 +94,36 @@ App.Views.BrowseView = Backbone.View.extend({
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
 	        	var pictureId = currentImage.metaData.pictureId;
 	        	var description = self.getImageAttributeValue(items, pictureId, "description");
+	        	var user = self.getImageAttributeValue(items, pictureId, "user");
+	        	var timestamp = self.getImageAttributeValue(items, pictureId, "timestamp");
+	        	var categories = self.getImageAttributeValue(items, pictureId, "categories");
+	        	alert("categories: "+ _.size(categories));
+
+	        	$.each(categories, function(index, category) {
+	        		var categoryName = category.name;
+	        		alert(categoryName);
+	        		var textNode = document.createTextNode(categoryName);
+	        		$(".categoryList").append(textNode);
+	        	});
+	        	
+	        	/*var length = _.size(categories);
+	        	for(var i = 0; i < length; i++){
+//	        		alert(categories[i].name);
+	        		var categoryName = categories[i].name;
+	        		alert(categoryName);
+	        		var textNode = document.createTextNode(categoryName);
+	        		$(".categoryList").append(textNode);
+	        	}*/
+	        	
 	        	$(".imageDescription").text(description);
 	        	$("#closeButton").click(function() {
 	        		e.target.hide();
-//	        		alert("Close");
 	        	});	
 		    });//onDisplay
        
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
 	        	$("#closeButton").click(function() {
         		e.target.hide();
-//        		alert("Close");
         	  })
 			});
 		}; //onItemsFetched		
@@ -120,12 +139,20 @@ App.Views.BrowseView = Backbone.View.extend({
      }, //render
      
      getImageAttributeValue: function(items, pictureId, attributeName) {
-     	$.each(items, function(index, value){
-//     		if(value.get("id")===pictureId){
-//     			return value.get(attributeName);
-//     		}
-     		alert(value.id);
-     	})
+    	 var matchingItem = items.find(function(item) {
+    		 if (item.get("id") == pictureId){
+    			 return item;
+    		 } 
+    	 });
+         /*items.forEach(function(item) { 
+        	 if(item.get("id") == pictureId){
+//        		 alert("on " +attributeName);
+//        		 alert(item.get(attributeName));
+        		 returnable = item.get(attributeName);
+//        		 alert("returnable: "+returnable);
+        	 }
+   	     });*/
+         return matchingItem.get(attributeName);     
      },
      
 
