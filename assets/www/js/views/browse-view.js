@@ -41,7 +41,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
 	        	enableKeyboard: false, 	
 	        	getToolbar: function(){ 
-	        		return '<div class="imageDescription"></div><div class="categoryList"></div>'
+	        		return '<div class="imageDescription"></div><div class="categoryList"></div><div class="infoList"></div>'
 	        	},
 			
 	        	getImageMetaData: function(el){
@@ -90,30 +90,23 @@ App.Views.BrowseView = Backbone.View.extend({
 	        });//myPhotoSwipe
 	        
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
-//			  alert(myPhotoSwipe.getCurrentImage().caption);
+	        	$(".categoryList").empty();
+	        	$(".infoList").empty();
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
 	        	var pictureId = currentImage.metaData.pictureId;
 	        	var description = self.getImageAttributeValue(items, pictureId, "description");
 	        	var user = self.getImageAttributeValue(items, pictureId, "user");
 	        	var timestamp = self.getImageAttributeValue(items, pictureId, "timestamp");
+	        	var info = timestamp + ", by " + user.name;
+	        	$(".infoList").text(info);
 	        	var categories = self.getImageAttributeValue(items, pictureId, "categories");
-	        	alert("categories: "+ _.size(categories));
 
 	        	$.each(categories, function(index, category) {
 	        		var categoryName = category.name;
-	        		alert(categoryName);
 	        		var textNode = document.createTextNode(categoryName);
-	        		$(".categoryList").append(textNode);
+	        		$(".categoryList").append(textNode); 		
+	        		$(".categoryList").append('<br />');  		
 	        	});
-	        	
-	        	/*var length = _.size(categories);
-	        	for(var i = 0; i < length; i++){
-//	        		alert(categories[i].name);
-	        		var categoryName = categories[i].name;
-	        		alert(categoryName);
-	        		var textNode = document.createTextNode(categoryName);
-	        		$(".categoryList").append(textNode);
-	        	}*/
 	        	
 	        	$(".imageDescription").text(description);
 	        	$("#closeButton").click(function() {
