@@ -63,16 +63,7 @@ img.logoImage {
 	margin: 5px;
 }
 
-div.submitPartUpper {
-	
-	position: relative;
-	top: 7%;
-	margin: 0px;
-	left: 5%;
-	width: 90%;
-}
-
-div.submitPartLower {
+div.submitPart {
 	
 	position: relative;
 	top: 7%;

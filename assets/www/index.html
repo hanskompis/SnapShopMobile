@@ -44,7 +44,7 @@
 
 <script type="text/template" id="upload-picture-template">
 
-  <div class="submitPartUpper">
+  <div class="submitPart">
 
 	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
 	<p>Title</p>
@@ -59,25 +59,19 @@
 		<option>Category 2</option>
 		<option>Category 3</option>
 	</select>
-	
-	
-
-  </div>
-
-</script>
-<script type="text/template" id="upload-picture-subcategory">
-	<div class="submitPartLower">
-		
-		<p>Title category 2</p>
+	<p>Title category 2</p>
 		<select id="imageCategory1" class="categoryOptions2">
 			<option>Category 1</option>
 			<option>Category 2</option>
 			<option>Category 3</option>
 		</select>
     
-		<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
 
-	</div>
+	
+
+  </div>
+
 </script>
 <script type="text/template" id="browse-template">
   <ul class="gallery">
@@ -104,9 +98,8 @@
 
 </head>
 <body>
-	<div id="topContainer"></div>
-	<div id="container"></div>
-	<div id="subcategoryContainer"></div>
+	<div id="mainContainer"></div>
+	<div id="naviContainer"></div>
 	<div id="buttonContainer"></div>
 	<div id="bottomContainer"></div>
 	
