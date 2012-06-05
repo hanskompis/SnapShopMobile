@@ -33,11 +33,10 @@ App.Views.BrowseView = Backbone.View.extend({
 				  }
 			    },
 			    
-			    
-			    //TODO: tämä koko metodi uusitaan siinä vaiheessa, kun tehdään muotoilut
 			    getImageCaption: function(el){
 
 			    	var captionText, captionEl;
+			    	captionEl = document.createElement('div');
 			    	
 			    	if (el.nodeName === "IMG"){
 			    	  captionText = el.getAttribute('alt');
@@ -50,24 +49,26 @@ App.Views.BrowseView = Backbone.View.extend({
 			    	    captionText = childEl.getAttribute('alt');
 			    	  }
 			    	}
-
-			    	captionEl = document.createElement('tr');
-//			    	captionEl.style.cssText = 'background: red; font-weight: bold; padding: 5px;';
 			    	
-			    	var closeElement = document.createElement('td'); 
-			    	var closeButton = document.createElement('button');
-			    	$(closeButton).attr('id', 'closeButton');
-			    	$(closeButton).css({backgroundColor: '#707070'});
-			    	$(closeButton).css({border: 'none'});
-			    	//alert(closeButton.getAttribute('id'));
-			    	
-			    	closeButton.appendChild(document.createTextNode("Close"));
-			    	closeElement.appendChild(closeButton);
-			    	captionEl.appendChild(closeElement);
-			    	
-			    	var titleElement = document.createElement('td');
-			    	titleElement.appendChild(document.createTextNode(captionText));		    	
-			    	captionEl.appendChild(titleElement);			    	
+			    	var captionElement = Mustache.to_html($("#caption-template").html(), {title: captionText});
+                    $(captionEl).html(captionElement);
+//			    	captionEl = document.createElement('tr');
+////			    	captionEl.style.cssText = 'background: red; font-weight: bold; padding: 5px;';
+//			    	
+//			    	var closeElement = document.createElement('td'); 
+//			    	var closeButton = document.createElement('button');
+//			    	$(closeButton).attr('id', 'closeButton');
+//			    	$(closeButton).css({backgroundColor: '#707070'});
+//			    	$(closeButton).css({border: 'none'});
+//			    	//alert(closeButton.getAttribute('id'));
+//			    	
+//			    	closeButton.appendChild(document.createTextNode("Close"));
+//			    	closeElement.appendChild(closeButton);
+//			    	captionEl.appendChild(closeElement);
+//			    	
+//			    	var titleElement = document.createElement('td');
+//			    	titleElement.appendChild(document.createTextNode(captionText));		    	
+//			    	captionEl.appendChild(titleElement);			    	
 			    	
 			    	return captionEl;
 
@@ -100,6 +101,7 @@ App.Views.BrowseView = Backbone.View.extend({
 	        	});	
 		    });//onDisplay
        
+	      	        
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
 	        	$("#closeButton").click(function() {
         		e.target.hide();
