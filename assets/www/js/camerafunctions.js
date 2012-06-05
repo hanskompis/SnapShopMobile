@@ -18,6 +18,7 @@ function uploadSuccess(r) {
     alert("Code = " + r.responseCode);
     alert("Response = " + r.response);
     alert("Sent = " + r.bytesSent);
+    App.picturePath = null;
 }
 
 function uploadFail(error) {
