@@ -55,16 +55,16 @@
     
 	<p>{{titleCategory1}}</p>
 	<select id="imageCategory1" class="categoryOptions1">
-		<option>{{optionTest}}</option>
-		<option>Category 2</option>
-		<option>Category 3</option>
+		{{#categoryList1}}
+			<option>{{optionList1}}</option>
+		{{/categoryList1}}
 	</select>
 	<p>{{titleCategory2}}</p>
-		<select id="imageCategory1" class="categoryOptions2">
-			<option>Category 1</option>
-			<option>Category 2</option>
-			<option>Category 3</option>
-		</select>
+	<select id="imageCategory1" class="categoryOptions2">
+		{{#categoryList2}}
+			<option>{{optionList2}}</option>
+		{{/categoryList2}}
+	</select>
     
 	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
 
