@@ -20,18 +20,6 @@ App.Views.BrowseView = Backbone.View.extend({
 			$(self.el).html(browseElement);
 			
 			self.appendImagesToList(items);
-
-//			var count = items.length;
-//	        var appended = 0;
-//	        for(var i = 0; i < browseTableRow && appended < count; i++){
-//	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
-//	  	        	var index = items.at(appended).id;
-//	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
-//	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
-//	  		        $(self.el).find(".gallery").append(dataElement); 
-//	  		        appended++;
-//	  	        }
-//	        }
 	        
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
 	        	enableKeyboard: false, 	
