@@ -1,8 +1,5 @@
 App.Views.BrowseView = Backbone.View.extend({
-//    instantiated at App:
-//    myPictures: true,  
-//    offset: 0,
-	
+
     render: function() {
     	var browseElement;
 	    if(App.myPictures) {
@@ -17,26 +14,12 @@ App.Views.BrowseView = Backbone.View.extend({
 
 		getItemsService.onItemsFetched = function(items) {
 			if(items.length === 0){
-				//alert("No more pictures");
 				return;
 			}
 				
-
 			$(self.el).html(browseElement);
-
-			var count = items.length;
-	        var appended = 0;
-	        for(var i = 0; i < browseTableRow && appended < count; i++){
-	  	        /*var rowElement = Mustache.to_html($("#browse-table-row-template").html(), {});
-	  	        $(self.el).find(".gallery").append(rowElement);*/
-	  	        for(var j = 0; j < browseTableCol && appended < count; j++){
-	  	        	var index = items.at(appended).id;
-	  	    	    var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
-	  	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
-	  		        $(self.el).find(".gallery").append(dataElement); 
-	  		        appended++;
-	  	        }
-	        }
+			
+			self.appendImagesToList(items);
 	        
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false , 
 	        	enableKeyboard: false, 	
@@ -130,6 +113,37 @@ App.Views.BrowseView = Backbone.View.extend({
 			getItemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
 		}
      }, //render
+       
+     events: {
+	   "click #myImagesButton": "myImagesAction",
+       "click #allImagesButton": "allImagesAction",
+       "click #nextImagesButton": "nextImagesAction",
+       "click #previousImagesButton": "previousImagesAction"    
+     },
+         
+     myImagesAction: function() {
+    	 App.offset = 0;
+    	 App.myPictures = true;
+    	 this.render(); 
+     },
+    
+     allImagesAction: function() {
+    	 App.offset = 0;
+    	 App.myPictures = false;
+         this.render();
+     },
+     
+     nextImagesAction: function() {
+    	 App.offset += 12;
+         this.render();
+     },
+     
+     previousImagesAction: function() {
+    	 if(App.offset === 0)
+    		 return;
+    	 App.offset -= 12;
+         this.render();
+     },
      
      getImageAttributeValue: function(items, pictureId, attributeName) {
     	 var matchingItem = items.find(function(item) {
@@ -137,55 +151,21 @@ App.Views.BrowseView = Backbone.View.extend({
     			 return item;
     		 } 
     	 });
-         /*items.forEach(function(item) { 
-        	 if(item.get("id") == pictureId){
-//        		 alert("on " +attributeName);
-//        		 alert(item.get(attributeName));
-        		 returnable = item.get(attributeName);
-//        		 alert("returnable: "+returnable);
-        	 }
-   	     });*/
          return matchingItem.get(attributeName);     
      },
      
-
-     events: {
-	   "click #myImagesButton": "myImagesAction",
-       "click #allImagesButton": "allImagesAction",
-       "click #nextImagesButton": "nextImagesAction",
-       "click #previousImagesButton": "previousImagesAction"    
-     },
-    
-     
-     myImagesAction: function() {
-//    	 alert("myImagesAction");
-//    	 alert(App.globalUserProfile.get("user").id);
-    	 App.offset = 0;
-    	 App.myPictures = true;
-    	 this.render(); 
-     },
-    
-     allImagesAction: function() {
-//    	 alert("allImagesAction");
-//    	 alert(App.globalUserProfile.get("user").id);
-    	 App.offset = 0;
-    	 App.myPictures = false;
-         this.render();
-     },
-     
-     nextImagesAction: function() {
-//    	 alert("nextImagesAction");
-//    	 alert(App.globalUserProfile.get("user").id);
-    	 App.offset += 12;
-         this.render();
-     },
-     
-     previousImagesAction: function() {
-//    	 alert("prevImagesAction");
-//    	 alert(App.globalUserProfile.get("user").id);
-    	 if(App.offset === 0)
-    		 return;
-    	 App.offset -= 12;
-         this.render();
+     appendImagesToList: function (items){
+       var count = items.length;
+       var appended = 0;
+       for(var i = 0; i < browseTableRow && appended < count; i++){
+	     for(var j = 0; j < browseTableCol && appended < count; j++){
+	       var index = items.at(appended).id;
+	       var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
+	    	    	id: index, backendUrl: backendUrl, title: items.at(appended).get("title")});
+		   $(this.el).find(".gallery").append(dataElement); 
+		   appended++;
+	     }
+       }
      }
+     
 });

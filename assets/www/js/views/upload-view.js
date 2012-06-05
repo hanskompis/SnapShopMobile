@@ -16,20 +16,14 @@ App.Views.UploadView = Backbone.View.extend({
 	 	                  {optionList2 : kook},],/* test */
      });
      $(this.el).html(uploadElement);
-     
-     var getItemsService = new GetItemsService();
-	 getItemsService.onItemsFetched = function(categories) {
-		 alert(categories);
-	 }
-	 getItemsService.getCategoryList();
-     
+     alert(App.categories);
    },
    events: {
 	   "click #uploadButton": "uploadAction",
 	   "click #cancelUpload": "cancelUploadAction"
    },
    uploadAction: function() {
-
+		 
 	   alert("uploading...");
 	   uploadPhoto(App.picturePath);
 	   },
