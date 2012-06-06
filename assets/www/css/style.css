@@ -13,6 +13,11 @@ body {
     background-color:#505050; 
 }
 
+.pictureInfoItems * {
+	text-align: left;
+	
+}
+
 div.imageDescription {
 		
 	font-family: 'RobotoRegular';
@@ -20,6 +25,7 @@ div.imageDescription {
 	color: #FFFFFF;
 	padding-top: 12px;
 }
+
 table.mainNavigationList {
 	
 	background: url(../images/tab-bar.png) no-repeat;
@@ -28,6 +34,7 @@ table.mainNavigationList {
 	text-align: center;
 
 }
+
 a.galleryButton:active {
 	
 	background: url(../images/tab_images_active.png) no-repeat;
@@ -43,6 +50,7 @@ a.cameraButton {
 	position: relative;
 
 }
+
 a.cancelUploadButton {
 	
 	font-family: 'RobotoMedium';
