@@ -69,11 +69,13 @@ App.Views.BrowseView = Backbone.View.extend({
 	        	var timestamp = self.getImageAttributeValue(items, pictureId, "timestamp");
 	        	var info = timestamp + ", by " + user.name;
 	        	$(".infoList").text(info);
-	        	var categories = self.getImageAttributeValue(items, pictureId, "categories");
+	        	var subCategories = self.getImageAttributeValue(items, pictureId, "categories");
 
-	        	$.each(categories, function(index, category) {
+	        	$.each(subCategories, function(index, category) {
 	        		var categoryName = category.name;
-	        		var textNode = document.createTextNode(categoryName);
+	        		var mainCategoryName = self.getMainCategoryName(categoryName);
+	        		var category = mainCategoryName + ", " + categoryName;
+	        		var textNode = document.createTextNode(category);
 	        		$(".categoryList").append(textNode); 		
 	        		$(".categoryList").append('<br />');  		
 	        	});
@@ -137,6 +139,20 @@ App.Views.BrowseView = Backbone.View.extend({
     		 } 
     	 });
          return matchingItem.get(attributeName);     
+     },
+     
+     getMainCategoryName: function(categoryName) {
+//    	 alert(JSON.stringify(App.categories));
+    	 var matchingCategory;
+    	 App.categories.each(function (category){
+    		 $.each(category.get("subcategories"), function(index, subcategory){
+    			 if(subcategory.name === categoryName){
+    				 matchingCategory = category;
+    			 }
+    		 })
+    	 })
+    	 return matchingCategory.get("name");
+   
      },
      
      appendImagesToList: function (items) {

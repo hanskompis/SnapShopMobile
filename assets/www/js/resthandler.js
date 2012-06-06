@@ -55,7 +55,7 @@ var GetItemsService = Class.extend({
 			}
 		
 		});
-		return categories;
+		return categories; //TODO: check this if actually needed?
 	}
 });
 
