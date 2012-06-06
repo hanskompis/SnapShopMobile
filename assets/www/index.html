@@ -43,36 +43,30 @@
 </script>
 
 <script type="text/template" id="upload-picture-template">
-
   <div class="submitPart">
-
 	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
 	<p>Title</p>
 	<input type="text" class="imageTitle" id="imageTitle"/>
-    
 	<p>Description</p>
 	<input type="text" class="imageDescription" id="imageDescription"/>
-    
-	<p>{{titleCategory1}}</p>
-	<select id="imageCategory1" class="categoryOptions1">
-		{{#categoryList1}}
-			<option>{{optionList1}}</option>
-		{{/categoryList1}}
-	</select>
-	<p>{{titleCategory2}}</p>
-	<select id="imageCategory1" class="categoryOptions2">
-		{{#categoryList2}}
-			<option>{{optionList2}}</option>
-		{{/categoryList2}}
-	</select>
-    
-	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
-
-	
-
-  </div>
-
+	</div>
 </script>
+<script type="text/template" id="upload-picture-select-open">
+	<p>{{categoryTitle}}</p>
+	<select id="{{selectID}}">
+</script>
+<script type="text/template" id="upload-picture-option">
+	{{#subcategoryList}}
+		<option>{{optionList}}</option>
+	{{/subcategoryList}}
+</script>
+<script type="text/template" id="upload-picture-select-close">
+	</select>
+</script>
+<script type="text/template" id="upload-picture-button">
+	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+</script>
+
 <script type="text/template" id="browse-template">
   <ul class="gallery">
  

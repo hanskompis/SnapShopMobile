@@ -1,23 +1,19 @@
 App.Views.UploadView = Backbone.View.extend({
    render: function() {
 	 
-	 var kaak = "Clint Eastwood"; /* test */
-	 var kook = "Chuck Norris";
-	 var foo = "Bill Gates";
-	 var bar = "Linus Torvalds";
-	 var titleCat1 = "Product"; /* test */
-	 var titleCat2 = "Campaign"; /* test */
-	 var uploadElement = Mustache.to_html($("#upload-picture-template").html(), { 
-    	 titleCategory1 : titleCat1, /* test */
-    	 titleCategory2 : titleCat2, /* test */
-    	 categoryList1 : [{optionList1 : foo}, 
-    	                  {optionList1 : bar},],/* test */
-	 	 categoryList2 : [{optionList2 : kaak}, 
-	 	                  {optionList2 : kook},],/* test */
-     });
-     $(this.el).html(uploadElement);
-     alert(App.categories);
+	 var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
+	 $(this.el).html(uploadElement);
+
+	 App.categories.each(function(category) {
+		var categoryItem = category.get("name");		
+		alert(category.get("name"));
+		var subcategoryItem = category.get("subcategories");
+		$.each(subcategoryItem, function(index, subcategory){			
+			alert(subcategory.name);
+		}),
+	 });
    },
+   
    events: {
 	   "click #uploadButton": "uploadAction",
 	   "click #cancelUpload": "cancelUploadAction"
