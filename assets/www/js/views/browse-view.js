@@ -23,60 +23,43 @@ App.Views.BrowseView = Backbone.View.extend({
 	        
 	        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({ captionAndToolbarAutoHideDelay: 0, enableMouseWheel: false, 
 	        	enableKeyboard: false, 	
-	        	getToolbar: function(){ 
+	        	getToolbar: function() { 
 	        		return '<div class="imageDescription"></div><div class="categoryList"></div><div class="infoList"></div>'
 	        	},
 			
-	        	getImageMetaData: function(el){
+	        	getImageMetaData: function(el) {
 				  return {
 					  pictureId: el.getAttribute('pictureId')
 				  }
 			    },
 			    
-			    getImageCaption: function(el){
+			    getImageCaption: function(el) {
 
 			    	var captionText, captionEl;
 			    	captionEl = document.createElement('div');
 			    	
-			    	if (el.nodeName === "IMG"){
+			    	if (el.nodeName === "IMG") {
 			    	  captionText = el.getAttribute('alt');
 			    	}
 			    	
 			    	var i, j, childEl;
-			    	for (i=0, j=el.childNodes.length; i<j; i++){
+			    	for (i=0, j=el.childNodes.length; i<j; i++) {
 			    	  childEl = el.childNodes[i];
-			    	  if (el.childNodes[i].nodeName === 'IMG'){
+			    	  if (el.childNodes[i].nodeName === 'IMG') {
 			    	    captionText = childEl.getAttribute('alt');
 			    	  }
 			    	}
 			    	
 			    	var captionElement = Mustache.to_html($("#caption-template").html(), {title: captionText});
                     $(captionEl).html(captionElement);
-//			    	captionEl = document.createElement('tr');
-////			    	captionEl.style.cssText = 'background: red; font-weight: bold; padding: 5px;';
-//			    	
-//			    	var closeElement = document.createElement('td'); 
-//			    	var closeButton = document.createElement('button');
-//			    	$(closeButton).attr('id', 'closeButton');
-//			    	$(closeButton).css({backgroundColor: '#707070'});
-//			    	$(closeButton).css({border: 'none'});
-//			    	//alert(closeButton.getAttribute('id'));
-//			    	
-//			    	closeButton.appendChild(document.createTextNode("Close"));
-//			    	closeElement.appendChild(closeButton);
-//			    	captionEl.appendChild(closeElement);
-//			    	
-//			    	var titleElement = document.createElement('td');
-//			    	titleElement.appendChild(document.createTextNode(captionText));		    	
-//			    	captionEl.appendChild(titleElement);			    	
-			    	
+
 			    	return captionEl;
 
 			    	}
     
 	        });//myPhotoSwipe
 	        
-	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e){
+	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e) {
 	        	$(".categoryList").empty();
 	        	$(".infoList").empty();
 	        	var currentImage = myPhotoSwipe.getCurrentImage();
@@ -100,16 +83,13 @@ App.Views.BrowseView = Backbone.View.extend({
 	        		e.target.hide();
 	        	});	
 		    });//onDisplay
-       
-	      	        
-	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+               
+	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
 	        	$("#closeButton").click(function() {
         		e.target.hide();
         	  })
 			});
-		}; //onItemsFetched		
-		
-
+		}; //onItemsFetched			
 
 		if(App.myPictures) {
 			getItemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
@@ -159,17 +139,15 @@ App.Views.BrowseView = Backbone.View.extend({
          return matchingItem.get(attributeName);     
      },
      
-     appendImagesToList: function (items){
+     appendImagesToList: function (items) {
        var count = items.length;
        var appended = 0;
-       for(var i = 0; i < browseTableRow && appended < count; i++){
-	     for(var j = 0; j < browseTableCol && appended < count; j++){
-	       var id = items.at(appended).id;
-	       var dataElement = Mustache.to_html($("#browse-table-data-template").html(), {
+       for(var i = 0; i < imagesInSet && appended < count; i++) {
+    	   var id = items.at(appended).id;
+  	       var dataElement = Mustache.to_html($("#browse-list-item-template").html(), {
 	    	    	id: id, backendUrl: backendUrl, title: items.at(appended).get("title")});
 		   $(this.el).find(".gallery").append(dataElement); 
 		   appended++;
-	     }
        }
      }
      

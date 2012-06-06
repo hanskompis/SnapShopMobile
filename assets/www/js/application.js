@@ -9,11 +9,11 @@ var App = {
 	Views: {},
 	Routers: {},
 	init: function() {
-		  $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
-		        options.xhrFields = {
-		          withCredentials: true
-		        };
-      });
+		$.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
+		      options.xhrFields = {
+		        withCredentials: true
+		      };
+        });
 		new App.Routers.Main();
 		Backbone.history.start();
 	}
