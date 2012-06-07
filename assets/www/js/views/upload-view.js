@@ -21,8 +21,9 @@ App.Views.UploadView = Backbone.View.extend({
 			var optionElement = Mustache.to_html($("#upload-picture-option").html(), {
 				optionName : subcategoryName
 			});
-			$("#"+categoryID).append(optionElement);
-		}),
+			//var cid = category.get("id");
+			$("#"+category.get("id")).append(optionElement);
+		})
 
 	 });
 	 var uploadButtonElement = Mustache.to_html($("#upload-picture-button").html(), {});

@@ -23,7 +23,7 @@ App.Routers.Main = Backbone.Router.extend({
 	  $("#naviContainer").empty();
 	  var uploadView = new App.Views.UploadView ({el: $("#mainContainer")});
 	  uploadView.render();
-	  takePic();
+	  //takePic();
   }
   
 });
