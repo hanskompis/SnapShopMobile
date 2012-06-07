@@ -16,6 +16,8 @@ function uploadPhoto(imageURI) {
     	return;
     }
 
+    params.category = "170";
+    //params.category = 171;
     options.params = params;
 
     var ft = new FileTransfer();

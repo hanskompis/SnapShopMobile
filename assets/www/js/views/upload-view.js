@@ -23,6 +23,7 @@ App.Views.UploadView = Backbone.View.extend({
 			});
 			//var cid = category.get("id");
 			$("#"+category.get("id")).append(optionElement);
+			//alert(category.get("id"));
 		})
 
 	 });
