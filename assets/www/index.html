@@ -52,22 +52,25 @@
 	<input type="text" class="imageTitle" id="imageTitle"/>
 	<p>Description</p>
 	<input type="text" class="imageDescription" id="imageDescription"/>
+  </div>
+</script>
+<script type="text/template" id="upload-picture-select">
+	<div class="selectOptionsPart">
+		<p>{{categoryTitle}}</p>
+		<select id="{{selectID}}">
+		</select>
 	</div>
 </script>
-<script type="text/template" id="upload-picture-select-open">
-	<p>{{categoryTitle}}</p>
-	<select id="{{selectID}}">
-</script>
 <script type="text/template" id="upload-picture-option">
-	{{#subcategoryList}}
-		<option>{{optionList}}</option>
-	{{/subcategoryList}}
+
+		<option>{{optionName}}</option>
+
 </script>
-<script type="text/template" id="upload-picture-select-close">
-	</select>
-</script>
+
 <script type="text/template" id="upload-picture-button">
+	<div class="uploadButtonPart">
 	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+	</div>
 </script>
 
 <!-- Browse gallery page templates -->

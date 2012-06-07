@@ -78,6 +78,24 @@ div.submitPart {
 	width: 90%;
 }
 
+div.selectOptionsPart {
+	
+	position: relative;
+	top: 7%;
+	margin: 0px;
+	left: 5%;
+	width: 90%;
+}
+
+div.uploadButtonPart {
+	
+	position: relative;
+	top: 7%;
+	margin: 0px;
+	left: 5%;
+	width: 90%;
+}
+
 p {
 	
 	font-family: 'RobotoMedium';
