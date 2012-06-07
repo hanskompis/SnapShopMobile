@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/photoswipe.css" type="text/css">
 
+<!-- Login page template -->
 <script type="text/template" id="login-template">
 
   <img src="images/login_logo.png" class="logoImage">
@@ -18,6 +19,7 @@
   </div>
 </script>
 
+<!-- Upper navigation page templates -->
 <script type="text/template" id="main-navigation-template">
 
 	<table class="mainNavigationList">
@@ -42,37 +44,36 @@
 
 </script>
 
+<!-- Upload page templates -->
 <script type="text/template" id="upload-picture-template">
-
   <div class="submitPart">
-
 	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
 	<p>Title</p>
 	<input type="text" class="imageTitle" id="imageTitle"/>
-    
 	<p>Description</p>
 	<input type="text" class="imageDescription" id="imageDescription"/>
-    
-	<p>{{titleCategory1}}</p>
-	<select id="imageCategory1" class="categoryOptions1">
-		{{#categoryList1}}
-			<option>{{optionList1}}</option>
-		{{/categoryList1}}
-	</select>
-	<p>{{titleCategory2}}</p>
-	<select id="imageCategory1" class="categoryOptions2">
-		{{#categoryList2}}
-			<option>{{optionList2}}</option>
-		{{/categoryList2}}
-	</select>
-    
-	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
-
-	
-
   </div>
+</script>
+<script type="text/template" id="upload-picture-select">
+	<div class="selectOptionsPart">
+		<p>{{categoryTitle}}</p>
+		<select id="{{selectID}}">
+		</select>
+	</div>
+</script>
+<script type="text/template" id="upload-picture-option">
+
+		<option>{{optionName}}</option>
 
 </script>
+
+<script type="text/template" id="upload-picture-button">
+	<div class="uploadButtonPart">
+	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+	</div>
+</script>
+
+<!-- Browse gallery page templates -->
 <script type="text/template" id="browse-template">
   <ul class="gallery">
  
@@ -138,6 +139,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/resthandler.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/browse-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/mainNavigation-view.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/uploadfunctions.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/camerafunctions.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/views/upload-view.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>

@@ -1,23 +1,36 @@
 App.Views.UploadView = Backbone.View.extend({
    render: function() {
 	 
-	 var kaak = "Clint Eastwood"; /* test */
-	 var kook = "Chuck Norris";
-	 var foo = "Bill Gates";
-	 var bar = "Linus Torvalds";
-	 var titleCat1 = "Product"; /* test */
-	 var titleCat2 = "Campaign"; /* test */
-	 var uploadElement = Mustache.to_html($("#upload-picture-template").html(), { 
-    	 titleCategory1 : titleCat1, /* test */
-    	 titleCategory2 : titleCat2, /* test */
-    	 categoryList1 : [{optionList1 : foo}, 
-    	                  {optionList1 : bar},],/* test */
-	 	 categoryList2 : [{optionList2 : kaak}, 
-	 	                  {optionList2 : kook},],/* test */
-     });
-     $(this.el).html(uploadElement);
-     alert(App.categories);
+	 var self = this;
+	 var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
+	 $(this.el).html(uploadElement);
+
+	 App.categories.each(function(category) {
+		
+		var categoryName = category.get("name");
+		var categoryId = category.get("id");
+		//alert(category.get("name"));
+		var selectElement = Mustache.to_html($("#upload-picture-select").html(), {
+			categoryTitle : categoryName,
+			selectID : categoryId
+		});
+		$(self.el).append(selectElement);
+		var subcategoryItem = category.get("subcategories");
+		$.each(subcategoryItem, function(index, subcategory){			
+			var subcategoryName = subcategory.name;
+			var optionElement = Mustache.to_html($("#upload-picture-option").html(), {
+				optionName : subcategoryName
+			});
+			//var cid = category.get("id");
+			$("#"+category.get("id")).append(optionElement);
+		})
+
+	 });
+	 var uploadButtonElement = Mustache.to_html($("#upload-picture-button").html(), {});
+	 $(self.el).append(uploadButtonElement);
    },
+   
+   
    events: {
 	   "click #uploadButton": "uploadAction",
 	   "click #cancelUpload": "cancelUploadAction"
