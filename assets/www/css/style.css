@@ -4,7 +4,28 @@ body {
 	background-color: #505050;
 	background-image: url(../images/bg_app.png);
 	margin: 0px;
-}	
+}
+
+.closeButton {
+
+	background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
+	font-family: 'RobotoMedium';
+	font-size: 20px;
+	color: #FFFFFF;
+	float: left;
+	width: 25%;
+	height: 150%;
+	border: 0px;
+	min-height: 60px;
+	left: 0%;
+	text-shadow:1px 1px 1px #000000;
+}
+
+.title {
+	font-family: 'RobotoRegular';
+	font-size: 26px;
+	min-height: 60px;
+}
 
 .listItem { 
 	
@@ -14,8 +35,8 @@ body {
 }
 
 .pictureInfoItems * {
-	text-align: left;
 	
+	text-align: left;
 }
 
 div.imageDescription {

@@ -81,13 +81,13 @@ App.Views.BrowseView = Backbone.View.extend({
 	        	});
 	        	  
 	        	$(".imageDescription").text(description);
-	        	$("#closeButton").click(function() {
+	        	$(".closeButton").click(function() {
 	        		e.target.hide();
 	        	});	
 		    });//onDisplay
                
 	        myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
-	        	$("#closeButton").click(function() {
+	        	$(".closeButton").click(function() {
         		e.target.hide();
         	  })
 			});
