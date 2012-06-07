@@ -2,9 +2,31 @@
 body {
 	
 	background-color: #505050;
-	background-image: url(../images/bg_app.png);
 	margin: 0px;
-}	
+	background-image: url(../images/bg_app.png);
+}
+
+.closeButton {
+
+	font-family: 'RobotoMedium';
+	font-size: 20px;
+	color: #FFFFFF;
+	float: left;
+	width: 25%;
+	height: 150%;
+	border: 0px;
+	min-height: 60px;
+	left: 0%;
+	text-shadow:1px 1px 1px #000000;
+	background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
+}
+
+.title {
+	
+	font-family: 'RobotoRegular';
+	font-size: 26px;
+	min-height: 60px;
+}
 
 .listItem { 
 	
@@ -14,8 +36,8 @@ body {
 }
 
 .pictureInfoItems * {
-	text-align: left;
 	
+	text-align: left;
 }
 
 div.imageDescription {
@@ -28,11 +50,10 @@ div.imageDescription {
 
 table.mainNavigationList {
 	
-	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
 	width: 100%;
 	text-align: center;
-
+	background: url(../images/tab-bar.png) no-repeat;
 }
 
 a.galleryButton:active {
@@ -155,16 +176,16 @@ input.submitButton {
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	opacity: 0.7;
-	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size: 100%;
 	margin: 0px;
 	padding: 10px;
+	background: transparent url(../images/btn_general_normal.png) no-repeat;
 }
 
 input.log:active {
 	
+	background-size: 100%;
 	background: url(../images/btn_general_active.png) no-repeat;
-	background-size: 100%;	
 }
 
 select {

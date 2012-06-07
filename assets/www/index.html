@@ -63,7 +63,7 @@
 </script>
 <script type="text/template" id="upload-picture-option">
 
-		<option>{{optionName}}</option>
+		<option data-category-id="{{id}}">{{optionName}}</option>
 
 </script>
 
@@ -87,7 +87,7 @@
 </script>
 
 <script type="text/template" id="caption-template">
-  <a href="javascript:;" id="closeButton">close</a> <div>{{title}}</div>
+   <div><input type="button" class="closeButton" value="Close"/><div class="title">{{title}}</div></div>
 </script>
 
 <script type="text/template" id="browse-list-item-template">

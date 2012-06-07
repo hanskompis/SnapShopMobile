@@ -15,9 +15,12 @@ function uploadPhoto(imageURI) {
     	alert("Description field is empty");
     	return;
     }
-
-    params.category = "170";
-    //params.category = 171;
+    
+    $("select").each(function (index, value){
+        var subCategoryID = $(value).find("option:selected").attr("data-category-id");
+        params.category = subCategoryID;
+    });
+    
     options.params = params;
 
     var ft = new FileTransfer();
