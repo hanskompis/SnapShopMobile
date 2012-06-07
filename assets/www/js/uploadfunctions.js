@@ -6,7 +6,9 @@ function uploadPhoto(imageURI) {
 
     var params = new Object();
     params.title = $("#imageTitle").val();
+    if(params.title.length === 0) return;
     params.description = $("#imageDescription").val();
+    if(params.description.length === 0) return;
 
     options.params = params;
 
@@ -15,13 +17,11 @@ function uploadPhoto(imageURI) {
 }
 
 function uploadSuccess(r) {
-    alert("Code = " + r.responseCode);
-    alert("Response = " + r.response);
-    alert("Sent = " + r.bytesSent);
+    alert("Upload complete");
     App.picturePath = null;
 }
 
 
 function uploadFail(error) {
-    alert("An error has occurred: Code = " = error.code);
+    alert("Error in uploading image: Code = " = error.code);
 }

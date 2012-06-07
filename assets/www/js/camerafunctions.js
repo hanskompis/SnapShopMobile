@@ -7,18 +7,18 @@ navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 }
 
 function onSuccess(imageData) {
-	alert("camera onsuccess");
+	//alert("camera onsuccess");
 	    //var image = document.getElementById('myImage');
 	    
 	    var image = "data:image/jpeg;base64," + imageData;
 	    //uploadPhoto(imageData);
 	    App.picturePath = imageData;
 	    //alert(image);
-	    alert("photo is ready...");
+	    //alert("photo is ready...");
 }
 
 function onFail(message) {
-	    alert('Failed because: ' + message);
+	    alert(message);
 	    Backbone.history.navigate("browse", true);
 }
 
