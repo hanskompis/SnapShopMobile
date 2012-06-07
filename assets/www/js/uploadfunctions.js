@@ -6,9 +6,15 @@ function uploadPhoto(imageURI) {
 
     var params = new Object();
     params.title = $("#imageTitle").val();
-    if(params.title.length === 0) return;
+    if(params.title.length === 0) {
+    	alert("Title field is empty");
+    	return;
+    }
     params.description = $("#imageDescription").val();
-    if(params.description.length === 0) return;
+    if(params.description.length === 0) {
+    	alert("Description field is empty");
+    	return;
+    }
 
     options.params = params;
 
