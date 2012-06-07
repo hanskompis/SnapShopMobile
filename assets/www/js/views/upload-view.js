@@ -18,10 +18,11 @@ App.Views.UploadView = Backbone.View.extend({
 		var subcategoryItem = category.get("subcategories");
 		$.each(subcategoryItem, function(index, subcategory){			
 			var subcategoryName = subcategory.name;
+			var subcategoryID = subcategory.id;
 			var optionElement = Mustache.to_html($("#upload-picture-option").html(), {
-				optionName : subcategoryName
+				optionName : subcategoryName,
+				id : subcategoryID
 			});
-			//var cid = category.get("id");
 			$("#"+category.get("id")).append(optionElement);
 		})
 
