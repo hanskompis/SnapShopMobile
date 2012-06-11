@@ -8,22 +8,12 @@ events: {
 },
 
 render: function() {
-	var self = this;
-    var browseElement;
-    var captionText;
-    var getItemsService = new GetItemsService();   
+	var self = this; 
+    var captionText, captionEl;
+    var itemsService = new ItemsService();   
     var photoswipeOption = {};
-    if(App.myPictures) {
-        browseElement = Mustache.to_html($("#browse-template").html(), {
-            checked1: "checked"
-        });
-    }
-    else {
-        browseElement = Mustache.to_html($("#browse-template").html(), {
-            checked2: "checked"
-        });
-    }
-    getItemsService.onItemsFetched = function(items) {
+    var browseElement = self.checkIfIGotPictures();
+    itemsService.onItemsFetched = function(items) {
         if(items.length === 0){
             return;
         }
@@ -38,7 +28,7 @@ render: function() {
             },
             getImageMetaData: function(el) { return { pictureId: el.getAttribute('pictureId') } },    
             getImageCaption: function(el) {
-                var captionEl = document.createElement('div');
+                captionEl = document.createElement('div');
                 if (el.nodeName === "IMG") {
                      captionText = el.getAttribute('alt');
                 } 
@@ -85,10 +75,10 @@ render: function() {
         });
     }; //onItemsFetched			
     if(App.myPictures) {
-        getItemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
+        itemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
     }
     else {
-        getItemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
+        itemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
     }
 }, //render
 
@@ -131,10 +121,26 @@ getMainCategoryName: function(categoryName) {
         $.each(category.get("subcategories"), function(index, subcategory){
             if(subcategory.name === categoryName){
                 matchingCategory = category;
+                
             }
         })
     })
     return matchingCategory.get("name");
+},
+
+checkIfIGotPictures : function() {
+	var element;
+	if(App.myPictures) {
+        element = Mustache.to_html($("#browse-template").html(), {
+            checked1: "checked"
+        });
+    }
+    else {
+        element = Mustache.to_html($("#browse-template").html(), {
+            checked2: "checked"
+        });
+    }
+	return element;
 },
 
 appendImagesToList: function (items) {

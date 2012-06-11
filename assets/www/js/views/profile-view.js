@@ -1,10 +1,4 @@
 App.Views.ProfileView = Backbone.View.extend({
-    render: function() {
-      var user = App.globalUserProfile.get("user");
-      var profileElement = Mustache.to_html($("#profile-template").html(), {name: user.name}); 
-      $(this.el).html(profileElement);
-    },
-
     events: {
 	   "click #profileButton": "profileAction",
 	   "click #cameraButton": "openCameraAction",
@@ -12,6 +6,12 @@ App.Views.ProfileView = Backbone.View.extend({
 	   "click #logoutButton": "logoutAction"
     },
     
+	render: function() {
+        var user = App.globalUserProfile.get("user");
+        var profileElement = Mustache.to_html($("#profile-template").html(), {name: user.name}); 
+      $(this.el).html(profileElement);
+    },
+  
     profileAction: function() {
  	    Backbone.history.navigate("profile", true);
     },
@@ -21,7 +21,7 @@ App.Views.ProfileView = Backbone.View.extend({
     },
      
     galleryAction: function() {
-   	    Backbone.history.navigate("browse", true);
+        Backbone.history.navigate("browse", true);
     }, 
 
     logoutAction: function() {
