@@ -125,22 +125,8 @@ p {
 	left: 5%;
 	color: #FFFFFF;
 	margin: 0px;
-}
-
-p.loginUsername {
-	
-	margin: 0px;
 	margin-bottom: 10px;
 }
-
-
-p.loginPassword {
-	
-	margin: 0px;
-	margin-bottom: 10px;
-}
-
-p.loginLabel {}
 
 input {
 	
@@ -153,13 +139,13 @@ input {
 	margin: 0px;
 }
 
-input.user { 
+input.username { 
 	
 	margin: 0px;
 	margin-bottom: 20px;
 }
 
-input.pass {
+input.password {
 	
 	color: #999999;
 	margin: 0px;
@@ -182,7 +168,7 @@ input.submitButton {
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 }
 
-input.log:active {
+input.submitButton:active {
 	
 	background-size: 100%;
 	background: url(../images/btn_general_active.png) no-repeat;
