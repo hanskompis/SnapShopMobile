@@ -2,100 +2,99 @@
 <html>
 <head>
 <title>SnapShopMob</title>
-<link rel="stylesheet" href="css/fonts.css" type="text/css">
-<link rel="stylesheet" href="css/style.css" type="text/css">
-<link rel="stylesheet" href="css/photoswipe.css" type="text/css">
-
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/photoswipe.css">
+<meta charset="UTF-8" />
 <!-- Login page template -->
 <script type="text/template" id="login-template">
 
   <img src="images/login_logo.png" class="logoImage">
   <div class="submitPart">
-      <p class="loginUsername">Username</p>
-	  <input type="text" class="user" id="username" />
-      <p class="loginPassword">Password</p>
-	  <input type="password" id="password" class="pass" placeholder="Snap Shop password"/>
+      <p>Username</p>
+	  <input type="text" class="username" id="loginUsername" />
+      <p>Password</p>
+	  <input type="password" id="loginPassword" class="password" placeholder="Snap Shop password"/>
       <input type="button" id="loginButton" class="submitButton" value="Log in"/>
   </div>
 </script>
 
 <!-- Upper navigation page templates -->
 <script type="text/template" id="main-navigation-template">
-
-	<table class="mainNavigationList">
-		<tr>
-			<td>
-				<a href="javascript:;" id="galleryButton" class="galleryButton">
-					<img src="images/tab_images_normal.png">
-				</a>
-			</td>
-			<td>
-				<a href="javascript:;" id="cameraButton" >
-					<img src="images/tab_shutter.png">
-				</a>
-			</td>
-			<td>
-				<a href="javascript:;" id="profileButton" class="profileButton">
-					<img src="images/tab_profile_normal.png">
-				</a>
-			</td>
-		</tr>
-	</table>
-
+<table class="mainNavigationList">
+    <tr>
+        <td>
+            <a href="javascript:;" id="galleryButton" class="galleryButton">
+                <img src="images/tab_images_normal.png">
+            </a>
+        </td>
+        <td>
+            <a href="javascript:;" id="cameraButton" >
+                <img src="images/tab_shutter.png">
+            </a>
+        </td>
+        <td>
+             <a href="javascript:;" id="profileButton" class="profileButton">
+                 <img src="images/tab_profile_normal.png">
+             </a>
+        </td>
+    </tr>
+</table>
 </script>
 
 <!-- Upload page templates -->
+
 <script type="text/template" id="upload-picture-template">
-  <div class="submitPart">
-	<a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
-	<p>Title</p>
-	<input type="text" class="imageTitle" id="imageTitle"/>
-	<p>Description</p>
-	<input type="text" class="imageDescription" id="imageDescription"/>
-  </div>
+<div class="submitPart">
+    <a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
+    <p>Title</p>
+    <input type="text" class="imageTitle" id="imageTitle"/>
+    <p>Description</p>
+    <input type="text" class="imageDescription" id="imageDescription"/>
+</div>
 </script>
+
 <script type="text/template" id="upload-picture-select">
-	<div class="selectOptionsPart">
-		<p>{{categoryTitle}}</p>
-		<select id="{{selectID}}">
-		</select>
-	</div>
+<div class="selectOptionsPart">
+    <p>{{categoryTitle}}</p>
+    <select id="{{selectID}}">
+    </select>
+</div>
 </script>
+
 <script type="text/template" id="upload-picture-option">
-
-		<option data-category-id="{{id}}">{{optionName}}</option>
-
+<option data-category-id="{{id}}">{{optionName}}</option>
 </script>
 
 <script type="text/template" id="upload-picture-button">
-	<div class="uploadButtonPart">
-	<input type="button" id="uploadButton" class="submitButton" value="Upload"/>
-	</div>
+<div class="uploadButtonPart">
+    <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+</div>
 </script>
 
 <!-- Browse gallery page templates -->
 <script type="text/template" id="browse-template">
-  <ul class="gallery">
- 
-  </ul>
-  <br>
-    <a href="javascript:;" id="previousImagesButton">previous</a>
-    <a href="javascript:;" id="nextImagesButton">next</a> <br>
-    <a href="javascript:;" id="myImagesButton">My Images</a>
-    <a href="javascript:;" id="allImagesButton">AllImages</a>
-
+<ul class="gallery"></ul>
+<br>
+<a href="javascript:;" id="previousImagesButton">previous</a>
+<a href="javascript:;" id="nextImagesButton">next</a> <br>
+<a href="javascript:;" id="myImagesButton">My Images</a>
+<a href="javascript:;" id="allImagesButton">AllImages</a>
 </script>
 
 <script type="text/template" id="caption-template">
-   <div><input type="button" class="closeButton" value="Close"/><div class="title">{{title}}</div></div>
+<div>
+    <input type="button" class="closeButton" value="Close"/>
+    <div class="title">{{title}}</div>
+</div>
 </script>
 
 <script type="text/template" id="browse-list-item-template">
-	<li class="listItem">
-		<a href="{{backendUrl}}content/{{id}}/type/original" pictureId="{{id}}">
-			<img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/>
-		</a>
-	</li> 
+<li class="listItem">
+    <a href="{{backendUrl}}content/{{id}}/type/original" pictureId="{{id}}">
+        <img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/>
+    </a>
+</li> 
 </script>
 
 </head>
@@ -106,32 +105,32 @@
 	<div id="bottomContainer"></div>
 	
 	<!-- Javascript libraries -->
-	<script type="text/javascript" charset="utf-8" src="lib/javascript-inheritance.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/cordova-1.7.0.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/klass.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/code.photoswipe.jquery-3.0.4.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/underscore-min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/backbone-min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/mustache.js"></script>
+	<script src="lib/javascript-inheritance.js"></script>
+	<script src="lib/cordova-1.7.0.js"></script>
+	<script src="lib/jquery-1.7.2.min.js"></script>
+	<script src="lib/klass.min.js"></script>
+	<script src="lib/code.photoswipe.jquery-3.0.4.min.js"></script>
+	<script src="lib/underscore-min.js"></script>
+	<script src="lib/backbone-min.js"></script>
+	<script src="lib/mustache.js"></script>
 	
 	<!-- Applications -->
-	<script type="text/javascript" charset="utf-8" src="js/application.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/config.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/models/loginmodel.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/models/usermodel.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/models/categorymodel.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/sessionhandler.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/views/login-view.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/resthandler.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/views/browse-view.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/views/mainNavigation-view.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/uploadfunctions.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/camerafunctions.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/views/upload-view.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+	<script src="js/application.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/models/loginmodel.js"></script>
+	<script src="js/models/usermodel.js"></script>
+	<script src="js/models/categorymodel.js"></script>
+	<script src="js/sessionhandler.js"></script>
+	<script src="js/views/login-view.js"></script>
+	<script src="js/resthandler.js"></script>
+	<script src="js/views/browse-view.js"></script>
+	<script src="js/views/mainNavigation-view.js"></script>
+	<script src="js/uploadfunctions.js"></script>
+	<script src="js/camerafunctions.js"></script>
+	<script src="js/views/upload-view.js"></script>
+	<script src="js/main.js"></script>
 
-	<script type="text/javascript">
+	<script >
 		$(document).ready(App.init());
 	</script>
 
