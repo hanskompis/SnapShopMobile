@@ -1,12 +1,11 @@
 App.Views.UploadView = Backbone.View.extend({
-	events: {
-		"click #uploadButton": "uploadAction",
-		"click #cancelUpload": "cancelUploadAction"
+    events: {
+        "click #uploadButton": "uploadAction",
+        "click #cancelUpload": "cancelUploadAction"
     },
-		
-	render: function() {
+    render: function() {
         var self = this;
-	    var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
+        var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
         $(this.el).html(uploadElement);        
         App.categories.each(function(category) {
             var categoryName = category.get("name");
