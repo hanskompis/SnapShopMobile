@@ -28,9 +28,10 @@ App.Routers.Main = Backbone.Router.extend({
 	  takePic();
   },
   
-  profile: function(){
-		var profileView = new App.Views.ProfileView ({el: $("#mainContainer")});
-		profileView.render();
+  profile: function(){	  
+	  var mainNavigationView = new App.Views.MainNavigationView ({el: $("#naviContainer")});
+	  var profileView = new App.Views.ProfileView ({el: $("#mainContainer")});
+	  profileView.render();
   },
 
   logout: function() {
