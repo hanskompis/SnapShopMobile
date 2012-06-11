@@ -7,8 +7,7 @@ App.Views.UploadView = Backbone.View.extend({
 	render: function() {
         var self = this;
 	    var uploadElement = Mustache.to_html($("#upload-picture-template").html(), {});
-        $(this.el).html(uploadElement);
-        
+        $(this.el).html(uploadElement);        
         App.categories.each(function(category) {
             var categoryName = category.get("name");
             var categoryId = category.get("id");
