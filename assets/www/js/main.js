@@ -4,6 +4,7 @@ App.Routers.Main = Backbone.Router.extend({
     "": "login",
     "browse": "browse",
     "opencamera": "opencamera",
+    "profile": "profile",
     "logout": "logout"
   },
   
@@ -27,6 +28,11 @@ App.Routers.Main = Backbone.Router.extend({
 	  takePic();
   },
   
+  profile: function(){
+		var profileView = new App.Views.ProfileView ({el: $("#mainContainer")});
+		profileView.render();
+  },
+
   logout: function() {
 		var logout = new App.Models.Logout;
 
@@ -44,7 +50,6 @@ App.Routers.Main = Backbone.Router.extend({
 			});
 //			return; //TODO: check this if actually needed?
 		}
-
   
 });
 
