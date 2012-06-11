@@ -4,7 +4,8 @@ App.Routers.Main = Backbone.Router.extend({
     "": "login",
     "browse": "browse",
     "opencamera": "opencamera",
-    "profile": "profile"
+    "profile": "profile",
+    "logout": "logout"
   },
   
   login: function(){
@@ -28,11 +29,27 @@ App.Routers.Main = Backbone.Router.extend({
   },
   
   profile: function(){
-//		var mainNavigationView = new App.Views.MainNavigationView ({el: $("#naviContainer")});
 		var profileView = new App.Views.ProfileView ({el: $("#mainContainer")});
-//		mainNavigationView.render();
 		profileView.render();
-  }
+  },
+
+  logout: function() {
+		var logout = new App.Models.Logout;
+
+		logout.fetch({
+				success : function(model, response) {
+//					alert("logout.fetch.success");
+					App.globalUserProfile = null;
+					$("#naviContainer").empty();
+					Backbone.history.navigate("", true);
+				},
+				error : function(model, response) {
+					alert("logout.fetch.error");
+				}
+			
+			});
+//			return; //TODO: check this if actually needed?
+		}
   
 });
 

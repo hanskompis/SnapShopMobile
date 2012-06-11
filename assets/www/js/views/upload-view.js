@@ -24,6 +24,7 @@ App.Views.UploadView = Backbone.View.extend({
 				id : subcategoryID
 			});
 			$("#"+category.get("id")).append(optionElement);
+			//alert(category.get("id"));
 		})
 
 	 });

@@ -14,7 +14,7 @@ App.Views.LoginView = Backbone.View.extend({
 		   Backbone.history.navigate("browse", true);
 	   };
 
-	   sessionService.makeLogin($("#username").val(), $("#password").val());
+	   sessionService.makeLogin($("#loginUsername").val(), $("#loginPassword").val());
 
    }
 	   

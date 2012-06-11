@@ -18,6 +18,6 @@ App.Views.MainNavigationView = Backbone.View.extend({
      
    profileAction: function() {
 	   Backbone.history.navigate("profile", true);
-   },
+   }
 	   
 });

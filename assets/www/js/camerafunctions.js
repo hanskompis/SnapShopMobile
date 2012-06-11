@@ -1,5 +1,5 @@
 function takePic() {
-	alert("take pic");
+//	alert("take pic");
 navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 	    destinationType: Camera.DestinationType.FILE_URI,
 	    sourceType: Camera.PictureSourceType.PHOTOLIBRARY
