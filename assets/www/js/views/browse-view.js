@@ -6,7 +6,6 @@ events: {
 	"click #nextImagesButton": "nextImagesAction",
 	"click #previousImagesButton": "previousImagesAction"    
 },
-
 render: function() {
 	var self = this; 
     var captionText, captionEl;
@@ -81,19 +80,16 @@ render: function() {
         itemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
     }
 }, //render
-
 myImagesAction: function() {
     App.offset = 0;
     App.myPictures = true;
     this.render(); 
 },
-
 allImagesAction: function() {
     App.offset = 0;
     App.myPictures = false;
     this.render();
 },
-
 nextImagesAction: function() {
     App.offset += 12;
     this.render();
@@ -105,7 +101,6 @@ previousImagesAction: function() {
     App.offset -= 12;
     this.render();
 },
-
 getImageAttributeValue: function(items, pictureId, attributeName) {
     var matchingItem = items.find(function(item) {
         if (item.get("id") == pictureId){
@@ -127,7 +122,6 @@ getMainCategoryName: function(categoryName) {
     })
     return matchingCategory.get("name");
 },
-
 checkIfIGotPictures : function() {
 	var element;
 	if(App.myPictures) {
@@ -142,7 +136,6 @@ checkIfIGotPictures : function() {
     }
 	return element;
 },
-
 appendImagesToList: function (items) {
     var count = items.length;
     var appended = 0;
