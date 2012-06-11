@@ -3,7 +3,8 @@ App.Routers.Main = Backbone.Router.extend({
   routes: {
     "": "login",
     "browse": "browse",
-    "opencamera": "opencamera"
+    "opencamera": "opencamera",
+    "logout": "logout"
   },
   
   login: function(){
@@ -24,7 +25,26 @@ App.Routers.Main = Backbone.Router.extend({
 	  var uploadView = new App.Views.UploadView ({el: $("#mainContainer")});
 	  uploadView.render();
 	  takePic();
-  }
+  },
+  
+  logout: function() {
+		var logout = new App.Models.Logout;
+
+		logout.fetch({
+				success : function(model, response) {
+//					alert("logout.fetch.success");
+					App.globalUserProfile = null;
+					$("#naviContainer").empty();
+					Backbone.history.navigate("", true);
+				},
+				error : function(model, response) {
+					alert("logout.fetch.error");
+				}
+			
+			});
+//			return; //TODO: check this if actually needed?
+		}
+
   
 });
 
