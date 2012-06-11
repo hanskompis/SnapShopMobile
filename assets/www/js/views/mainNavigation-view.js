@@ -10,6 +10,14 @@ App.Views.MainNavigationView = Backbone.View.extend({
    openCameraAction: function() {
 
   	 Backbone.history.navigate("opencamera", true);
-   }
+   },
+   
+   events: {
+       "click #profileButton": "profileAction"   
+   },
+     
+   profileAction: function() {
+	   Backbone.history.navigate("profile", true);
+   },
 	   
 });

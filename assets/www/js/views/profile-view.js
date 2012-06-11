@@ -1,0 +1,8 @@
+App.Views.ProfileView = Backbone.View.extend({
+   render: function() {
+     var user = App.globalUserProfile.get("user");
+     var profileElement = Mustache.to_html($("#profile-template").html(), {name: user.name}); 
+     $(this.el).html(profileElement);
+   }
+	   
+});
