@@ -10,9 +10,9 @@ events: {
 render: function() {
 	var self = this;
     var browseElement;
-    var captionText, captionEl;
+    var captionText;
     var getItemsService = new GetItemsService();   
-    var photoswipeOption = {}
+    var photoswipeOption = {};
     if(App.myPictures) {
         browseElement = Mustache.to_html($("#browse-template").html(), {
             checked1: "checked"
@@ -34,15 +34,11 @@ render: function() {
     	    enableMouseWheel: false,
     	    enableKeyboard: false,
     	    getToolbar: function() { 
-                return '<div class="pictureInfoItems"><div class="imageDescription"></div><div class="categoryList"></div><br /><div class="infoList"></div><br /></div>';
+    	    	return Mustache.to_html($("#browse-picture-info").html());             
             },
-            getImageMetaData: function(el) {
-                return { 
-                    pictureId: el.getAttribute('pictureId')
-                }
-            },    
+            getImageMetaData: function(el) { return { pictureId: el.getAttribute('pictureId') } },    
             getImageCaption: function(el) {
-                captionEl = document.createElement('div');
+                var captionEl = document.createElement('div');
                 if (el.nodeName === "IMG") {
                      captionText = el.getAttribute('alt');
                 } 
