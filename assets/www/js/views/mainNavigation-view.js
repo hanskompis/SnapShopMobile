@@ -11,14 +11,17 @@ App.Views.MainNavigationView = Backbone.View.extend({
     }, 
     
     openCameraAction: function() {
+    	alert("camera");
         Backbone.history.navigate("opencamera", true);
     },
     
     profileAction: function() {
+    	alert("profile");
 	    Backbone.history.navigate("profile", true);
     }, 
     
     galleryAction: function() {
+    	alert("gallery");
 	    Backbone.history.navigate("browse", true);
     }	   
 });

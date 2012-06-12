@@ -81,11 +81,13 @@ render: function() {
     }
 }, //render
 myImagesAction: function() {
-    App.offset = 0;
+	alert("my imagers")
+	App.offset = 0;
     App.myPictures = true;
     this.render(); 
 },
 allImagesAction: function() {
+	alert("all imagers");
     App.offset = 0;
     App.myPictures = false;
     this.render();
