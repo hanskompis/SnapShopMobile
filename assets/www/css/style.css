@@ -119,13 +119,29 @@ div.uploadButtonPart {
 
 p {
 	
-	font-family: 'RobotoMedium';
-	font-size: 16px;
 	position: relative;
 	left: 5%;
 	color: #FFFFFF;
 	margin: 0px;
 	margin-bottom: 10px;
+}
+
+.smallParagraph {
+	
+	font-family: 'RobotoMedium';
+	font-size: 16px;
+}
+
+.mediumParagraph {
+	
+	font-family: 'RobotoMedium';
+	font-size: 20px;
+}
+
+.smallField {
+	
+	font-family: 'RobotoRegular';
+	font-size: 18px;
 }
 
 input {
@@ -136,7 +152,6 @@ input {
 	position: relative;
 	left: 5%;
 	width: 90%;
-	margin: 0px;
 }
 
 input.username { 
@@ -163,8 +178,7 @@ input.submitButton {
 	box-shadow: -90px 111px #00000;
 	opacity: 0.7;
 	background-size: 100%;
-	margin: 0px;
-	padding: 10px;
+	padding: 12px;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 }
 

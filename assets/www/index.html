@@ -11,9 +11,9 @@
 
   <img src="images/login_logo.png" class="logoImage">
   <div class="submitPart">
-      <p>Username</p>
+      <p class="smallField">Username</p>
 	  <input type="text" class="username" id="loginUsername" />
-      <p>Password</p>
+      <p class="smallField">Password</p>
 	  <input type="password" id="loginPassword" class="password" placeholder="Snap Shop password"/>
       <input type="button" id="loginButton" class="submitButton" value="Log in"/>
   </div>
@@ -23,10 +23,10 @@
 <script type="text/template" id="profile-template">
 
   <div class="profilePart">
-      <p class="profileInfo">Logged in as</p>
-      <p class="name">{{name}}</p>
+      <p class="smallParagraph">Logged in as</p>
+      <p class="mediumParagraph">{{realName}}</p>
       <input type="button" id="logoutButton" class="submitButton" value="Log out"/>
-      <p>
+      <p class="smallParagraph">
 		 Support issues 
 		 <a href="mailto:support@moremr.com">support@moremr.com</a>
 	  </p>
