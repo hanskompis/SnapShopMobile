@@ -118,7 +118,7 @@ getPhotoSwipeOptions: function() {
                     captionText = childEl.getAttribute('alt');
                 }
             }
-            var captionElement = Mustache.to_html($("#caption-template").html(), {title: captionText});
+            var captionElement = Mustache.to_html($("#caption-template").html(), {pictureTitle: captionText});
             $(captionEl).html(captionElement);
             return captionEl;
         }
@@ -142,9 +142,12 @@ appendImagesToList: function (items) {
     var count = items.length;
     var appended = 0;
     for(var i = 0; i < imagesInSet && appended < count; i++) {
-        var id = items.at(appended).id;
+        var pictureId = items.at(appended).id;
         var dataElement = Mustache.to_html($("#browse-list-item-template").html(), {
-            id: id, backendUrl: backendUrl, title: items.at(appended).get("title")});
+            pictureId: pictureId,
+            backendUrl: backendUrl,
+            pictureTitle: items.at(appended).get("title")
+        });
             $(this.el).find(".gallery").append(dataElement); 
             appended++;
         }
