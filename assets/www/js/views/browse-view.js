@@ -8,9 +8,7 @@ events: {
 },
 render: function() {
 	var self = this; 
-    var captionText, captionEl;
     var itemsService = new RestHandlerService();   
-    var photoswipeOption = {};
     var browseElement = self.checkIfIGotPictures();
     itemsService.onItemsFetched = function(items) {
         if(items.length === 0){
@@ -18,31 +16,7 @@ render: function() {
         }
         $(self.el).html(browseElement);
         self.appendImagesToList(items);
-        var myPhotoSwipe = $(self.el).find(".gallery a").photoSwipe({
-    	    captionAndToolbarAutoHideDelay: 0,
-    	    enableMouseWheel: false,
-    	    enableKeyboard: false,
-    	    getToolbar: function() { 
-    	    	return Mustache.to_html($("#browse-picture-info").html());             
-            },
-            getImageMetaData: function(el) { return { pictureId: el.getAttribute('pictureId') } },    
-            getImageCaption: function(el) {
-                captionEl = document.createElement('div');
-                if (el.nodeName === "IMG") {
-                     captionText = el.getAttribute('alt');
-                } 
-                var i, j, childEl;
-                for (i=0, j=el.childNodes.length; i<j; i++) {
-                    childEl = el.childNodes[i];
-                    if (el.childNodes[i].nodeName === 'IMG') {
-                        captionText = childEl.getAttribute('alt');
-                    }
-                }
-                var captionElement = Mustache.to_html($("#caption-template").html(), {title: captionText});
-                $(captionEl).html(captionElement);
-                return captionEl;
-            }
-        });//myPhotoSwipe
+        var myPhotoSwipe = self.getPhotoSwipeOptions();
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e) {
             $(".categoryList").empty();
             $(".infoList").empty();
@@ -57,7 +31,7 @@ render: function() {
             $.each(subCategories, function(index, category) {
                 var categoryName = category.name;
                 var mainCategoryName = self.getMainCategoryName(categoryName);
-                var category = mainCategoryName + ", " + categoryName;
+                var category = self.getMainCategoryName(categoryName) + ", " + categoryName;
                 var textNode = document.createTextNode(category);
                 $(".categoryList").append('<br />');  
                 $(".categoryList").append(textNode); 
@@ -68,9 +42,7 @@ render: function() {
             });	
         });//onDisplay
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
-            $(".closeButton").click(function() {
-                e.target.hide();
-            })
+            $(".closeButton").click(function() { e.target.hide(); } )
         });
     }; //onItemsFetched			
     if(App.myPictures) {
@@ -109,7 +81,6 @@ getImageAttributeValue: function(items, pictureId, attributeName) {
     });
     return matchingItem.get(attributeName);     
 },
-
 getMainCategoryName: function(categoryName) {
     var matchingCategory;
     App.categories.each(function (category){
@@ -121,6 +92,35 @@ getMainCategoryName: function(categoryName) {
         })
     })
     return matchingCategory.get("name");
+},
+getPhotoSwipeOptions: function() {
+	var self = this;	
+	return	$(self.el).find(".gallery a").photoSwipe({
+	    captionAndToolbarAutoHideDelay: 0,
+	    enableMouseWheel: false,
+	    enableKeyboard: false,
+	    getToolbar: function() { 
+	    	return Mustache.to_html($("#browse-picture-info").html());             
+        },
+        getImageMetaData: function(el) { return { pictureId: el.getAttribute('pictureId') } },    
+        getImageCaption: function(el) {
+        	var captionText;
+            var captionEl = document.createElement('div');
+            if (el.nodeName === "IMG") {
+                 captionText = el.getAttribute('alt');
+            } 
+            var i, j, childEl;
+            for (i=0, j=el.childNodes.length; i<j; i++) {
+                childEl = el.childNodes[i];
+                if (el.childNodes[i].nodeName === 'IMG') {
+                    captionText = childEl.getAttribute('alt');
+                }
+            }
+            var captionElement = Mustache.to_html($("#caption-template").html(), {title: captionText});
+            $(captionEl).html(captionElement);
+            return captionEl;
+        }
+    });
 },
 checkIfIGotPictures : function() {
 	var element;
