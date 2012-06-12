@@ -5,6 +5,8 @@ var App = {
 	globalUserProfile: null,
 	picturePath: null,
 	categories: null,
+	currentView: null, 
+	navigationView: null,
 	Collections: {},
 	Views: {},
 	Routers: {},

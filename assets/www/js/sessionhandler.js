@@ -12,11 +12,11 @@ var SessionService = Class.extend ({
 					   alert("Login failed!");
 					   return;
 				   }
-					var getItemsService = new GetItemsService();
-					getItemsService.onItemsFetched = function(categories) {
+					var categoryService = new RestHandlerService();
+					categoryService.onItemsFetched = function(categories) {
 						App.categories = categories;
 						}
-					getItemsService.getCategoryList();
+					categoryService.getCategoryCollection();
 				   App.globalUserProfile = new App.Models.User(response);
 				   self.loginOk(response);
 			   }				   		   			   
