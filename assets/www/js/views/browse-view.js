@@ -53,13 +53,11 @@ render: function() {
     }
 }, //render
 myImagesAction: function() {
-	alert("my imagers")
 	App.offset = 0;
     App.myPictures = true;
     this.render(); 
 },
 allImagesAction: function() {
-	alert("all imagers");
     App.offset = 0;
     App.myPictures = false;
     this.render();
