@@ -101,14 +101,14 @@
 <script type="text/template" id="caption-template">
 <div>
     <input type="button" class="closeButton" value="Close"/>
-    <div class="title">{{title}}</div>
+    <div class="captionTitle">{{pictureTitle}}</div>
 </div>
 </script>
 
 <script type="text/template" id="browse-list-item-template">
 <li class="listItem">
-    <a href="{{backendUrl}}content/{{id}}/type/original" pictureId="{{id}}">
-        <img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/>
+    <a href="{{backendUrl}}content/{{pictureId}}/type/original" pictureId="{{pictureId}}">
+        <img src="{{backendUrl}}content/{{pictureId}}/type/thumbnail" alt="{{pictureTitle}}"/>
     </a>
 </li> 
 </script>

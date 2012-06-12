@@ -30,8 +30,7 @@ var RestHandlerService = Class.extend({
     },	
     getCategoryCollection: function() {
         var self = this;
-        var categories = new App.Collections.Categories();
-		
+        var categories = new App.Collections.Categories();	
         categories.fetch({
             success : function(model, response) {
                 self.onItemsFetched(categories);
@@ -40,7 +39,6 @@ var RestHandlerService = Class.extend({
                 alert("categories.fetch.error");
             }		
         });
-        return categories; //TODO: check this if actually needed?
     },	
 });
 
