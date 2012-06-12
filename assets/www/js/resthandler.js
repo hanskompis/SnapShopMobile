@@ -2,7 +2,7 @@ App.Collections.Items = Backbone.Collection.extend({
 	url : backendUrl
 });
 
-var ItemsService = Class.extend({
+var RestHandlerService = Class.extend({
     onItemsFetched : null,	
     getItemsCollection : function (listType, offset, count, userID) {
         var self = this;
@@ -28,7 +28,7 @@ var ItemsService = Class.extend({
         });
         return items;
     },	
-    getCategoryList : function() {
+    getCategoryCollection: function() {
         var self = this;
         var categories = new App.Collections.Categories();
 		

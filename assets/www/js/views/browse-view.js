@@ -9,7 +9,7 @@ events: {
 render: function() {
 	var self = this; 
     var captionText, captionEl;
-    var itemsService = new ItemsService();   
+    var itemsService = new RestHandlerService();   
     var photoswipeOption = {};
     var browseElement = self.checkIfIGotPictures();
     itemsService.onItemsFetched = function(items) {
