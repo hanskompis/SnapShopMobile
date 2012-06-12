@@ -7,7 +7,7 @@ events: {
 	"click #previousImagesButton": "previousImagesAction"    
 },
 render: function() {
-	var self = this; 
+    var self = this; 
     var itemsService = new RestHandlerService();   
     var browseElement = self.checkIfIGotPictures();
     itemsService.onItemsFetched = function(items) {
