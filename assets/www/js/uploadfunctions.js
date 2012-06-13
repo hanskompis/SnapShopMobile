@@ -32,11 +32,11 @@ function uploadPhoto(imageURI) {
     ft.upload(imageURI, backendUrl + "content", uploadSuccess, uploadFail, options);
 }
 function uploadSuccess(r) {
-    //alert("Upload complete");
     App.picturePath = null;
-    Backbone.history.navigate("browse", true);
     hideStatus();
+    Backbone.history.navigate("browse", true);
 }
 function uploadFail(error) {
+	hideStatus();
     alert("Error in uploading image: Code = " = error.code);
 }
