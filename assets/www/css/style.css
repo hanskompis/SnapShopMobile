@@ -269,7 +269,7 @@ select {
 	height: 90%; 
 }
 
-.progressImage {
+.uploadProgress {
 	visibility:hidden;
 	position:relative;
 	top:1%;

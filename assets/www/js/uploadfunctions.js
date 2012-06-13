@@ -1,9 +1,9 @@
 function showStatus(){
-    $(".progressImage").css("visibility", "visible");
+    $(".uploadProgress").css("visibility", "visible");
 }
 
 function hideStatus(){
-	$(".progressImage").css("visibility", "hidden");
+	$(".uploadProgress").css("visibility", "hidden");
 }
 
 function uploadPhoto(imageURI) {
