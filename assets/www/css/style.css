@@ -144,46 +144,78 @@ p {
 	font-size: 18px;
 }
 
-input {
-	
-	font-family: 'RobotoRegular';
-	font-size: 20px;	
-	color: #1A1A1A;
-	position: relative;
-	left: 5%;
-	width: 90%;
-}
+
+
 
 input.username { 
 	
 	margin: 0px;
 	margin-bottom: 20px;
+	width: 90%;
+	font-family: 'RobotoRegular';
+	font-size: 20px;	
+	color: #1A1A1A;
 }
 
 input.password {
-	
-	color: #999999;
+
 	margin: 0px;
 	margin-bottom: 20px;
+	width: 90%;
+	font-family: 'RobotoRegular';
+	font-size: 20px;
+	color: #999999;
 }
 
-input.submitButton {
-	
-	font-family: 'RobotoRegular';
+
+
+
+.submitButton {
+	border: 0;
+	background: transparent url(../images/btn_general_normal.png) no-repeat;
+	background-size:100% 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    min-height: 50px;
+    width: 92%;
+    align: left;
+    
+    font-family: 'RobotoRegular';
 	font-size: 18px;
-  	border: 0;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
-	opacity: 0.7;
-	background-size: 100%;
-	padding: 12px;
-	background: transparent url(../images/btn_general_normal.png) no-repeat;
+	text-shadow:1px 1px 1px #000000;
 }
 
-input.submitButton:active {
-	
+.submitButton:active {
 	background-size: 100%;
 	background: url(../images/btn_general_active.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.allImagesButton {
+	
+	float: left;
+	background: url(../images/btn_switch_left_normal.png) no-repeat;
+	border: 0 none;
+}
+
+.myImagesButton {
+	
+	float: left;
+	background: url(../images/btn_switch_right_normal.png) no-repeat;
+	border: 0 none;
 }
 
 select {
