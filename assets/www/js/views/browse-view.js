@@ -8,7 +8,7 @@ events: {
 },
 render: function() {
     var self = this; 
-    var itemsService = new RestHandlerService();   
+    var itemsService = new RestService();   
     var browseElement = self.checkIfIGotPictures();
     itemsService.onItemsFetched = function(items) {
         if(items.length === 0){

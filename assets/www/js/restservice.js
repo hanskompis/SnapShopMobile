@@ -2,7 +2,7 @@ App.Collections.Items = Backbone.Collection.extend({
 	url : backendUrl
 });
 
-var RestHandlerService = Class.extend({
+var RestService = Class.extend({
     onItemsFetched : null,	
     getItemsCollection : function (listType, offset, count, userID) {
         var self = this;

@@ -12,7 +12,7 @@ var SessionService = Class.extend ({
                     alert("Login failed!");
                     return;
                 }
-                var categoryService = new RestHandlerService();
+                var categoryService = new RestService();
                 categoryService.onItemsFetched = function(categories) {
                     App.categories = categories;
                 }
