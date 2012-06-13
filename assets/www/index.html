@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<script src="lib/swipeUpDownEvents.js"></script>
 <title>SnapShopMob</title>
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
@@ -88,7 +89,8 @@
 
 <!-- Browse gallery page templates -->
 <script type="text/template" id="browse-template">
-<ul class="gallery"></ul>
+<ul class="gallery"  id="swipeBox" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" 
+ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"></ul>
 <br>
 <a href="javascript:;" id="previousImagesButton">previous</a>
 <a href="javascript:;" id="nextImagesButton">next</a> <br>
@@ -133,6 +135,8 @@
 	<script src="lib/underscore-min.js"></script>
 	<script src="lib/backbone-min.js"></script>
 	<script src="lib/mustache.js"></script>
+    <!--   <script src="lib/jquery.mobile-1.1.0.min.js"></script>  -->	
+       <!--   <script src="lib/swipeUpDownEvents.js"></script> -->	
 	
 	<!-- Applications -->
 	<script src="js/application.js"></script>

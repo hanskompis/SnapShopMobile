@@ -18,5 +18,12 @@ var App = {
         });
 		new App.Routers.Main();
 		Backbone.history.start();
+		
+		$("body").live('swipeup',function() {
+			alert("swiped up");
+			});
+		$("body").live('swipedown',function() {
+			alert("swiped down");
+			});
 	}
 }
