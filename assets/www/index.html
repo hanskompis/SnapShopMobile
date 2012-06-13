@@ -11,11 +11,15 @@
 
   <img src="images/login_logo.png" class="logoImage">
   <div class="submitPart">
+      <div>
       <p class="smallField">Username</p>
 	  <input type="text" class="username" id="loginUsername" />
       <p class="smallField">Password</p>
 	  <input type="password" id="loginPassword" class="password" placeholder="Snap Shop password"/>
-      <input type="button" id="loginButton" class="submitButton" value="Log in"/>
+      </div>
+      <div>
+          <input type="button" id="loginButton" class="submitButton" value="Log in" style="padding-left: 0px;"/>
+      </div>
   </div>
 </script>
 
@@ -95,8 +99,12 @@
 <br>
 <a href="javascript:;" id="previousImagesButton">previous</a>
 <a href="javascript:;" id="nextImagesButton">next</a> <br>
-<a href="javascript:;" id="myImagesButton">My Images</a>
-<a href="javascript:;" id="allImagesButton">AllImages</a>
+<div class="allImagesButton">
+    <input type="button" id="allImagesButton" class="allImagesButton" value="All images"/>
+</div>
+<div class="myImagesButton">
+    <input type="button" id="myImagesButton" class="myImagesButton" value="My images"/>
+</div>
 </script>
 
 <script type="text/template" id="caption-template">
