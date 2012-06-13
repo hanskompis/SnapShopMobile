@@ -27,6 +27,8 @@
       <p class="smallParagraph">Logged in as</p>
       <p class="mediumParagraph">{{realName}}</p>
       <input type="button" id="logoutButton" class="submitButton" value="Log out"/>
+      <p class="smallParagraph">MSISDN {{MSISDN}}</p>
+      <p class="smallParagraph">{{organization}}</p>
       <p class="smallParagraph">
 		 Support issues 
 		 <a href="mailto:support@moremr.com">support@moremr.com</a>
@@ -101,14 +103,14 @@ ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"></ul>
 <script type="text/template" id="caption-template">
 <div>
     <input type="button" class="closeButton" value="Close"/>
-    <div class="title">{{title}}</div>
+    <div class="captionTitle">{{pictureTitle}}</div>
 </div>
 </script>
 
 <script type="text/template" id="browse-list-item-template">
 <li class="listItem">
-    <a href="{{backendUrl}}content/{{id}}/type/original" pictureId="{{id}}">
-        <img src="{{backendUrl}}content/{{id}}/type/thumbnail" alt="{{title}}"/>
+    <a href="{{backendUrl}}content/{{pictureId}}/type/original" pictureId="{{pictureId}}">
+        <img src="{{backendUrl}}content/{{pictureId}}/type/thumbnail" alt="{{pictureTitle}}"/>
     </a>
 </li> 
 </script>
