@@ -1,4 +1,13 @@
+function showStatus(){
+    $(".progressImage").css("visibility", "visible");
+}
+
+function hideStatus(){
+	$(".progressImage").css("visibility", "hidden");
+}
+
 function uploadPhoto(imageURI) {
+	showStatus();
     var params = new Object();
     var options = new FileUploadOptions();
     options.fileKey="file";
@@ -23,8 +32,10 @@ function uploadPhoto(imageURI) {
     ft.upload(imageURI, backendUrl + "content", uploadSuccess, uploadFail, options);
 }
 function uploadSuccess(r) {
-    alert("Upload complete");
+    //alert("Upload complete");
     App.picturePath = null;
+    Backbone.history.navigate("browse", true);
+    hideStatus();
 }
 function uploadFail(error) {
     alert("Error in uploading image: Code = " = error.code);

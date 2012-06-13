@@ -237,4 +237,13 @@ select {
 	height: 90%; 
 }
 
+.progressImage {
+	visibility:hidden;
+	position:relative;
+	top:1%;
+	text-align:center;
+	color:white;
+	z-index:1;
+}
+
 
