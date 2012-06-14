@@ -7,18 +7,17 @@ body {
 }
 
 .closeButton {
-
-	font-family: 'RobotoMedium';
-	font-size: 20px;
-	color: #FFFFFF;
-	float: left;
-	width: 25%;
-	height: 150%;
-	border: 0px;
-	min-height: 60px;
-	left: 0%;
-	text-shadow:-2px -2px -2px #000000;
-	background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
+    
+    color: #FFFFFF;
+    float: left;
+    width: 25%;
+    height: 150%;
+    border: 0px;
+    min-height: 60px;
+    left: 0%;
+    text-shadow:-2px -2px -2px #000000;
+    background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
+    background-size:100% 100%;
 }
 
 .captionTitle {
@@ -162,7 +161,7 @@ input.username {
 	margin: 0px;
 	margin-bottom: 20px;
 	width: 98%;
-	min-height: 40px;
+	min-height: 35px;
 	color: #1A1A1A;
 }
 
@@ -171,7 +170,7 @@ input.password {
 	margin: 0px;
 	margin-bottom: 20px;
 	width: 98%;
-	min-height: 40px;
+	min-height: 35px;
 	color: #999999;
 }
 
@@ -186,7 +185,7 @@ input.password {
 	border: 0;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size:100% 100%;
-    min-height: 60px;
+    min-height: 50px;
     width: 100%;
     align: left;
     font-family: 'RobotoRegular';
