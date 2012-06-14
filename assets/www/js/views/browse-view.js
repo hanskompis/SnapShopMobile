@@ -128,13 +128,9 @@ getPhotoSwipeOptions: function() {
 checkIfIGotPictures : function() {
 	var element;
 	if(App.myPictures) {
-//        $(".myImagesButton").css("background", "transparent url(../../images/btn_switch_right_active.png) no-repeat !important;");
-//        $(".allImagesButton").css("background", "transparent url(../../images/btn_switch_left_normal.png) no-repeat !important;");
         element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonActive" , allImagesClass : "allImagesButtonNormal"});        
     }
     else {
-//        $(".myImagesButton").css("background", "transparent url(../../images/btn_switch_right_normal.png) no-repeat !important;");
-//        $(".allImagesButton").css("background", "transparent url(../../images/btn_switch_left_active.png) no-repeat !important;");
         element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonNormal", allImagesClass : "allImagesButtonActive"});
     }
 	return element;
