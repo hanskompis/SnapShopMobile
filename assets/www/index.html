@@ -68,18 +68,20 @@
 
 <script type="text/template" id="upload-picture-template">
 <div class="submitPart">
-    <a href="javascript:;" id="cancelUpload" class="cancelUploadButton">Cancel</a>
+    <div>
+        <input type="button" id="cancelUpload" class="cancelUploadButton mediumParagraph" value="Cancel"/>
+    </div>    
     <p>Title</p>
-    <input type="text" class="imageTitle" id="imageTitle"/>
+    <input type="text" class="inputImageInfo largeField" id="imageTitle"/>
     <p>Description</p>
-    <input type="text" class="imageDescription" id="imageDescription"/>
+    <input type="text" class="inputImageInfo" id="imageDescription"/>
 </div>
 </script>
 
 <script type="text/template" id="upload-picture-select">
-<div class="selectOptionsPart">
+<div class="submitPart"> 
     <p>{{categoryTitle}}</p>
-    <select id="{{selectID}}">
+    <select id="{{selectID}}" class="inputImageInfo largeField">
     </select>
 </div>
 </script>

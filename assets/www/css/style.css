@@ -68,10 +68,8 @@ a.cameraButton {
 	position: relative;
 }
 
-a.cancelUploadButton {
+.cancelUploadButton {
 	
-	font-family: 'RobotoMedium';
-	font-size: 16px;
 	color: #FFFFFF;
 	margin: 0px;
 	background: url(../images/btn_titlebar_normal.png);
@@ -87,6 +85,7 @@ img.logoImage {
 	margin-bottom: 42px;
 }
 
+/*
 div.selectOptionsPart {
 	
 	position: relative;
@@ -94,16 +93,25 @@ div.selectOptionsPart {
 	margin: 0px;
 	left: 5%;
 	width: 90%;
-}
+}*/
 
 div.uploadButtonPart {
 	
+	border: 0;
 	position: relative;
 	top: 7%;
 	margin: 0px;
 	left: 5%;
 	width: 90%;
 }
+
+.inputImageInfo {
+    color: #999999;
+    margin: 0 0 10px;
+    min-height: 35px;
+    width: 98%;
+}
+
 
 p {
 	
@@ -155,11 +163,10 @@ p {
 	margin-bottom: 7px;
 }
 
-
 input.username { 
 	
 	margin: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	width: 98%;
 	min-height: 35px;
 	color: #1A1A1A;
@@ -168,7 +175,7 @@ input.username {
 input.password {
 
 	margin: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	width: 98%;
 	min-height: 35px;
 	color: #999999;
@@ -227,14 +234,8 @@ input.password {
 
 select {
 	
-	font-family: 'RobotoRegular';
-	font-size: 20px;
-	position: relative;
-    left: 5%;
     background-size: 100%;
   	border: 0;
-  	margin: 5px;
-  	padding: 10px
 }
 
 .gallery { 
@@ -265,15 +266,15 @@ select {
 .gallery li a { 
 	
 	display: block; 
-	margin: 5px; 
-	border: 1px solid #3c3c3c; 
+	margin: 0px; 
+	border: 0px solid #3c3c3c; 
 }
 
 .gallery li img { 
 	
 	display: block; 
 	width: 100%;
-	height: 90%; 
+	height: 100%; 
 }
 
 .uploadProgress {
