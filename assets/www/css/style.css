@@ -203,20 +203,71 @@ input.password {
 
 
 
-
+/*	border: 0 none;*/
+/*
 .allImagesButton {
 	
 	float: left;
-	background: url(../images/btn_switch_left_normal.png) no-repeat;
-	border: 0 none;
+	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
+	background-size:100%;
+	border: 0;
+
 }
 
 .myImagesButton {
 	
 	float: left;
-	background: url(../images/btn_switch_right_normal.png) no-repeat;
-	border: 0 none;
+	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
+	background-size:100%;
+	border: 0;
 }
+
+*/
+
+.allImagesButtonActive {
+	
+	float: right;
+	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
+	background-size:100%;
+	border: 0;
+}
+
+.myImagesButtonActive {
+	
+	float: left;
+	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
+	background-size:100%;
+	border: 0;
+}
+.allImagesButtonNormal {
+	
+	float: right;
+	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
+	background-size:100%;
+	border: 0;
+}
+
+.myImagesButtonNormal {
+	
+	float: left;
+	background:  transparent url(../images/btn_switch_right_normal.png) no-repeat; 
+	background-size:100%;
+	border: 0;
+
+}
+
+.purkka {
+		
+	float: left;
+	margin: 0;	
+	border: 0;
+}
+
+.purkka2 {
+	margin: 0;	
+	border: 0;
+}
+
 
 select {
 	

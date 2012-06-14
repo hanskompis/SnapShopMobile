@@ -15,6 +15,7 @@ render: function() {
             return;
         }
         $(self.el).html(browseElement);
+        $(".allImagesButton").css("background", "transparent url(../../images/btn_switch_left_active.png) no-repeat;");
         self.appendImagesToList(items);
         var myPhotoSwipe = self.getPhotoSwipeOptions();
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onDisplayImage, function(e) {
@@ -73,6 +74,8 @@ previousImagesAction: function() {
     App.offset -= 12;
     this.render();
 },
+
+
 getImageAttributeValue: function(items, pictureId, attributeName) {
     var matchingItem = items.find(function(item) {
         if (item.get("id") == pictureId){
@@ -125,14 +128,14 @@ getPhotoSwipeOptions: function() {
 checkIfIGotPictures : function() {
 	var element;
 	if(App.myPictures) {
-        element = Mustache.to_html($("#browse-template").html(), {
-            checked1: "checked"
-        });
+//        $(".myImagesButton").css("background", "transparent url(../../images/btn_switch_right_active.png) no-repeat !important;");
+//        $(".allImagesButton").css("background", "transparent url(../../images/btn_switch_left_normal.png) no-repeat !important;");
+        element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonActive" , allImagesClass : "allImagesButtonNormal"});        
     }
     else {
-        element = Mustache.to_html($("#browse-template").html(), {
-            checked2: "checked"
-        });
+//        $(".myImagesButton").css("background", "transparent url(../../images/btn_switch_right_normal.png) no-repeat !important;");
+//        $(".allImagesButton").css("background", "transparent url(../../images/btn_switch_left_active.png) no-repeat !important;");
+        element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonNormal", allImagesClass : "allImagesButtonActive"});
     }
 	return element;
 },
