@@ -30,7 +30,7 @@ App.Views.UploadView = Backbone.View.extend({
         });
     },   
     uploadAction: function() {
-        alert("uploading...");
+    	showStatus();
         uploadPhoto(App.picturePath);
     },   
     cancelUploadAction: function() {

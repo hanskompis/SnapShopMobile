@@ -13,9 +13,9 @@
   <div class="submitPart">
       <div>
       <p class="smallField">Username</p>
-	  <input type="text" class="username" id="loginUsername" />
+	  <input type="text" class="username largeField" id="loginUsername" />
       <p class="smallField">Password</p>
-	  <input type="password" id="loginPassword" class="password" placeholder="Snap Shop password"/>
+	  <input type="password" id="loginPassword" class="password largeField" placeholder="Snap Shop password"/>
       </div>
       <div>
           <input type="button" id="loginButton" class="submitButton" value="Log in" style="padding-left: 0px;"/>
@@ -26,12 +26,14 @@
 <!-- Profile page template -->
 <script type="text/template" id="profile-template">
 
-  <div class="profilePart">
-      <p class="smallParagraph">Logged in as</p>
-      <p class="mediumParagraph">{{realName}}</p>
-      <input type="button" id="logoutButton" class="submitButton" value="Log out"/>
+  <div class="submitPart">
+      <p class="smallParagraph extraMargin">Logged in as</p>
+      <p class="mediumParagraph extraMargin">{{realName}}</p>
+      <div>
+          <input type="button" id="logoutButton" class="submitButton extraMargin" value="Log out"/>
+      </div>
       <p class="smallParagraph">MSISDN {{MSISDN}}</p>
-      <p class="smallParagraph">{{organization}}</p>
+      <p class="smallParagraph extraMargin">{{organization}}</p>
       <p class="smallParagraph">
 		 Support issues 
 		 <a href="mailto:support@moremr.com">support@moremr.com</a>
@@ -89,6 +91,7 @@
 <script type="text/template" id="upload-picture-button">
 <div class="uploadButtonPart">
     <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+    <div class="uploadProgress">Uploading...</div>
 </div>
 </script>
 
@@ -111,7 +114,7 @@
 <script type="text/template" id="caption-template">
 <div>
     <input type="button" class="closeButton" value="Close"/>
-    <div class="captionTitle">{{pictureTitle}}</div>
+    <div class="captionTitle x-largeField">{{pictureTitle}}</div>
 </div>
 </script>
 
@@ -124,9 +127,9 @@
 </script>
 <script type="text/template" id="browse-picture-info">
 <div class="pictureInfoItems">
-    <div class="imageDescription"></div>
-    <div class="categoryList"></div><br />
-    <div class="infoList"></div><br />
+    <div class="imageDescription mediumField"></div>
+    <div class="categoryList mediumField"></div><br />
+    <div class="infoList smallParagraph"></div><br />
 </div>
 </script>
 </head>

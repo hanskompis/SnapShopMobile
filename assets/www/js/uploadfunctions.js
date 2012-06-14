@@ -1,4 +1,13 @@
+function showStatus(){
+    $(".uploadProgress").css("visibility", "visible");
+}
+
+function hideStatus(){
+	$(".uploadProgress").css("visibility", "hidden");
+}
+
 function uploadPhoto(imageURI) {
+	showStatus();
     var params = new Object();
     var options = new FileUploadOptions();
     options.fileKey="file";
@@ -14,18 +23,25 @@ function uploadPhoto(imageURI) {
     	alert("Description field is empty");
     	return;
     }    
+    params.category = "";
+    var counter = 0;
     $("select").each(function (index, value){
+    	if(counter>0)
+    		params.category += ",";
         var subCategoryID = $(value).find("option:selected").attr("data-category-id");
-        params.category = subCategoryID;
+        params.category += subCategoryID;
+        counter++;
     });   
     options.params = params;
     var ft = new FileTransfer();
     ft.upload(imageURI, backendUrl + "content", uploadSuccess, uploadFail, options);
 }
 function uploadSuccess(r) {
-    alert("Upload complete");
     App.picturePath = null;
+    hideStatus();
+    Backbone.history.navigate("browse", true);
 }
 function uploadFail(error) {
+	hideStatus();
     alert("Error in uploading image: Code = " = error.code);
 }
