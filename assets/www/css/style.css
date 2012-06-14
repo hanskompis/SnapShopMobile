@@ -17,14 +17,12 @@ body {
 	border: 0px;
 	min-height: 60px;
 	left: 0%;
-	text-shadow:1px 1px 1px #000000;
+	text-shadow:-2px -2px -2px #000000;
 	background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
 }
 
 .captionTitle {
 	
-	font-family: 'RobotoRegular';
-	font-size: 26px;
 	min-height: 60px;
 }
 
@@ -38,14 +36,14 @@ body {
 .pictureInfoItems * {
 	
 	text-align: left;
+	margin-left: 10px;
 }
 
 div.imageDescription {
-		
-	font-family: 'RobotoRegular';
-	font-size: 18px;
+	
 	color: #FFFFFF;
 	padding-top: 12px;
+	margin-left: 10px;
 }
 
 table.mainNavigationList {
@@ -69,7 +67,6 @@ a.profileButton:active {
 a.cameraButton { 
 	
 	position: relative;
-
 }
 
 a.cancelUploadButton {
@@ -88,15 +85,7 @@ img.logoImage {
 	width: 80%;
 	top: 15%;
 	margin: 5px;
-}
-
-div.submitPart {
-	
-	position: relative;
-	top: 7%;
-	margin: 0px;
-	left: 5%;
-	width: 90%;
+	margin-bottom: 42px;
 }
 
 div.selectOptionsPart {
@@ -120,40 +109,60 @@ div.uploadButtonPart {
 p {
 	
 	position: relative;
-	left: 5%;
+	left: 4%;
 	color: #FFFFFF;
 	margin: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 2px;
 }
 
 .smallParagraph {
 	
 	font-family: 'RobotoMedium';
-	font-size: 16px;
+	font-size: small;
 }
 
 .mediumParagraph {
 	
 	font-family: 'RobotoMedium';
-	font-size: 20px;
+	font-size: medium;
 }
 
 .smallField {
 	
 	font-family: 'RobotoRegular';
-	font-size: 18px;
+	font-size: small;
 }
 
+.mediumField {
+	
+	font-family: 'RobotoRegular';
+	font-size: medium;
+}
 
+.largeField {
+	
+	font-family: 'RobotoRegular';
+	font-size: large;
+}
+
+.x-largeField {
+	
+	font-family: 'RobotoRegular';
+	font-size: x-large;
+}
+
+.extraMargin {
+	
+	margin-bottom: 7px;
+}
 
 
 input.username { 
 	
 	margin: 0px;
 	margin-bottom: 20px;
-	width: 90%;
-	font-family: 'RobotoRegular';
-	font-size: 20px;	
+	width: 98%;
+	min-height: 40px;
 	color: #1A1A1A;
 }
 
@@ -161,31 +170,30 @@ input.password {
 
 	margin: 0px;
 	margin-bottom: 20px;
-	width: 90%;
-	font-family: 'RobotoRegular';
-	font-size: 20px;
+	width: 98%;
+	min-height: 40px;
 	color: #999999;
 }
 
 
-
+.submitPart {
+	width: 92%;
+	position: relative;
+	left: 4%;
+}
 
 .submitButton {
 	border: 0;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size:100% 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    min-height: 50px;
-    width: 92%;
+    min-height: 60px;
+    width: 100%;
     align: left;
-    
     font-family: 'RobotoRegular';
 	font-size: 18px;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
-	text-shadow:1px 1px 1px #000000;
+	text-shadow: -2px -2px -2px #000000;
 }
 
 .submitButton:active {
