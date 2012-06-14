@@ -23,9 +23,14 @@ function uploadPhoto(imageURI) {
     	alert("Description field is empty");
     	return;
     }    
+    params.category = "";
+    var counter = 0;
     $("select").each(function (index, value){
+    	if(counter>0)
+    		params.category += ",";
         var subCategoryID = $(value).find("option:selected").attr("data-category-id");
-        params.category = subCategoryID;
+        params.category += subCategoryID;
+        counter++;
     });   
     options.params = params;
     var ft = new FileTransfer();
