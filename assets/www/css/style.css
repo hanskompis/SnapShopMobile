@@ -112,7 +112,6 @@ div.uploadButtonPart {
     width: 98%;
 }
 
-
 p {
 	
 	position: relative;
@@ -183,12 +182,14 @@ input.password {
 
 
 .submitPart {
+	
 	width: 92%;
 	position: relative;
 	left: 4%;
 }
 
 .submitButton {
+	
 	border: 0;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size:100% 100%;
@@ -203,86 +204,60 @@ input.password {
 }
 
 .submitButton:active {
+	
 	background-size: 100%;
 	background: url(../images/btn_general_active.png) no-repeat;
 }
 
-
-
-
-
-
-
-
-
-
-
-/*	border: 0 none;*/
-/*
-.allImagesButton {
-	
-	float: left;
-	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
-	background-size:100%;
-	border: 0;
-
-}
-
-.myImagesButton {
-	
-	float: left;
-	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
-	background-size:100%;
-	border: 0;
-}
-
-*/
-
 .allImagesButtonActive {
 	
-	float: right;
+	float: left;
 	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
-	background-size:100%;
-	border: 0;
+	background-size: 100% 100%;
+	width: 50%;	
+	min-height: 50px;
+	padding: 0px;
+	position: relative;
+	border:none;
 }
 
 .myImagesButtonActive {
 	
 	float: left;
 	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
-	background-size:100%;
-	border: 0;
+	background-size: 100% 100%;
+	width: 50%;
+	min-height: 50px;
+	padding: 0px;
+	left: -5px;
+	position: relative;
+	border:none;
 }
+
 .allImagesButtonNormal {
 	
-	float: right;
+	float: left;
 	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
-	background-size:100%;
-	border: 0;
+	background-size: 100% 100%;
+	width: 50%;
+	min-height: 50px;
+	padding: 0px;
+	position: relative;
+	border:none;
 }
 
 .myImagesButtonNormal {
 	
 	float: left;
 	background:  transparent url(../images/btn_switch_right_normal.png) no-repeat; 
-	background-size:100%;
-	border: 0;
-
+	background-size: 100% 100%;
+	width: 50%;
+	min-height: 50px;	
+	padding: 0px;
+	left: -5px;
+	position: relative;
+	border:none;
 }
-/* temporary names in order to easily get a grip on certain divs*/
-
-.purkka {
-		
-	float: left;
-	margin: 0;	
-	border: 0;
-}
-
-.purkka2 {
-	margin: 0;	
-	border: 0;
-}
-
 
 select {
 	
@@ -296,7 +271,6 @@ select {
 	padding: 0; 
 	margin: 0;
 	border: 0;
-	
 }
 
 .gallery:after { 
