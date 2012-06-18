@@ -229,7 +229,7 @@ input.password {
 	width: 50%;
 	min-height: 50px;
 	padding: 0px;
-	left: -5px;
+	left: -1px;
 	position: relative;
 	border:none;
 }
@@ -254,7 +254,7 @@ input.password {
 	width: 50%;
 	min-height: 50px;	
 	padding: 0px;
-	left: -5px;
+	left: -1px;
 	position: relative;
 	border:none;
 }
