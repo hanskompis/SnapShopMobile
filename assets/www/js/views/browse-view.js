@@ -46,7 +46,7 @@ render: function() {
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
             $(".closeButton").click(function() { e.target.hide(); } )
         });
-        self.addSweepEvents();
+        //self.addSweepEvents();
     }; //onItemsFetched			
     if(App.myPictures) {
         itemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
