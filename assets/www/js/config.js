@@ -6,3 +6,4 @@ var userSession = {
     authentication: null
 };
 
+

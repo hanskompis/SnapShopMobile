@@ -18,8 +18,14 @@
 	  <input type="password" id="loginPassword" class="password largeField"/>
       </div>
       <div>
-          <input type="button" id="loginButton" class="submitButton" value="Log in" style="padding-left: 0px;"/>
+          <input type="button" id="loginButton" class="submitButton" value="Log in"/>
       </div>
+
+      <p class="smallParagraph extraMarginTop">
+		 Support issues 
+		 <a class="emailLink" href="mailto:support@moremr.com">support@moremr.com</a>
+	  </p>
+
   </div>
 </script>
 
@@ -27,16 +33,16 @@
 <script type="text/template" id="profile-template">
 
   <div class="submitPart">
-      <p class="smallParagraph extraMargin">Logged in as</p>
-      <p class="mediumParagraph extraMargin">{{realName}}</p>
+      <p class="smallParagraph extraMarginBottom">Logged in as</p>
+      <p class="mediumParagraph extraMarginBottom">{{realName}}</p>
       <div>
-          <input type="button" id="logoutButton" class="submitButton extraMargin" value="Log out"/>
+          <input type="button" id="logoutButton" class="submitButton extraMarginBottom" value="Log out"/>
       </div>
       <p class="smallParagraph">MSISDN {{MSISDN}}</p>
-      <p class="smallParagraph extraMargin">{{organization}}</p>
+      <p class="smallParagraph extraMarginBottom">{{organization}}</p>
       <p class="smallParagraph">
 		 Support issues 
-		 <a href="mailto:support@moremr.com">support@moremr.com</a>
+		 <a class="emailLink" href="mailto:support@moremr.com">support@moremr.com</a>
 	  </p>
   </div>
 </script>

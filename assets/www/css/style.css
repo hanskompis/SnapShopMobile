@@ -157,9 +157,20 @@ p {
 	font-size: x-large;
 }
 
-.extraMargin {
+.extraMarginBottom {
 	
 	margin-bottom: 7px;
+}
+
+.extraMarginTop {
+	
+	margin-top: 7px;
+}
+
+.emailLink {
+	
+	text-decoration: none;
+	color: #0778BE;
 }
 
 input.username { 
