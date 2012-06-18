@@ -11,6 +11,7 @@ var App = {
 	Views: {},
 	Routers: {},
 	init: function() {
+		$.ajaxSetup({ cache: false });
 		$.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
 		      options.xhrFields = {
 		        withCredentials: true
