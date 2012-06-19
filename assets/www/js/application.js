@@ -6,6 +6,7 @@ var App = {
 	picturePath: null,
 	categories: null,
 	currentView: null, 
+	uploading: false,
 	navigationView: null,
 	Collections: {},
 	Views: {},

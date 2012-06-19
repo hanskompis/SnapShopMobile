@@ -30,8 +30,13 @@ App.Views.UploadView = Backbone.View.extend({
         });
     },   
     uploadAction: function() {
-    	showStatus();
-        uploadPhoto(App.picturePath);
+    	if(uploading)
+    		return;
+    	else {
+    	    App.uploading = true;
+    	    showStatus();
+            uploadPhoto(App.picturePath);
+    	}
     },   
     cancelUploadAction: function() {
         Backbone.history.navigate("browse", true);
