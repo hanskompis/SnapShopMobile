@@ -2,7 +2,8 @@ function takePic() {
     navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+//        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+          sourceType: Camera.PictureSourceType.CAMERA
     });
 }
 
