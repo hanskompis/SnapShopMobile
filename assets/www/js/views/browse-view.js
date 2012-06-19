@@ -9,7 +9,7 @@ events: {
 render: function() {
     var self = this; 
     var itemsService = new RestService();   
-    var browseElement = self.checkIfIGotPictures();
+    var browseElement = self.generateBrowseElement();
 
     itemsService.onItemsFetched = function(items) {
         if(items.length === 0){
@@ -46,7 +46,6 @@ render: function() {
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
             $(".closeButton").click(function() { e.target.hide(); } )
         });
-        //self.addSweepEvents();
     }; //onItemsFetched			
     if(App.myPictures) {
         itemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
@@ -127,7 +126,7 @@ getPhotoSwipeOptions: function() {
         }
     });
 },
-checkIfIGotPictures : function() {
+generateBrowseElement : function() {
 	var element;
 	if(App.myPictures) {
         element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonActive" , allImagesClass : "allImagesButtonNormal"});        
@@ -150,19 +149,5 @@ appendImagesToList: function (items) {
             $(this.el).find(".gallery").append(dataElement); 
             appended++;
         }
-    },
-addSweepEvents: function () {
-    $(".gallery").bind('touchstart', function(event){
-    	touchStart(event, "picture-frame");
-    });
-    $(".gallery").bind('touchmove', function(event){
-    	touchMove(event);
-    });
-    $(".gallery").bind('touchend', function(event){
-    	touchEnd(event);
-    });
-    $(".gallery").bind('touchcancel', function(event){
-    	touchCancel(event);
-    });
-}
+    }
 });
