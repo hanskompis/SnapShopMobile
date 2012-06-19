@@ -47,10 +47,16 @@ div.imageDescription {
 
 table.mainNavigationList {
 	
+	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
 	width: 100%;
 	text-align: center;
-	background: url(../images/tab-bar.png) no-repeat;
+}
+
+.naviPicture {
+	
+	width: 80%;
+	height: 80%;
 }
 
 a.galleryButton:active {
@@ -73,6 +79,7 @@ a.cameraButton {
 	color: #FFFFFF;
 	margin: 0px;
 	background: url(../images/btn_titlebar_normal.png);
+	border: 0;
 }
 
 img.logoImage {
@@ -85,16 +92,6 @@ img.logoImage {
 	margin-bottom: 42px;
 }
 
-/*
-div.selectOptionsPart {
-	
-	position: relative;
-	top: 7%;
-	margin: 0px;
-	left: 5%;
-	width: 90%;
-}*/
-
 div.uploadButtonPart {
 	
 	border: 0;
@@ -106,6 +103,7 @@ div.uploadButtonPart {
 }
 
 .inputImageInfo {
+	
     color: #999999;
     margin: 0 0 10px;
     min-height: 35px;
@@ -191,12 +189,11 @@ input.password {
 	color: #999999;
 }
 
-
 .submitPart {
 	
-	width: 92%;
+	width: 95%;
 	position: relative;
-	left: 4%;
+	left: 3%;
 }
 
 .submitButton {
@@ -207,8 +204,6 @@ input.password {
     min-height: 50px;
     width: 100%;
     align: left;
-    font-family: 'RobotoRegular';
-	font-size: 18px;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	text-shadow: -2px -2px -2px #000000;
@@ -220,54 +215,43 @@ input.password {
 	background: url(../images/btn_general_active.png) no-repeat;
 }
 
-.allImagesButtonActive {
+.switchButton {
 	
 	float: left;
-	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
-	background-size: 100% 100%;
 	width: 50%;	
 	min-height: 50px;
 	padding: 0px;
 	position: relative;
 	border: none;
+	color: #FFFFFF;
+	box-shadow: -90px 111px #00000;
+	text-shadow: -2px -2px -2px #000000;
+}
+
+.allImagesButtonActive {
+	
+	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
+	background-size: 100% 100%;
 }
 
 .myImagesButtonActive {
 	
-	float: left;
 	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
 	background-size: 100% 100%;
-	width: 50%;
-	min-height: 50px;
-	padding: 0px;
 	left: -1px;
-	position: relative;
-	border: none;
 }
 
 .allImagesButtonNormal {
 	
-	float: left;
 	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
 	background-size: 100% 100%;
-	width: 50%;
-	min-height: 50px;
-	padding: 0px;
-	position: relative;
-	border: none;
 }
 
 .myImagesButtonNormal {
 	
-	float: left;
 	background:  transparent url(../images/btn_switch_right_normal.png) no-repeat; 
 	background-size: 100% 100%;
-	width: 50%;
-	min-height: 50px;	
-	padding: 0px;
 	left: -1px;
-	position: relative;
-	border: none;
 }
 
 select {
