@@ -13,7 +13,7 @@ body {
     width: 25%;
     height: 150%;
     border: 0px;
-    min-height: 60px;
+    min-height: 50px;
     left: 0%;
     text-shadow:-2px -2px -2px #000000;
     background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
@@ -22,7 +22,7 @@ body {
 
 .captionTitle {
 	
-	min-height: 60px;
+    line-height: 200%
 }
 
 .listItem { 
@@ -229,7 +229,7 @@ input.password {
 	min-height: 50px;
 	padding: 0px;
 	position: relative;
-	border:none;
+	border: none;
 }
 
 .myImagesButtonActive {
@@ -242,7 +242,7 @@ input.password {
 	padding: 0px;
 	left: -1px;
 	position: relative;
-	border:none;
+	border: none;
 }
 
 .allImagesButtonNormal {
@@ -254,7 +254,7 @@ input.password {
 	min-height: 50px;
 	padding: 0px;
 	position: relative;
-	border:none;
+	border: none;
 }
 
 .myImagesButtonNormal {
@@ -267,7 +267,7 @@ input.password {
 	padding: 0px;
 	left: -1px;
 	position: relative;
-	border:none;
+	border: none;
 }
 
 select {
