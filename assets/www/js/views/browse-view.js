@@ -10,6 +10,7 @@ render: function() {
     var self = this; 
     var itemsService = new RestService();   
     var browseElement = self.checkIfIGotPictures();
+
     itemsService.onItemsFetched = function(items) {
         if(items.length === 0){
             return;
@@ -45,13 +46,14 @@ render: function() {
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
             $(".closeButton").click(function() { e.target.hide(); } )
         });
+        //self.addSweepEvents();
     }; //onItemsFetched			
     if(App.myPictures) {
         itemsService.getItemsCollection("user", App.offset, 12, App.globalUserProfile.get("user").id);
     }
     else {
         itemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
-    }
+    }    
 }, //render
 myImagesAction: function() {
 	App.offset = 0;
@@ -148,5 +150,19 @@ appendImagesToList: function (items) {
             $(this.el).find(".gallery").append(dataElement); 
             appended++;
         }
-    }   
+    },
+addSweepEvents: function () {
+    $(".gallery").bind('touchstart', function(event){
+    	touchStart(event, "picture-frame");
+    });
+    $(".gallery").bind('touchmove', function(event){
+    	touchMove(event);
+    });
+    $(".gallery").bind('touchend', function(event){
+    	touchEnd(event);
+    });
+    $(".gallery").bind('touchcancel', function(event){
+    	touchCancel(event);
+    });
+}
 });
