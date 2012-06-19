@@ -92,16 +92,6 @@ img.logoImage {
 	margin-bottom: 42px;
 }
 
-div.uploadButtonPart {
-	
-	border: 0;
-	position: relative;
-	top: 7%;
-	margin: 0px;
-	left: 5%;
-	width: 90%;
-}
-
 .inputImageInfo {
 	
     margin: 0 0 10px;
@@ -109,8 +99,12 @@ div.uploadButtonPart {
     width: 98%;
 }
 
-.grayFont {
-	color: #999999;
+.inputImageInfoCategory {
+	
+    margin: 0 0 10px;
+    min-height: 30px;
+    width: 100%;
+    color: #999999;
 }
 
 p {
