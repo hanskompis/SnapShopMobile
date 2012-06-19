@@ -104,10 +104,13 @@ div.uploadButtonPart {
 
 .inputImageInfo {
 	
-    color: #999999;
     margin: 0 0 10px;
-    min-height: 35px;
+    min-height: 30px;
     width: 98%;
+}
+
+.grayFont {
+	color: #999999;
 }
 
 p {
