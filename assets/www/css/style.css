@@ -215,6 +215,14 @@ input.password {
 	background: url(../images/btn_general_active.png) no-repeat;
 }
 
+.switchPart {
+	
+	width: 95%;
+	position: absolute;
+	left: 3%;
+	bottom: 0px;
+}
+
 .switchButton {
 	
 	float: left;
