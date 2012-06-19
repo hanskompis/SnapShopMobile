@@ -39,6 +39,7 @@ function uploadPhoto(imageURI) {
 function uploadSuccess(r) {
     App.picturePath = null;
     hideStatus();
+    App.uploading = false;
     Backbone.history.navigate("browse", true);
 }
 function uploadFail(error) {
