@@ -92,22 +92,19 @@ img.logoImage {
 	margin-bottom: 42px;
 }
 
-div.uploadButtonPart {
-	
-	border: 0;
-	position: relative;
-	top: 7%;
-	margin: 0px;
-	left: 5%;
-	width: 90%;
-}
-
 .inputImageInfo {
 	
-    color: #999999;
     margin: 0 0 10px;
-    min-height: 35px;
+    min-height: 30px;
     width: 98%;
+}
+
+.inputImageInfoCategory {
+	
+    margin: 0 0 10px;
+    min-height: 30px;
+    width: 100%;
+    color: #999999;
 }
 
 p {
