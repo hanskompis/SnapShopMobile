@@ -73,6 +73,7 @@ a.cameraButton {
 	color: #FFFFFF;
 	margin: 0px;
 	background: url(../images/btn_titlebar_normal.png);
+	border: 0;
 }
 
 img.logoImage {
@@ -214,7 +215,6 @@ input.password {
 .switchButton {
 	
 	float: left;
-	background-size: 100% 100%;
 	width: 50%;	
 	min-height: 50px;
 	padding: 0px;
@@ -225,11 +225,13 @@ input.password {
 .allImagesButtonActive {
 	
 	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
+	background-size: 100% 100%;
 }
 
 .myImagesButtonActive {
 	
 	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
+	background-size: 100% 100%;
 	left: -1px;
 }
 
@@ -242,6 +244,7 @@ input.password {
 .myImagesButtonNormal {
 	
 	background:  transparent url(../images/btn_switch_right_normal.png) no-repeat; 
+	background-size: 100% 100%;
 	left: -1px;
 }
 
