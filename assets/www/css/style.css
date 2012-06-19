@@ -47,10 +47,16 @@ div.imageDescription {
 
 table.mainNavigationList {
 	
+	background: url(../images/tab-bar.png) no-repeat;
 	background-size: 100%;
 	width: 100%;
 	text-align: center;
-	background: url(../images/tab-bar.png) no-repeat;
+}
+
+.naviPicture {
+	
+	width: 80%;
+	height: 80%;
 }
 
 a.galleryButton:active {
@@ -183,12 +189,11 @@ input.password {
 	color: #999999;
 }
 
-
 .submitPart {
 	
-	width: 92%;
+	width: 95%;
 	position: relative;
-	left: 4%;
+	left: 3%;
 }
 
 .submitButton {
@@ -199,8 +204,6 @@ input.password {
     min-height: 50px;
     width: 100%;
     align: left;
-    font-family: 'RobotoRegular';
-	font-size: 18px;
 	color: #FFFFFF;
 	box-shadow: -90px 111px #00000;
 	text-shadow: -2px -2px -2px #000000;
@@ -220,6 +223,9 @@ input.password {
 	padding: 0px;
 	position: relative;
 	border: none;
+	color: #FFFFFF;
+	box-shadow: -90px 111px #00000;
+	text-shadow: -2px -2px -2px #000000;
 }
 
 .allImagesButtonActive {

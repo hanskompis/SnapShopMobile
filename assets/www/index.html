@@ -18,7 +18,7 @@
 	  <input type="password" id="loginPassword" class="password largeField"/>
       </div>
       <div>
-          <input type="button" id="loginButton" class="submitButton" value="Log in"/>
+          <input type="button" id="loginButton" class="submitButton mediumField" value="Log in"/>
       </div>
       <p class="smallParagraph extraMarginTop">
 		 Support issues 
@@ -34,7 +34,7 @@
       <p class="smallParagraph extraMarginBottom">Logged in as</p>
       <p class="mediumParagraph extraMarginBottom">{{realName}}</p>
       <div>
-          <input type="button" id="logoutButton" class="submitButton extraMarginBottom" value="Log out"/>
+          <input type="button" id="logoutButton" class="submitButton mediumField extraMarginBottom" value="Log out"/>
       </div>
       <p class="smallParagraph">MSISDN {{MSISDN}}</p>
       <p class="smallParagraph extraMarginBottom">{{organization}}</p>
@@ -51,17 +51,17 @@
     <tr>
         <td>
             <a href="javascript:;" id="galleryButton" class="galleryButton">
-                <img src="images/tab_images_normal.png">
+                <img class="naviPicture" src="images/tab_images_normal.png">
             </a>
         </td>
         <td>
             <a href="javascript:;" id="cameraButton" >
-                <img src="images/tab_shutter.png">
+                <img class="naviPicture" src="images/tab_shutter.png">
             </a>
         </td>
         <td>
              <a href="javascript:;" id="profileButton" class="profileButton">
-                 <img src="images/tab_profile_normal.png">
+                 <img class="naviPicture" src="images/tab_profile_normal.png">
              </a>
         </td>
     </tr>
@@ -96,7 +96,7 @@
 
 <script type="text/template" id="upload-picture-button">
 <div class="uploadButtonPart">
-    <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+    <input type="button" id="uploadButton" class="submitButton mediumField" value="Upload"/>
     <div class="uploadProgress">Uploading...</div>
 </div>
 </script>
@@ -106,13 +106,12 @@
  <ul id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" 
 ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);" class="gallery"></ul>
  <!-- <ul class="gallery"></ul>   -->
-<br>
 <div class="submitPart">
   <div>
-    <input type="button" id="allImagesButton" class="{{allImagesClass}} switchButton" value="All images"/>
+    <input type="button" id="allImagesButton" class="{{allImagesClass}} switchButton mediumField" value="All images"/>
   </div>
   <div>
-    <input type="button" id="myImagesButton" class="{{myImagesClass}} switchButton" value="My images"/>
+    <input type="button" id="myImagesButton" class="{{myImagesClass}} switchButton mediumField" value="My images"/>
   </div>
 </div>
 </script>
