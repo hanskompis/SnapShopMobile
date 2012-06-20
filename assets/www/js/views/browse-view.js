@@ -42,7 +42,7 @@ render: function() {
             $(".closeButton").click(function() {
                 e.target.hide();
             });	
-        });//onDisplay
+        }); //onDisplay
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
             $(".closeButton").click(function() { e.target.hide(); } )
         });
