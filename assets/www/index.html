@@ -15,11 +15,15 @@
       <p class="smallField">Username</p>
 	  <input type="text" class="username largeField" id="loginUsername" />
       <p class="smallField">Password</p>
-	  <input type="password" id="loginPassword" class="password largeField" placeholder="Snap Shop password"/>
+	  <input type="password" id="loginPassword" class="password largeField"/>
       </div>
       <div>
-          <input type="button" id="loginButton" class="submitButton" value="Log in" style="padding-left: 0px;"/>
+          <input type="button" id="loginButton" class="submitButton mediumField" value="Log in"/>
       </div>
+      <p class="smallParagraph extraMarginTop">
+		 Support issues 
+		 <a class="emailLink" href="mailto:support@moremr.com">support@moremr.com</a>
+	  </p>
   </div>
 </script>
 
@@ -27,16 +31,16 @@
 <script type="text/template" id="profile-template">
 
   <div class="submitPart">
-      <p class="smallParagraph extraMargin">Logged in as</p>
-      <p class="mediumParagraph extraMargin">{{realName}}</p>
+      <p class="smallParagraph extraMarginBottom">Logged in as</p>
+      <p class="mediumParagraph extraMarginBottom">{{realName}}</p>
       <div>
-          <input type="button" id="logoutButton" class="submitButton extraMargin" value="Log out"/>
+          <input type="button" id="logoutButton" class="submitButton mediumField extraMarginBottom" value="Log out"/>
       </div>
       <p class="smallParagraph">MSISDN {{MSISDN}}</p>
-      <p class="smallParagraph extraMargin">{{organization}}</p>
+      <p class="smallParagraph extraMarginBottom">{{organization}}</p>
       <p class="smallParagraph">
 		 Support issues 
-		 <a href="mailto:support@moremr.com">support@moremr.com</a>
+		 <a class="emailLink" href="mailto:support@moremr.com">support@moremr.com</a>
 	  </p>
   </div>
 </script>
@@ -47,17 +51,17 @@
     <tr>
         <td>
             <a href="javascript:;" id="galleryButton" class="galleryButton">
-                <img src="images/tab_images_normal.png">
+                <img class="naviPicture" src="images/tab_images_normal.png">
             </a>
         </td>
         <td>
             <a href="javascript:;" id="cameraButton" >
-                <img src="images/tab_shutter.png">
+                <img class="naviPicture" src="images/tab_shutter.png">
             </a>
         </td>
         <td>
              <a href="javascript:;" id="profileButton" class="profileButton">
-                 <img src="images/tab_profile_normal.png">
+                 <img class="naviPicture" src="images/tab_profile_normal.png">
              </a>
         </td>
     </tr>
@@ -70,18 +74,18 @@
 <div class="submitPart">
     <div>
         <input type="button" id="cancelUpload" class="cancelUploadButton mediumParagraph" value="Cancel"/>
-    </div>    
-    <p>Title</p>
+    </div>   
+    <p class="smallField extraMarginTop">Title</p>
     <input type="text" class="inputImageInfo largeField" id="imageTitle"/>
-    <p>Description</p>
-    <input type="text" class="inputImageInfo" id="imageDescription"/>
+    <p class="smallField">Description</p>
+    <input type="text" class="inputImageInfo largeField" id="imageDescription"/>
 </div>
 </script>
 
 <script type="text/template" id="upload-picture-select">
 <div class="submitPart"> 
-    <p>{{categoryTitle}}</p>
-    <select id="{{selectID}}" class="inputImageInfo largeField">
+    <p class="smallField">{{categoryTitle}}</p>
+    <select id="{{selectID}}" class="inputImageInfoCategory largeField">
     </select>
 </div>
 </script>
@@ -91,24 +95,23 @@
 </script>
 
 <script type="text/template" id="upload-picture-button">
-<div class="uploadButtonPart">
-    <input type="button" id="uploadButton" class="submitButton" value="Upload"/>
+<div class="submitPart">
+    <input type="button" id="uploadButton" class="submitButton mediumField extraMarginTop" value="Upload"/>
     <div class="uploadProgress">Uploading...</div>
 </div>
 </script>
 
 <!-- Browse gallery page templates -->
 <script type="text/template" id="browse-template">
-<ul class="gallery"></ul>
-<br>
-<a href="javascript:;" id="previousImagesButton">previous</a>
-<a href="javascript:;" id="nextImagesButton">next</a> <br>
-<div>
-  <div class="purkka">
-    <input type="button" id="allImagesButton" class="{{allImagesClass}}" value="All images"/>
+ <ul id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" 
+ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);" class="gallery"></ul>
+
+<div class="switchPart">
+  <div>
+    <input type="button" id="allImagesButton" class="{{allImagesClass}} switchButton mediumField" value="All images"/>
   </div>
-  <div  class="purkka2">
-    <input type="button" id="myImagesButton" class="{{myImagesClass}}" value="My images"/>
+  <div>
+    <input type="button" id="myImagesButton" class="{{myImagesClass}} switchButton mediumField" value="My images"/>
   </div>
 </div>
 </script>
@@ -138,8 +141,6 @@
 <body>
 	<div id="naviContainer"></div>
 	<div id="mainContainer"></div>
-	<div id="buttonContainer"></div>
-	<div id="bottomContainer"></div>
 	
 	<!-- Javascript libraries -->
 	<script src="lib/javascript-inheritance.js"></script>
@@ -150,6 +151,7 @@
 	<script src="lib/underscore-min.js"></script>
 	<script src="lib/backbone-min.js"></script>
 	<script src="lib/mustache.js"></script>
+	<script src="lib/sweepFunctions.js"></script>
 	
 	<!-- Applications -->
 	<script src="js/application.js"></script>

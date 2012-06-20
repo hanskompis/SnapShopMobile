@@ -9,7 +9,8 @@ events: {
 render: function() {
     var self = this; 
     var itemsService = new RestService();   
-    var browseElement = self.checkIfIGotPictures();
+    var browseElement = self.generateBrowseElement();
+
     itemsService.onItemsFetched = function(items) {
         if(items.length === 0){
             return;
@@ -41,7 +42,7 @@ render: function() {
             $(".closeButton").click(function() {
                 e.target.hide();
             });	
-        });//onDisplay
+        }); //onDisplay
         myPhotoSwipe.addEventHandler(Code.PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e) {
             $(".closeButton").click(function() { e.target.hide(); } )
         });
@@ -51,7 +52,7 @@ render: function() {
     }
     else {
         itemsService.getItemsCollection("organization", App.offset, 12, App.globalUserProfile.get("user").id); 
-    }
+    }    
 }, //render
 myImagesAction: function() {
 	App.offset = 0;
@@ -125,7 +126,7 @@ getPhotoSwipeOptions: function() {
         }
     });
 },
-checkIfIGotPictures : function() {
+generateBrowseElement : function() {
 	var element;
 	if(App.myPictures) {
         element = Mustache.to_html($("#browse-template").html(), {myImagesClass : "myImagesButtonActive" , allImagesClass : "allImagesButtonNormal"});        
@@ -148,5 +149,5 @@ appendImagesToList: function (items) {
             $(this.el).find(".gallery").append(dataElement); 
             appended++;
         }
-    }   
+    }
 });

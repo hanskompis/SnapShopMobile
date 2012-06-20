@@ -9,7 +9,7 @@ var SessionService = Class.extend ({
         loginModel.save({}, {
             success: function(model, response) {
                 if (response.authenticated === false){
-                    alert("Login failed!");
+                    alert("Invalid username/password");
                     return;
                 }
                 var categoryService = new RestService();

@@ -6,11 +6,13 @@ var App = {
 	picturePath: null,
 	categories: null,
 	currentView: null, 
+	uploading: false,
 	navigationView: null,
 	Collections: {},
 	Views: {},
 	Routers: {},
 	init: function() {
+		$.ajaxSetup({ cache: false });
 		$.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
 		      options.xhrFields = {
 		        withCredentials: true

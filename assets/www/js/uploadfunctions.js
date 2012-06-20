@@ -39,9 +39,11 @@ function uploadPhoto(imageURI) {
 function uploadSuccess(r) {
     App.picturePath = null;
     hideStatus();
+    App.uploading = false;
     Backbone.history.navigate("browse", true);
 }
 function uploadFail(error) {
+	App.uploading = false;
 	hideStatus();
     alert("Error in uploading image: Code = " = error.code);
 }
