@@ -1,89 +1,69 @@
-
-body {
-	
+body {	
 	background-color: #505050;
 	margin: 0px;
 	background-image: url(../images/bg_app.png);
 }
 
-.closeButton {
-    
+.closeButton {  
     color: #FFFFFF;
     float: left;
     width: 25%;
     height: 150%;
     border: 0px;
-    min-height: 50px;
+    min-height: 60px;
     left: 0%;
     text-shadow:-2px -2px -2px #000000;
     background: transparent url(../images/btn_titlebar_normal.png) no-repeat;
     background-size:100% 100%;
 }
 
-.captionTitle {
-	
-    line-height: 200%
+.captionTitle {	
+	min-height: 60px;
 }
 
-.listItem { 
-	
+.listItem { 	
     width:90px;
     height:90px;
     background-color:#505050; 
 }
 
-.pictureInfoItems * {
-	
+.pictureInfoItems * {	
 	text-align: left;
 	margin-left: 10px;
 }
 
-div.imageDescription {
-	
+div.imageDescription {	
 	color: #FFFFFF;
 	padding-top: 12px;
 	margin-left: 10px;
 }
 
-table.mainNavigationList {
-	
-	background: url(../images/tab-bar.png) no-repeat;
+table.mainNavigationList {	
 	background-size: 100%;
 	width: 100%;
 	text-align: center;
+	background: url(../images/tab-bar.png) no-repeat;
 }
 
-.naviPicture {
-	
-	width: 80%;
-	height: 80%;
-}
-
-a.galleryButton:active {
-	
+a.galleryButton:active {	
 	background: url(../images/tab_images_active.png) no-repeat;
 }
 
-a.profileButton:active {
-	
+a.profileButton:active {	
 	background: url(../images/tab_profile_active.png) no-repeat;
 }
 
-a.cameraButton { 
-	
+a.cameraButton { 	
 	position: relative;
 }
 
-.cancelUploadButton {
-	
+.cancelUploadButton {	
 	color: #FFFFFF;
 	margin: 0px;
 	background: url(../images/btn_titlebar_normal.png);
-	border: 0;
 }
 
-img.logoImage {
-	
+img.logoImage {	
 	position: relative;
 	left: 10%;
 	width: 80%;
@@ -92,23 +72,23 @@ img.logoImage {
 	margin-bottom: 42px;
 }
 
+div.uploadButtonPart {	
+	border: 0;
+	position: relative;
+	top: 7%;
+	margin: 0px;
+	left: 5%;
+	width: 90%;
+}
+
 .inputImageInfo {
-	
+    color: #999999;
     margin: 0 0 10px;
-    min-height: 30px;
+    min-height: 35px;
     width: 98%;
 }
 
-.inputImageInfoCategory {
-	
-    margin: 0 0 10px;
-    min-height: 30px;
-    width: 100%;
-    color: #999999;
-}
-
-p {
-	
+p {	
 	position: relative;
 	left: 4%;
 	color: #FFFFFF;
@@ -116,60 +96,41 @@ p {
 	margin-bottom: 2px;
 }
 
-.smallParagraph {
-	
+.smallParagraph {	
 	font-family: 'RobotoMedium';
 	font-size: small;
 }
 
-.mediumParagraph {
-	
+.mediumParagraph {	
 	font-family: 'RobotoMedium';
 	font-size: medium;
 }
 
-.smallField {
-	
+.smallField {	
 	font-family: 'RobotoRegular';
 	font-size: small;
 }
 
-.mediumField {
-	
+.mediumField {	
 	font-family: 'RobotoRegular';
 	font-size: medium;
 }
 
-.largeField {
-	
+.largeField {	
 	font-family: 'RobotoRegular';
 	font-size: large;
 }
 
-.x-largeField {
-	
+.x-largeField {	
 	font-family: 'RobotoRegular';
 	font-size: x-large;
 }
 
-.extraMarginBottom {
-	
+.extraMargin {	
 	margin-bottom: 7px;
 }
 
-.extraMarginTop {
-	
-	margin-top: 7px;
-}
-
-.emailLink {
-	
-	text-decoration: none;
-	color: #0778BE;
-}
-
-input.username { 
-	
+input.username { 	
 	margin: 0px;
 	margin-bottom: 15px;
 	width: 98%;
@@ -178,7 +139,6 @@ input.username {
 }
 
 input.password {
-
 	margin: 0px;
 	margin-bottom: 15px;
 	width: 98%;
@@ -186,15 +146,16 @@ input.password {
 	color: #999999;
 }
 
+
 .submitPart {
-	
-	width: 95%;
+	width: 92%;
 	position: relative;
-	left: 3%;
+	left: 4%;
 }
 
 .submitButton {
-	
+	font-family: 'RobotoRegular';
+	font-size: 18px;
 	border: 0;
 	background: transparent url(../images/btn_general_normal.png) no-repeat;
 	background-size:100% 100%;
@@ -202,79 +163,67 @@ input.password {
     width: 100%;
     align: left;
 	color: #FFFFFF;
-	box-shadow: -90px 111px #00000;
-	text-shadow: -2px -2px -2px #000000;
+	text-shadow: -0.5px -0.5px 1px #000000;
 }
 
 .submitButton:active {
-	
 	background-size: 100%;
 	background: url(../images/btn_general_active.png) no-repeat;
 }
 
-.switchPart {
-	
-	width: 95%;
-	position: absolute;
-	left: 3%;
-	bottom: 0px;
-}
-
-.switchButton {
-	
-	float: left;
-	width: 50%;	
-	min-height: 50px;
-	padding: 0px;
-	position: relative;
-	border: none;
-	color: #FFFFFF;
-	box-shadow: -90px 111px #00000;
-	text-shadow: -2px -2px -2px #000000;
-}
-
-.allImagesButtonActive {
-	
+.allImagesButtonActive {	
+	float: right;
 	background: transparent url(../images/btn_switch_left_active.png) no-repeat; 
-	background-size: 100% 100%;
+	background-size:100%;
+	border: 0;
 }
 
-.myImagesButtonActive {
-	
+.myImagesButtonActive {	
+	float: left;
 	background:  transparent url(../images/btn_switch_right_active.png) no-repeat; 
-	background-size: 100% 100%;
-	left: -1px;
+	background-size:100%;
+	border: 0;
 }
-
-.allImagesButtonNormal {
-	
+.allImagesButtonNormal {	
+	float: right;
 	background: transparent url(../images/btn_switch_left_normal.png) no-repeat; 
-	background-size: 100% 100%;
+	background-size:100%;
+	border: 0;
 }
 
-.myImagesButtonNormal {
-	
+.myImagesButtonNormal {	
+	float: left;
 	background:  transparent url(../images/btn_switch_right_normal.png) no-repeat; 
-	background-size: 100% 100%;
-	left: -1px;
+	background-size:100%;
+	border: 0;
+
 }
 
-select {
-	
+.purkka {		
+	float: left;
+	margin: 0;	
+	border: 0;
+}
+
+.purkka2 {
+	margin: 0;	
+	border: 0;
+}
+
+select {	
     background-size: 100%;
   	border: 0;
 }
 
 .gallery { 
-
 	list-style: none; 
 	padding: 0; 
 	margin: 0;
 	border: 0;
+	
 }
 
-.gallery:after { 
-	
+.gallery:after { 	
 	clear: both; 
 	content: "."; 
 	display: block; 
@@ -282,22 +231,19 @@ select {
 	visibility: hidden;
 }
 
-.gallery li { 
-	
+.gallery li { 	
 	float: left; 
 	width: 33.33333333%;
 	background-color: transparent;
 }
 
-.gallery li a { 
-	
+.gallery li a { 	
 	display: block; 
 	margin: 0px; 
 	border: 0px solid #3c3c3c; 
 }
 
-.gallery li img { 
-	
+.gallery li img {	
 	display: block; 
 	width: 100%;
 	height: 100%; 
