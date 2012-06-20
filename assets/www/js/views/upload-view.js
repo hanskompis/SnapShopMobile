@@ -30,7 +30,7 @@ App.Views.UploadView = Backbone.View.extend({
         });
     },   
     uploadAction: function() {
-    	if(uploading)
+    	if(App.uploading)
     		return;
     	else {
     	    App.uploading = true;
